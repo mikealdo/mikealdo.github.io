@@ -1,10 +1,1 @@
-{
-  "meta": {
-    "username": "mikealdo",
-    "repositoryName": "mikealdo.github.io",
-    "branch": "master"
-  },
-  "theme": {
-    "name": "uno"
-  }
-}
+{"meta":{"username":"mikealdo","repositoryName":"mikealdo.github.io","branch":"master","delay":"1000"},"site":{"title":"Michal Davídek - Programming blog","postsPerPage":"10","googleAnalytics":"UA-72815761-1","url":"https://mikealdo.github.io"},"socialnetwork":{"email":"mdavidek1@gmail.com","twitter":"https://twitter.com/mikealdo007"},"theme":{"name":"uno","url":"//mikealdo.github.io/themes/uno"}}
