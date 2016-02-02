@@ -1,5 +1,5 @@
 = Software architecture like a building own house
-:hp-image:covers/software-architecture-like-a-building-own-house.jpg
+:hp-image: /images/covers/software-architecture-like-a-building-own-house.jpg
 :hp-tags: architecture, analogy
 :hp-alt-title: Software architecture like a building own house
 :published_at: 2015-10-02
