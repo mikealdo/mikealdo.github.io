@@ -1,4 +1,8 @@
 = Merge vs. Rebase in Git
+:hp-image: /covers/merge-vs-rebase-hell.jpg
+:hp-tags: continuous delivery, git, merge, rebase, vcs
+:hp-alt-title: Merge vs. Rebase in Git
+:published_at: 2015-10-05
 
 In Czech Republic we have one old school series of books from Jaroslav Foglar about boys groups and their fightings between each other. At one stage there were big decission time between two biggest groups and their leaders namely _Losna_ and _Mažňák_. And from this we have frequently used expression for two very hard to distinguish options - _Losna_ *or* _Mažňák_. It seems to me that it's very matching to merge or rebase strategy between developers.
 
