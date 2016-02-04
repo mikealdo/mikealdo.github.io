@@ -1,0 +1,40 @@
+= Merge vs. Rebase in Git
+
+In Czech Republic we have one old school series of books from Jaroslav Foglar about boys groups and their fightings between each other. At one stage there were big decission time between two biggest groups and their leaders namely _Losna_ and _Mažňák_. And from this we have frequently used expression for two very hard to distinguish options - _Losna_ *or* _Mažňák_. It seems to me that it's very matching to merge or rebase strategy between developers.
+
+== Definition 
+
+First of all, definition of merge and rebase by very good answer from stackoverflow.com:
+====
+*Short Version* => Merge takes all the changes in one branch and merge them into another branch in one commit. Rebase says I want the point at which I branched to move to a new starting point.
+_**So when do you use either one?**_
+
+*Merge* => Let's say you have created a branch for the purpose of developing a single feature. When you want to bring those changes back to master, you probably want merge (you don't care about maintaining all of the interim commits).
+
+*Rebase* => A second scenario would be if you started doing some development and then another developer made an unrelated change. You probably want to pull and then rebase to base your changes from the current version from the repo.
+====
+
+It takes some time (for me it was half of year) to have these strategies in your hands and be able to do them routinely. It takes some time to make decission of which strategy promote as a project wide. If I'll start with my progress this is step by step of my evolution:
+
+. *Merge* is the tool of choice, it's easier, conflicts in commits are solved only once.
+. In Merge commit with resolved conflicts were very hard to spot if changes were resolved in right way.
+. Merge commit in history is becoming annoying.
+. *Rebase* is tool of choice, it's becoming straightforward, without merge commit.
+. Before pulling commits to master I was squashing commits to one and still continuing with rebasing but with only one resolving of conflicts.
+. Continuous delivery and automatic merging pull requests after code review were here and I were back to *merging*.
+
+I have to admit that for this half a year which I was fighting with these two strategies it was very hard times. So I reccomend to spend some time with theory and with work out on real example. Each strategy has some advantages on top of other. For me personally is most important to have one strategy accross project and enforcing this rule. 
+
+[WARNING]
+====
+Nothing is worse than developers with different mind setworking with VCS in different manner because after some time becomes reading history or finding anything just nightmare.
+====
+
+
+Also there can be some bottlenecks which prevent use one or other strategy in real life even when it's supported by all interested people. At my last project we have this bottleneck in code review process. We were happy to do rebasing. But code review were becoming longer and longer due to unsufficient count of people doing code review and after some time our feature branches were old - we were forced to do rebase and solve conflicts from master three or more times. And it was not fun and very productive.
+
+== Conclusion
+
+Right tool for right situation, right? I am happy with merge commits which are made automatically in continous delivery process. I am happy to doing rebasing on very well prepared feature branch with squashed commits to one or two. It's not problem for me to use merging in cases that I won't push my changes to remote repository. I am satisfied when history is clean without merging commits or only contains merge commits. Which strategy are used in your project?
+
+P.S. If you enjoyed reading this blog post, could you do me favor and tweet it? Thanks!
