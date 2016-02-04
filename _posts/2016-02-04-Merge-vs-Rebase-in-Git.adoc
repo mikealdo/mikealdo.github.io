@@ -37,4 +37,4 @@ Also there can be some bottlenecks which prevent use one or other strategy in re
 
 Right tool for right situation, right? I am happy with merge commits which are made automatically in continous delivery process. I am happy to doing rebasing on very well prepared feature branch with squashed commits to one or two. It's not problem for me to use merging in cases that I won't push my changes to remote repository. I am satisfied when history is clean without merging commits or only contains merge commits. Which strategy are used in your project?
 
-P.S. If you enjoyed reading this blog post, could you do me favor and tweet it? Thanks!
+*P.S.* If you enjoyed reading this blog post, could you do me favor and tweet it? Thanks!
