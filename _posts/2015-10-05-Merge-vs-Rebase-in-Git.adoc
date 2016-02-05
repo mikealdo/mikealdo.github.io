@@ -29,10 +29,9 @@ It takes some time (for me it was half of year) to have these strategies in your
 
 I have to admit that for this half a year which I was fighting with these two strategies it was very hard times. So I reccomend to spend some time with theory and with work out on real example. Each strategy has some advantages on top of other. For me personally is most important to have one strategy accross project and enforcing this rule. 
 
-[WARNING]
-====
+<q>
 Nothing is worse than developers with different mind setworking with VCS in different manner because after some time becomes reading history or finding anything just nightmare.
-====
+</q>
 
 
 Also there can be some bottlenecks which prevent use one or other strategy in real life even when it's supported by all interested people. At my last project we have this bottleneck in code review process. We were happy to do rebasing. But code review were becoming longer and longer due to unsufficient count of people doing code review and after some time our feature branches were old - we were forced to do rebase and solve conflicts from master three or more times. And it was not fun and very productive.
