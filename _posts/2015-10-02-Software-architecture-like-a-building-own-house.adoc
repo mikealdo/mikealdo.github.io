@@ -3,9 +3,11 @@
 :hp-tags: architecture, analogy
 :hp-alt-title: Software architecture like a building own house
 :published_at: 2015-10-02
+:twitter-link:
 
 I heard several parables for SW architecture versus real life and their similarities or differences. And when I was finishing my working place in my own house I started thinking about own parable.
 
+== Hard times
 I am living in my family house for 4 years. It was built by our own hands with my girlfriend and with huge help of our families. We spent every weekend on it for 2 years and outcome is in our eyes outstanding. On the other hand there are many things that are unfinished for vairous reasons and one of them was just my working place.
 
 You know the parable with building of houses ... you have the plan on the start, nothing is changing, everything is straightforward and house is finished in term and budget. It's not like software because nowadays is everything changing every day (minute). It's applicable to engineering buildings maybe but with family houses I would like to express objection. It's like a software and here is my list of similarities (in parenthesis are expressions from house building):
@@ -23,7 +25,7 @@ You know the parable with building of houses ... you have the plan on the start,
 - it's harder to do things more robust and prepared for unpredictible situations but still possible
 - after some time with fine tuning of applications (rooms or details in rooms) you are satisfied with just enough working solution
 
-Conclusion
-In time of preparing room for my future working place everybody was laughing at my face when I was preparing goosenecks under plastering to each corner of room for 6.1 repro set. And of course for preparing my future working place for stand or backlit of my future couch. And today when I have working room with all the details everybody just stand with open mouth. This robust preparation is nowadays rewarding. Even when SW architecture and building of houses have many differences there are situations which are very similiar and we can take an ideas from one domain to other. In my eyes you will be better developer when you will have experience with building own house by own hands because you will have direct experience with areas which are being solved in both domains.
+== Conclusion
+In time of preparing room for my future working place everybody was laughing at my face when I was preparing goosenecks under plastering to each corner of room for 6.1 repro set. And of course for preparing my future working place for stand or backlit of my future couch. And today when I have working room with all the details everybody just stand with open mouth. This robust preparation is nowadays rewarding. Even when SW architecture and building of houses have many differences there are situations which are very similiar and we can take an ideas from one domain to other. In my eyes you will be *better* developer when you will have experience with building own house by own hands because you will have direct experience with areas which are being solved in both domains.
 
-P.S. If you enjoyed reading this blog post, could you do me favor and tweet it? Thanks!
+*P.S.* If you enjoyed reading this blog post, could you do me favor and tweet it? Thanks!*
