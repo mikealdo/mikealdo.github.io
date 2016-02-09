@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Read only master branch - Michal Davídek - Programming blog</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Read only master branch">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Read only master branch">
+    <meta property="og:description" content="">
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+
+    <link rel="stylesheet" type="text/css" href="//mikealdo.github.io/themes/uno/assets/css/uno.css?v=1.0.0" />
+
+    <link rel="canonical" href="https://mikealdo.github.io/2015/11/02/Read-only-master-branch.html" />
+    
+    <meta property="og:site_name" content="Michal Davídek - Programming blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Read only master branch" />
+    <meta property="og:description" content="Continuous delivery Continuous delivery is about delivering high quality software to customer immediately after next feature is added to the codebase. This adding is based on version control system and now I would like to discuss one step in this..." />
+    <meta property="og:url" content="https://mikealdo.github.io/2015/11/02/Read-only-master-branch.html" />
+    <meta property="og:image" content="https://mikealdo.github.io/images//covers/read-only-master-branch.png" />
+    <meta property="article:published_time" content="2015-11-01T23:00:00.000Z" />
+    <meta property="article:modified_time" content="2016-02-09T14:18:08.105Z" />
+    <meta property="article:tag" content="continuous delivery" />
+    <meta property="article:tag" content="git" />
+    <meta property="article:tag" content="jenkins" />
+    <meta property="article:tag" content="stash" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Read only master branch" />
+    <meta name="twitter:description" content="Continuous delivery Continuous delivery is about delivering high quality software to customer immediately after next feature is added to the codebase. This adding is based on version control system and now I would like to discuss one step in this..." />
+    <meta name="twitter:url" content="https://mikealdo.github.io/2015/11/02/Read-only-master-branch.html" />
+    <meta name="twitter:image:src" content="https://mikealdo.github.io/images//covers/read-only-master-branch.png" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Michal Davídek - Programming blog",
+    "author": {
+        "@type": "Person",
+        "name": "Michal Davídek",
+        "image": "https://avatars.githubusercontent.com/u/14245058?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": null
+    },
+    "headline": "Read only master branch",
+    "url": "https://mikealdo.github.io/2015/11/02/Read-only-master-branch.html",
+    "datePublished": "2015-11-01T23:00:00.000Z",
+    "dateModified": "2016-02-09T14:18:08.105Z",
+    "image": "https://mikealdo.github.io/images//covers/read-only-master-branch.png",
+    "keywords": "continuous delivery,  git,  jenkins,  stash",
+    "description": "Continuous delivery Continuous delivery is about delivering high quality software to customer immediately after next feature is added to the codebase. This adding is based on version control system and now I would like to discuss one step in this..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Michal Davídek - Programming blog" href="https://mikealdo.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+
+</head>
+<body class="post-template tag-continuous-delivery tag-git tag-jenkins tag-stash no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    <header class="panel-cover panel-cover--collapsed " >
+      <div class="panel-main">
+    
+        <div class="panel-main__inner panel-inverted">
+        <div class="panel-main__content">
+    
+            <h1 class="panel-cover__title panel-title"><a href="https://mikealdo.github.io" title="link to homepage for Michal Davídek - Programming blog">Michal Davídek - Programming blog</a></h1>
+            <hr class="panel-cover__divider" />
+            <p class="panel-cover__description">Developer community gave me a lot for free. This is my attempt to return at least something to all interested.</p>
+            <hr class="panel-cover__divider panel-cover__divider--secondary" />
+    
+            <div class="navigation-wrapper">
+    
+              <nav class="cover-navigation cover-navigation--primary">
+                <ul class="navigation">
+                  <li class="navigation__item"><a href="https://mikealdo.github.io/#blog" title="link to Michal Davídek - Programming blog blog" class="blog-button">Blog</a></li>
+                </ul>
+              </nav>
+    
+              
+              
+              <nav class="cover-navigation navigation--social">
+                <ul class="navigation">
+              
+              
+                  <!-- Twitter -->
+                  <li class="navigation__item">
+                    <a href="https://twitter.com/mikealdo007" title="Twitter account">
+                      <i class='icon icon-social-twitter'></i>
+                      <span class="label">Twitter</span>
+                    </a>
+                  </li>
+              
+                  <!-- Google Plus -->
+                  <li class="navigation__item">
+                    <a href="https://plus.google.com/+MichalDavidekCZ" title="Google+ account">
+                      <i class='icon icon-social-google-plus'></i>
+                      <span class="label">Google-plus</span>
+                    </a>
+                  </li>
+              
+                  <!-- Github -->
+                  <li class="navigation__item">
+                    <a href="https://github.com/mikealdo" title="Github account">
+                      <i class='icon icon-social-github'></i>
+                      <span class="label">Github</span>
+                    </a>
+                  </li>
+                  </li>
+              
+              
+              
+              
+                  <!-- LinkedIn -->
+                  <li class="navigation__item">
+                    <a href="https://www.linkedin.com/in/davidekmichal" title="LinkedIn account">
+                      <i class='icon icon-social-linkedin'></i>
+                      <span class="label">LinkedIn</span>
+                    </a>
+                  </li>
+              
+                  <!-- Email -->
+                  <li class="navigation__item">
+                    <a href="mailto:mdavidek1@gmail.com" title="Email mdavidek1@gmail.com">
+                      <i class='icon icon-mail'></i>
+                      <span class="label">Email</span>
+                    </a>
+                  </li>
+              
+                </ul>
+              </nav>
+              
+    
+            </div>
+    
+          </div>
+    
+        </div>
+    
+        <div class="panel-cover--overlay"></div>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="02 Nov 2015" class="post-meta__date date">02 Nov 2015</time> &#8226; <span class="post-meta__tags tags">on <a href="https://mikealdo.github.io/tag/continuous-delivery">continuous delivery</a>, <a href="https://mikealdo.github.io/tag/git"> git</a>, <a href="https://mikealdo.github.io/tag/jenkins"> jenkins</a>, <a href="https://mikealdo.github.io/tag/stash"> stash</a></span>
+        <span class="post-meta__author author"><img src="https://avatars.githubusercontent.com/u/14245058?v=3" alt="profile image for Michal Davídek" class="avatar post-meta__avatar" /> by Michal Davídek</span>
+      </div>
+      <h1 class="post-title">Read only master branch</h1>
+    </header>
+
+    <section class="post tag-continuous-delivery tag-git tag-jenkins tag-stash">
+      <div class="sect1">
+<h2 id="_continuous_delivery">Continuous delivery</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://en.wikipedia.org/wiki/Continuous_delivery">Continuous delivery</a> is about delivering high quality software to customer immediately after next feature is added to the codebase. This adding is based on version control system and now I would like to discuss one step in this process which is almost required to have always shippable product. It&#8217;s called read-only master branch.</p>
+</div>
+<div class="paragraph">
+<p>In my last project we have disovered that combo "pull requests + code review" is not enough to have always green automatic build for master branch. We were using it for some time successfuly but at one point more developers was on the project and codebase (+build time) grew up. And our continous integration server was far away from blue and shinny. We realized that we missed two important things before merging our feature to master branch and proceeding build on master branch. First of all build with unit and integration tests before merge and after that avoiding direct merges to master.</p>
+</div>
+<div class="paragraph">
+<p>Without needs to have pull request there were always some inconsistent commits which should fix something quickly but with increased build time of all needed things (~ 15 min) and failures. It was very unpleasant to work with such master branch. You should be carefull in creating feature branch and check healthy of build of master before it. With increasing number of commits (~ 100 daily) was very hard (aka impossible) to find out which change caused failure. And it was impossible to do continous delivery because at the end we weren&#8217;t able to build anything for whole day.</p>
+</div>
+<div class="paragraph">
+<p>So firstly we implemented <em>"pull request build"</em> to run whole build from your feature branch separately to verify that your changes doesn&#8217;t break anything. But it was not enough because it was not preventing our architects, gurus, senior developers to commit "well intended" changes directly to master. Enforcing rule that each developer should use feature branches, pull requests, code review and pull request builds only by word simply didn&#8217;t worked. Also rebasing feature branches with current master wasn&#8217;t performed before pull request build in all times which caused similar types of problems.</p>
+</div>
+<div class="paragraph">
+<p>Avoiding direct merges to master (read-only master branch for everybody except automatic process) and allowing it only through UI (stash in our case) changed healthy of our builds dramatically. This button at the end was doing automatic rebase from master and build. If it was succesfull there were another allowed button to merge to master. If not, developer was enforced to resolve problem because without that he wasn&#8217;t able to have his feature in master. We realized that this second "merge" button is better than automatic merge because we were using several repositories and merges to them needed to by synchronized. But for one repository it can be in one step of course.</p>
+</div>
+<div class="paragraph">
+<p><strong>Technologically</strong>, we were using git and as a remote repository <a href="https://www.atlassian.com/software/bitbucket/server">stash</a>. Build server <a href="https://jenkins-ci.org">jenkins</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_in_conclusion">In conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you have only possibility to merge to master by using feature branch, pull request and button in remote VCS repository it&#8217;s impossible to add to master incompatible changes which will break builds. And read-only master branch is one step further to implement continuous delivery to your project.</p>
+</div>
+<div class="paragraph">
+<p><strong>P.S.</strong> If you enjoyed reading this blog post, could you do me favor and tweet it? Thanks!</p>
+</div>
+</div>
+</div>
+    </section>
+
+  </article>
+
+  
+  <section class="post-comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'mikealdo'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+  
+
+
+
+            <footer class="footer">
+                <span class="footer__copyright">&copy; 2016. All rights reserved.</span>
+                <span class="footer__copyright"><a href="http://uno.daleanthony.com" title="link to page for Uno Ghost theme">Uno theme</a> by <a href="http://daleanthony.com" title="link to website for Dale-Anthony">Dale-Anthony</a></span>
+                <span class="footer__copyright">Proudly published with <a href="http://hubpress.io" title="link to Hubpress website">Hubpress</a></span>
+            </footer>
+        </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//mikealdo.github.io/themes/uno/assets/js/main.js?v=1.0.0"></script>
+    
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-72815761-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+
+</body>
+</html>
