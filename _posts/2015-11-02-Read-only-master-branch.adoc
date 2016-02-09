@@ -4,6 +4,7 @@
 :hp-alt-title: Read only master branch
 :published_at: 2015-11-02
 :continous-deliver-link: https://en.wikipedia.org/wiki/Continuous_delivery[Continuous delivery]
+:stash-link: https://www.atlassian.com/software/bitbucket/server[stash]
 
 == Continuous delivery
 {continous-deliver-link} is about delivering high quality software to customer immediately after next feature is added to the codebase. This adding is based on version control system and now I would like to discuss one step in this process which is almost required to have always shippable product. It's called read-only master branch.
@@ -16,7 +17,7 @@ So firstly we implemented _"pull request build"_ to run whole build from your fe
 
 Avoiding direct merges to master (read-only master branch for everybody except automatic process) and allowing it only through UI (stash in our case) changed healthy of our builds dramatically. This button at the end was doing automatic rebase from master and build. If it was succesfull there were another allowed button to merge to master. If not, developer was enforced to resolve problem because without that he wasn't able to have his feature in master. We realized that this second "merge" button is better than automatic merge because we were using several repositories and merges to them needed to by synchronized. But for one repository it can be in one step of course.
 
-*Technologically*, we were using git and as a remote repository stash. Build server jenkins.
+*Technologically*, we were using git and as a remote repository {stash-link}. Build server jenkins.
 
 == In conclusion 
 
