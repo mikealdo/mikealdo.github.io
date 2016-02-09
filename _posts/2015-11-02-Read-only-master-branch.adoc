@@ -1,0 +1,25 @@
+= Read only master branch
+:hp-image: /covers/merge-vs-rebase-hell.jpg
+:hp-tags: continuous delivery, git, jenkins, stash
+:hp-alt-title: Read only master branch
+:published_at: 2015-11-02
+:continous-deliver-link: https://en.wikipedia.org/wiki/Continuous_delivery[Continuous delivery]
+
+== Continuous delivery
+{continous-deliver-link} is about delivering high quality software to customer immediately after next feature is added to the codebase. This adding is based on version control system and now I would like to discuss one step in this process which is almost required to have always shippable product. It's called read-only master branch.
+
+In my last project we have disovered that combo "pull requests + code review" is not enough to have always green automatic build for master branch. We were using it for some time successfuly but at one point more developers was on the project and codebase (+build time) grew up. And our continous integration server was far away from blue and shinny. We realized that we missed two important things before merging our feature to master branch and proceeding build on master branch. First of all build with unit and integration tests before merge and after that avoiding direct merges to master.
+
+Without needs to have pull request there were always some inconsistent commits which should fix something quickly but with increased build time of all needed things (~ 15 min) and failures. It was very unpleasant to work with such master branch. You should be carefull in creating feature branch and check healthy of build of master before it. With increasing number of commits (~ 100 daily) was very hard (aka impossible) to find out which change caused failure. And it was impossible to do continous delivery because at the end we weren't able to build anything for whole day.
+
+So firstly we implemented _"pull request build"_ to run whole build from your feature branch separately to verify that your changes doesn't break anything. But it was not enough because it was not preventing our architects, gurus, senior developers to commit "well intended" changes directly to master. Enforcing rule that each developer should use feature branches, pull requests, code review and pull request builds only by word simply didn't worked. Also rebasing feature branches with current master wasn't performed before pull request build in all times which caused similar types of problems.
+
+Avoiding direct merges to master (read-only master branch for everybody except automatic process) and allowing it only through UI (stash in our case) changed healthy of our builds dramatically. This button at the end was doing automatic rebase from master and build. If it was succesfull there were another allowed button to merge to master. If not, developer was enforced to resolve problem because without that he wasn't able to have his feature in master. We realized that this second "merge" button is better than automatic merge because we were using several repositories and merges to them needed to by synchronized. But for one repository it can be in one step of course.
+
+*Technologically*, we were using git and as a remote repository stash. Build server jenkins.
+
+== In conclusion 
+
+When you have only possibility to merge to master by using feature branch, pull request and button in remote VCS repository it's impossible to add to master incompatible changes which will break builds. And read-only master branch is one step further to implement continuous delivery to your project.
+
+*P.S.* If you enjoyed reading this blog post, could you do me favor and tweet it? Thanks!
