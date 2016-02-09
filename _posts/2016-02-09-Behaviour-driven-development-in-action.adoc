@@ -64,7 +64,7 @@ Ok, here is end of theory and what about real life, hm? I was on two projects wi
 ** Wiki pages are becoming standard so documenting of all information available for your test codebase is necessary.
 
 
-== In conclusion & Lessons learnt
+== In conclusion & lessons learnt
 
 Automatic tests are really outstanding thing. Of course there are many things which are not easy and especially adding these tests to working software is unconscionably hard. But in the end they decrease time needed to deliver new features. They decrease time needed for manual tests and continuously improving testability of whole software. At one project was almost rule that implementing of acceptance tests for new feature took two (three) more times than the implementation itself - but in the end it was still much less than several manual testing by human on various environments.
 
@@ -79,6 +79,6 @@ use pull requests for defend codebase stability
 create documentation, approach for creating new tests visible for both developers and business analyst
 if you are testing API of your application, don’t create any artificial API used only by tests
 
-=== Have you automatic acceptance test in your suite as well?
+==== Have you automatic acceptance test in your suite as well?
 
-*P.S.* If you enjoyed reading this blog post, could you do me favor and tweet it? Thanks!
+*P.S.* If you enjoyed reading this blog post, could you do me favor and tweet it? Thanksl
