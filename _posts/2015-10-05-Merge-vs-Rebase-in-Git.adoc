@@ -29,7 +29,7 @@ It takes some time (for me it was half of year) to have these strategies in your
 
 I have to admit that for this half a year which I was fighting with these two strategies it was very hard times. So I reccomend to spend some time with theory and with work out on real example. Each strategy has some advantages on top of other. For me personally is most important to have one strategy accross project and enforcing this rule. 
 
-> Nothing is worse than developers with different mind setworking with VCS in different manner because after some time becomes reading history or finding anything just nightmare.
+> Nothing is worse than developers with different mindset are working with VCS in different manner. After some time becomes reading history or finding anything just nightmare.
 
 
 
