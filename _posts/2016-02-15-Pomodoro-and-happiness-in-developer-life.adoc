@@ -1,0 +1,50 @@
+= Pomodoro and developer life
+:hp-image: /covers/pomodoro-and-developer-life.png
+:hp-tags: happiness, productivity, retrospective, life-hack
+:hp-alt-title: Pomodoro and happiness in developer life
+:published_at: 2016-02-15
+:pomodoro-link: http://pomodorotechnique.com[Pomodoro]
+
+I heard about {pomodoro-link} technique couple of times in recent years. As usually with adopting new technique or habit I was little bit sceptic about it because it was so prescriptive and from the first sight it looked as “usual” working time with breaks - so I was thinking that I have been “somehow” practicing it on daily basis. Such a big mistake to evaluate something instead of actually trying it. With my family growing, commuting to work, house and couple of hobbies I finally realized that time is most valuable item which I have and started improving my life with better time management. I did rough and wholehearted retrospective of time spent with work and personal stuff and tried to identify areas for improvement or getting rid of. One of the thing which I identified to improve was my information hunger (as I wrote recently) which has strong impact to my work and personal productivity. But it was not enough.
+
+== Pomodoro rules!
+Hard things are not becoming over night and usually you need some plan how to deal with them. And my plan how to return time under control and productivity to my work life was start with Pomodoro. Some researches are saying that new habit you incorporate to your life after doing it at least 21 days. Yesterday I did 21st Pomodoro working day (4 weeks) and it’s clear to me, that pomodores will stay with me. I know that maybe 21 days are not so big amount of time to assess whole technique but I have several points which almost immediately came to me after starting with it and may be helpful to incorporate Pomodoro to your life as well:
+
+. It’s coming with need to have a list of tasks for each day and to have a list of planned task.
+** This leads to need spend some time with planning of each day and plan not doing multi-tasking and switching context from one task to another.
+** Pomodoro in fact is producing list with (at least some) tasks marked as done after working day which works perfectly against feeling “today I haven’t been  finishing anything” and producing good feeling of getting things done.
+** This tracking of your time leads to ability doing self-retro and produce advices leading to further improvements.
+** This leads to identify things which I was fighting with and realisation that for example some of them I was solving to early or unnecessarily.
+. Focused and time-limited working period is perfect - it's one small competition to tackle task and focus to solve it in that time so it immediately increased my focus on task and stopped procrastination.
+. After each day I realized that I need less time for same work results as with my previous style of working.
+** And more importantly - it’s sustainable!
+. I stopped waiting with triggering work on unpopular and hard things because suddenly I have a feeling to tackle them firstly - as I was looking forward for better tasks (or free time) as a praise for my hard work.
+. After couple of days some tasks stayed remaining on my list so I assigned them priority and this was leading that I didn’t miss anything important.
+. I got rid of useless debates with colleagues at my desk (I started working with earphones and draw attention that no distraction allowed at that times).
+. After each 25 minutes it breaks accidental “stav proudeni” which is extremely useful - it prevent me to produce code which can lead dead end and allow me to rethink approach at next Pomodoro start.
+. It’s also great for pair programming to have clear borders of work for both developers.
+. I tried bigger and smaller time for Pomodoro units but in practice 25 magically working the best.
+. Indeed, at 14:00 each day I have clear mind that I have planned work done.
+. When you are working on enjoyable task, you don’t need a pomodoro too much - productivity and focus it’s somehow present. But for boring tasks it’s very useful.
+
+== My Working day
+After some retrospection I converged to fact that I am usually able to make 8 pomodores per day. Sometimes more, sometimes less. I have no hard commitment on that because it can be easily interrupted by meetings, high priority not programming work and discussion with other colleagues. It’s very fine for my clear mind if I am able to make about 40 super focused development Pomodores per working week.
+. Right After coming to work I am creating my detailed list of 4-5 items (granularity matters) which I will busy with that day, sorted by my innermost priority, difficulty and boringness (in this order).
+** I am merging stuff not done previous day, stuff came to my mind due to period I was not in work and stuff from list of planned work.
+** I am also planning count of Pomodoro units according to meetings, needed discussions and obvious obstacles.
+. I am not opening emails, Twitter, Google+.
+. Then I am working on first two Pomodores.
+. Then I have coffee break and moving to next two Pomodores
+. Then I finally check work email and putting things which I am not able to solve under 2 minutes onto my list.
+. Then we have standup and usually it’s followed by some discussion with colleagues of mine
+. Before lunch I am usually working on one or two next Pomodores so at that time I have 6/8 daily amount of work done.
+. After lunch I am making last two or free missing Pomodores so at 14:00 I am done with clear mind.
+. If I have good mood, not feeling bad, I am working on one or two next Pomodores with enlarged time for breaks. At these breaks I am usually reading well chosen technical blog post from my industry which I had in my pocket.
+. Then I am filling notes to my retrospective notebook (physical) about things done and going to home.
+
+For tracking time I am currently not using any software application because I wasn’t able to pick anything - I was not sure what features I would like to have so I am using plain old text notebook and couple of colored markers. I am using Pomodoro Indicator on my Ubuntu for tracking time for pomodores and breaks. It’s not so fullfilling because it suddenly stopped to produce sounds so I am looking for something better.
+
+== In conclusion
+If you have each day feeling, that you not done anything, start with Pomodoro, or at least tracking your daily activity. With Pomodoro (and reasonable limits of count per working week) you will be praised with more free time, clear mind and increased sustainable productivity.
+
+*P.S.* If you enjoyed reading this blog post, could you do me favor and tweet it or/and leave a comment? Thanks!
