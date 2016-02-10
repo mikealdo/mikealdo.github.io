@@ -1,4 +1,8 @@
 = Software architect is like a captain of football team
+:hp-image: /covers/software-architect-like-a-captain.png
+:hp-tags: architecture, decisions, football, mistakes
+:hp-alt-title: Software architect is like a captain of football team
+:published_at: 2015-11-19
 
 I am software engineer for more than 9 years. I am captain of football teams for more than 20 years. And I have experience with leading football teams and with following of various types of software architects. I am not entirely sure why I was electing as a captain, maybe for my faith, skills, charisma or there were no better person.  At some point I discovered that mentioned roles have some similarities … so how to be a good architect or captain?
 
