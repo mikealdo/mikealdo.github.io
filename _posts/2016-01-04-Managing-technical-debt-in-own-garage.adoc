@@ -1,0 +1,34 @@
+= Managing technical debt in own garage
+:hp-image: /covers/managing-technical-debt-in-own-garage.png
+:hp-tags: refactoring, technical debt
+:hp-alt-title: Managing technical debt in own garage
+:published_at: 2016-01-04
+:winter-is-coming-link: http://gameofthrones.wikia.com/wiki/Winter_is_Coming_(motto)[Winter is coming]
+
+Recently I have written blog post about similarities between building of own house and software architecture . And at last weekend I realized that there are more parallels inside house than one could expect. And thing came into my mind has many to do with refactoring and managing of technical debt in software development.
+
+== Winter is coming
+{winter-is-coming-link} is popular Stark motto from Game of Thrones series. Recently it was touched me in reality when I was trying to get rid of mess inside my garage to be able to park car inside (as nobody is happy to managing frozen car each morning). But as weeks before were going, garage was full of added unsorted things occupating place for my car. These things were adding with style "Now I have no time to find a proper place for it, I'll manage it later". This approach inevitably ended with my walking around, closing my eyes whenever I was entering garage (even not switching lights on) and cumulating (mostly unnecessary) things. 
+
+But one day I was brave enough to switch light on and started to think how to deal with it. At first sight, it was so big, so hard to deal with. Almost impossible to see way how to find a proper place for all the things. Hard to say goodbay to obviously not used (but still somehow useful) things. So tedious when I am not creating something. And then came into my mind that this is obviously same technical debt as I am solving almost each day in software development. So what about levereging some useful technics of getting rid of software technological debt? This mental switch was really important because immediately it was not about cleaning but about challenge to get rid of technical debt.
+
+== Small steps matter
+I started with small steps. I started with moving boxes from one place to another (moving methods to right class, classes to right package in refactoring) but after some time it was not enough. Obviously my garage has had more things to deal with than my storage capacity can serve. So I repacked things inside boxes (renaming of methods, unit tests for these methods and cleaning up of content inside methods) to maximize utilization of each storage capacity. Some storage capacity was freed up. Then I realized that some things are so special that they are occupating too much place which is not more useable - like slegde for kids. I quickly did simple hook on the wall for suspension of sledges. So far so good.
+
+Then I was trying to get rid of things (features) which I was not using for more than one year. If thing was replaceable with other, I put the worse in trash. After several iterations whole boot of my car was full and garage more empty. At that time it was very important to start the car and finish throwing things (push to master/create pull request) by going to scrap yard. Because without that things are still accessible and possible to return back and increase the mess in the garage.
+
+Ok, after several steps (and weekend days) my car was placed inside garage and storage places has some free space as well. I realized that I have to set up several rules (retrospective) for incoming things into garage to not increasing technical debts and still being able to park my car inside:
+. Clean desk before work.
+. One reasonably small box for things which are not suitable for store at the moment/hard to find out proper place for it.
+. Canibalize things - if I have something old which might be replaced by new thing, old one is uncompromisingly threw away.
+. Enforcing rules for whole family (hardest thing) - no added useless things.
+. Continuously improving placing of things, throwing away of things.
+. Each box will have stick with content inside to have better view of things which are stored and to have overview of places for adding new usable things.
+
+== What else?
+
+Thing is that it’s hard to have discipline (same for cleaning as well as for software engineering). Right things are mostly time consuming but rewarding. Bringing sunshine to mess is almost always rewarding (but it takes time to have full reward). If you are tired even before performing some action, it’s time to change perspective like me with adapting approach from software engineering and facing challenge face to face. Begin with some small step and divide unpopular actions into smaller and doable things. Enjoy each success and reward yourself for each particular good achieved action. Live will continuously getting better.
+
+ 
+
+*P.S.* If you enjoyed reading this blog post, could you do me favor and tweet it and/or leave a comment? Thanks!
