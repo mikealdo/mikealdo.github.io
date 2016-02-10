@@ -1,0 +1,46 @@
+= Testing database changes using Liquibase in continous delivery
+:hp-image: /covers/testing-database-changes-using-liquibase.png
+:hp-tags: architecture, continuous delivery, database, liquibase
+:hp-alt-title: Testing database changes using Liquibase in continous delivery
+:published_at: 2016-12-14
+:liquibase-link: http://www.liquibase.org[Liquibase]
+:continuous-delivery-link: https://en.wikipedia.org/wiki/Continuous_delivery[Continuous delivery]
+
+Almost every application needs to cooperate with database. In these agile times is database layer changing in daily order as every other things. When you are trying to adopt continous delivery for delivering features to your customers earlier or later you have to face with need to test change at database layer. And in best case you should be able to test your changes at several environments, localy and have this testing as first class citizen in your development process.
+
+== Ways are different
+I was on several projects where increment of work on database layer were treated differently. Once it was through pure SQL files and custom framework which have been managing it. Once it was custom files with SQL statements with groovy scripts handling their applicating. Once it was custom XML and custom java framework for managing it. And at most times we were using {liquibase-link} where is leveraging own format in XML files. And after all I have to admit that the best option which we currently have in java world is Liquibase. I am not saying that is impossible to develop own solution but why invent the wheel when we have this robust library. But of course it's hard to leave own solution (when it's used) and migrate to another one.
+
+=== Own solutions has had these disadvantages which I was experiencing:
+* Strongly tied to one database which was in use in that project.
+** Not such big issue because moving to another database is not so common after project is started.
+* In case of need to use some other feature of database it was need to improve framework.
+** Have your implementation support for procedures, “INSERT using SELECT” and any other thing?
+* Knowledge around framework was lost in time when original author left project.
+* And very probably with very poor documentation and hidden implementation details.
+* Very hard to use it for local environment.
+* Missing documentation, project vocabulary and user manual.
+** Majority of important things stay in someone’s head.
+* Sometimes it was not clear when failure is caused by framework or by developer mistake.
+** Pretty hard to find out implementation drawbacks.
+* In 90% cases was missing rollback feature - crucial point.
+** And some built-in rollback features (e.g. for adding column) as well.
+* Missing (or it was needed to implement) runtime environment for running it through CI server or linux/win servers.
+** so in CI were running .sh scripts resides on some specific server, huh.
+* No community, backlog of open issues and possibility to ask on the internet.
+** What we can say more ...
+
+Pretty big set of arguments, right? So to summarize, Liquibase provides answers and solutions for all mentioned points. Of course take some time to be familiar with special XML format for writing change scripts, some infrastructure work needed also. From my point the crucial point for which I can strongly recommend to use Liquibase is the rollback feature and runtime environment (maven/gradle).
+
+I believe that {continuous-delivery-link} is way how to deliver software in these days. Delivering output of our effort immediately after it is developed to customer in highest quality possible and without fear that something will be broken should be our primary goal. Without fear in this context I mean that changes performed on production database will be performed:
+
+. Database changes are tested in every environment where developed software is being deployed automatically.
+. Changes and rollback is tested on copy of production (can be obfuscated) database.
+. Before developed code is deployed to production.
+. If deployed artifact contains some “show stopper” issue(s) then it can be rolled back to last known good state.
+
+== Conlusion
+
+When you are planning to do real Continuous delivery you need to have your database changes under your control and need to have rollback functionality to provide “easy to return to last running software” feature. Liquibase is tool of choice for everybody who don’t want to spend time with developing own solution and have comprehensive tool for maintain database changes.
+
+P.S. If you enjoyed reading this blog post, could you do me favor and tweet it? Thanks!
