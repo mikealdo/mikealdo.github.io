@@ -52,9 +52,12 @@ Action is a Page. Action has a component(s). Component can have reference to Pag
 
 So quite easy model but the biggest problem here is how to call methods (aka business logic) inside component without needed to have boilerplate code inside parent Action to recalling components. So we would like to not have this inside action class:
 
+[source,java]
+----
 Action.sayHelloInSomeComponent() {
      someComponent.sayHello();
 }
+----
 
 But Struts2 invocation is not generic, doesn’t find methods inside inner fields. So here is a first hack - {default-action-invocation-link}. We would like to have a algorithm which resolve method even inside inner field (if field is marked as Component). This method can be represented by dot notation on the view layer (links etc.) - “someComponent.sayHello” and which in fact doesn’t adding mess to parent action. See creation of link by Freemarker templating engine {freemarker-engine-link}. So at the first sight it should be easy to hack, but after some elaboration we ended with quite huge reworking of this class and some other were needed to adjust also - {default-workflow-interceptor-link}, {proxy-factory-link}, {struts-proxy-factory-link} and {ann-validation-interceptor-link}. Although it seems a lot of code inside reworked classes, all the important changed code is between comments “// Struts components” and “// END OF Struts components”.
 
