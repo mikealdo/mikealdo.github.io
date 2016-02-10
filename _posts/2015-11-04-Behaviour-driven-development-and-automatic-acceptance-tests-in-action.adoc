@@ -1,5 +1,8 @@
 = Behaviour driven development in action
-
+:hp-image: /covers/behaviour-driven-development-in-action.png
+:hp-tags: continuous delivery, git, jenkins, stash, bdd
+:hp-alt-title: Behaviour driven development and automatic acceptance tests in action
+:published_at: 2015-11-04
 :acceptance-testing-link: https://en.wikipedia.org/wiki/Acceptance_testing[acceptance testing]
 :cucumber-link: https://cucumber.io[Cucumber]
 :req-spec-link: https://en.wikipedia.org/wiki/Software_requirements_specification[Requirement specification document]
@@ -14,7 +17,7 @@ In these days is here tension to replace human testers with these tests and/or r
 
 Ok, here is end of theory and what about real life, hm? I was on two projects with this type of testing and after two years experience here is my commented list of positives and negatives:
 
-== +
+== Identified advantages
 
 . Best thing for newcomers on the project.
 ** Working great as an documentation, reference guide and reference _how is this software used_.
@@ -34,7 +37,7 @@ Ok, here is end of theory and what about real life, hm? I was on two projects wi
 . Support continuous delivery because you're not being stuck with time of your tester.
 ** sometimes is not easy to test something by hand (set up of scenario, test data, calling external services) so if you haven’t this covered by automatic scenarios it’s impossible do continuous delivery at all.
 
-== -
+== Drawbacks
 
 . Business people are only able to read acceptance test, not write them.
 ** After uncountable attempts deliveries of acceptance tests scenarios from business was not sufficient. There were still problems - step definitions doesn’t match developed ones, unnecessary steps, complex steps, steps which aren’t prescriptive etc. After all developers are writing these scenarios and business only verifies that they are right.
