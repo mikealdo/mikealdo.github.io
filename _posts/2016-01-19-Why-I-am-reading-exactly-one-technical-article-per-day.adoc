@@ -1,10 +1,10 @@
 = Why I am reading exactly one technical article per day
 :hp-image: /covers/exactly-one-technical-article-per-day.png
-:hp-tags: improvement, procrastination, reading, writing
+:hp-tags: improvement, procrastination, reading, writing, life-hack, happiness
 :hp-alt-title: Why I am reading exactly one technical article per day
 :published_at: 2016-01-19
 
-From time to time (ok, everyday) we are speaking about everything with cup of coffee with colleagues of mine at work. From time to time (now it’s right usage of that sentence) we are speaking about technical stuff around us. And as we are all developers, there are plenty of things. After several discussions I realized that we are speaking about things that we are not expert in and we are messing each other with not true stuff often. And in my eyes it’s often triggered by many articles read by us day after day.
+From time to time (ok, everyday) we are speaking about everything with cup of coffee with colleagues of mine at work. From time to time (now it’s right usage of that sentence) we are speaking about technical stuff around us. And as we are all developers, there are plenty of things. After several discussions I realized that we are speaking about things that we are not expert in and we are messing each other with not true stuff often. And in my eyes it’s often triggered by many articles read by us day after day. 
 
 == Reading is bad?
 Well, you could think reading is not as bad, you are continuously improving yourself by adding awareness about various technologies which can lead to feeling “when it’s time to make a technology decision, I’ll be prepared” for example. That’s just wrong. You will be never prepared enough. You will forget to most of stuff you read. When decision time will come, things will change, technologies will die, libraries will be canibalized by others. 
