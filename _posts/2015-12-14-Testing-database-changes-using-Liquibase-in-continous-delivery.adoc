@@ -2,7 +2,7 @@
 :hp-image: /covers/testing-database-changes-using-liquibase.png
 :hp-tags: architecture, continuous delivery, database, liquibase
 :hp-alt-title: Testing database changes using Liquibase in continous delivery
-:published_at: 2016-12-14
+:published_at: 2015-12-14
 :liquibase-link: http://www.liquibase.org[Liquibase]
 :continuous-delivery-link: https://en.wikipedia.org/wiki/Continuous_delivery[Continuous delivery]
 
@@ -43,4 +43,4 @@ I believe that {continuous-delivery-link} is way how to deliver software in thes
 
 When you are planning to do real Continuous delivery you need to have your database changes under your control and need to have rollback functionality to provide “easy to return to last running software” feature. Liquibase is tool of choice for everybody who don’t want to spend time with developing own solution and have comprehensive tool for maintain database changes.
 
-*P.S.* If you enjoyed reading this blog post, could you do me favor and tweet it? Thanks!
+*P.S.* If you enjoyed reading this blog post, could you do me favor and tweet it or/and leave a comment? Thanks!
