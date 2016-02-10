@@ -9,33 +9,33 @@
 Fact is that if your application cooperate with database and you are writing tests you need testing data. There are several ways how to maintain testing data which I ever seen, Each choice have some cons and pros so let's compare them:
 
 . SQL scripts executed before and after test
-SQL scripts have advantage that you can leverage them not only in your tests.
-It's easy to write for everyone who knows SQL.
-If you have all your database code in SQL it's probably good thing to have testing data in SQL as well to have some consistency.
-It's pretty hard to maintain them and it's common that each developer is writing them in slightly different way. When you have complex data model SQL is becoming too extensive to read and if you are looking for something to fix it's very easy to overlook something. You also need to implement your way how to run all the scripts before test and how to clean DB after your test.
+** SQL scripts have advantage that you can leverage them not only in your tests.
+** It's easy to write for everyone who knows SQL.
+** If you have all your database code in SQL it's probably good thing to have testing data in SQL as well to have some consistency.
+** It's pretty hard to maintain them and it's common that each developer is writing them in slightly different way. When you have complex data model SQL is becoming too extensive to read and if you are looking for something to fix it's very easy to overlook something. You also need to implement your way how to run all the scripts before test and how to clean DB after your test.
 . Liquibase changesets
-Liquibase changesets are in my mind very solid competitor with DBUnit because it's way for writing XML's is pretty similiar and has tool set for easy to implement your test infrastructure. It's quite easy to write, easy to maintain and their exceptions when something goes wrong are comprehensive. It as own structure how to maintain separate files and run them alltogether or alone. One thing which is not so comfortable is that it's quite hard to attach one particular changeset for run one particular test and it's not directly visible from your test.
+** Liquibase changesets are in my mind very solid competitor with DBUnit because it's way for writing XML's is pretty similiar and has tool set for easy to implement your test infrastructure. It's quite easy to write, easy to maintain and their exceptions when something goes wrong are comprehensive. It as own structure how to maintain separate files and run them alltogether or alone. One thing which is not so comfortable is that it's quite hard to attach one particular changeset for run one particular test and it's not directly visible from your test.
 . Written in programming language and persisted before test to in memory database
-Other way how to have some data in DB before your test run is writing test infrasturcture in domain objects and let your persitence layer to persist them. From some complexity it's not so scalabale because it's leading to have either
-extensive setUp methods inside each testing class (ok, you can have inheritance in tests but {not-big-fan-link})
-data set classes using some way how to reuse of data sets itself - at some point it becomes too messy due to inevitable complexity and dependencies
+** Other way how to have some data in DB before your test run is writing test infrasturcture in domain objects and let your persitence layer to persist them. From some complexity it's not so scalabale because it's leading to have either
+*** Extensive setUp methods inside each testing class (ok, you can have inheritance in tests but {not-big-fan-link}).
+*** Data set classes using some way how to reuse of data sets itself - at some point it becomes too messy due to inevitable complexity and dependencies.
 . Excel file
-pretty intuitive to modify, pretty difficult to set up infrastructure for it. 
-possible hard merges in source control
-nice thing about it can be that is transparent for everybody and your (maybe a less skilled) testers can maintain data as well 
-it can leads to have always transparent data and possibility for breaking tests is greater than with other approaches
-with formatting and colors it’s most well-arranged method
+** Pretty intuitive to modify, pretty difficult to set up infrastructure for it. 
+** Possible hard merges in source control.
+** Nice thing about it can be that is transparent for everybody and your (maybe a less skilled) testers can maintain data as well.
+*** It can leads to have always transparent data and possibility for breaking tests is greater than with other approaches.
+*** With formatting and colors it’s most well-arranged method.
 . DBUnit XML files
-{dbunit-link} is tool for writing (JUnit extension for Java) integration tests which are testing cooperation application with database layer. It has also quite effective way how to prepare data for your tests and has overall good tooling set.
-DBUnit XML files are pretty easy to write
-it has tooling set for serialize snapshot of DB to these XML files to have starting point. After some infrastructure work is visible from each test which files are included in particular class. Disadvantage is that you need to find out way how to maintain all the files in some manner by yourself.
+** {dbunit-link} is tool for writing (JUnit extension for Java) integration tests which are testing cooperation application with database layer. It has also quite effective way how to prepare data for your tests and has overall good tooling set.
+** DBUnit XML files are pretty easy to write.
+** It has tooling set for serialize snapshot of DB to these XML files to have starting point. After some infrastructure work is visible from each test which files are included in particular class. Disadvantage is that you need to find out way how to maintain all the files in some manner by yourself.
 . Creating data by API calls
-if your application support API for CRUD operations above entities it’s also valid to create only empty in-memory DB before test and fill it appropriately before test by calling this API
-data are not coupled with database schema and data are independent from database structure change
-you are working inside code so refactoring of API and test calls it’s matter of minutes with current IDE support
+** If your application support API for CRUD operations above entities it’s also valid to create only empty in-memory DB before test and fill it appropriately before test by calling this API.
+** Data are not coupled with database schema and data are independent from database structure change.
+** You are working inside code so refactoring of API and test calls it’s matter of minutes with current IDE support.
 
 == Conclusion
 
-Each way can work. DBUnit in particular can bring visibility of dependencies, maintainable structure of testing data, common tool set for maintain and prepare data and prepared infrastucture for java integration tests. It's easy to start with it but after some level of complexity it's needed to work on infrastructure by ourselves. API calls are useful when you have support inside application for it and it can bring more visibility then any technic dependent of DB structure. Excel file brings value when data are shared between broad spectrum of people and not only tied to developers. _Which approach are you using in your project?_
+Each way can work. *DBUnit* in particular can bring visibility of dependencies, maintainable structure of testing data, common tool set for maintain and prepare data and prepared infrastucture for java integration tests. It's easy to start with it but after some level of complexity it's needed to work on infrastructure by ourselves. *API calls* are useful when you have support inside application for it and it can bring more visibility then any technic dependent of DB structure. *Excel* file brings value when data are shared between broad spectrum of people and not only tied to developers. _Which approach are you using in your project_?
 
 *P.S.* If you enjoyed reading this blog post, could you do me favor and tweet it or/and leave a comment? Thanks!
