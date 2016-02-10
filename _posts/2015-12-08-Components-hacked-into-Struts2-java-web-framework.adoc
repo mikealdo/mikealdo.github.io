@@ -1,0 +1,77 @@
+= Components hacked into Struts2
+:hp-image: /covers/components-hacked-into-struts2.png
+:hp-tags: struts2, components, architecture
+:hp-alt-title: Components hacked into Struts2 java web framework
+:published_at: 2015-12-08
+:struts2-in-action-link: https://www.manning.com/books/struts-2-in-action[Struts 2 in action]
+:sec-component-link: https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/components/SecondSimpleComponent.java[SecondSimpleComponent]
+:default-action-invocation-link: https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/DefaultActionInvocation.java[DefaultActionInvocation]
+:freemarker-engine-link: https://github.com/mikealdo/struts2components/blob/master/src/main/webapp/ftl/index.ftl[here]
+:default-workflow-interceptor-link: https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/DefaultWorkflowInterceptor.java[DefaultWorkflowInterceptor]
+:proxy-factory-link: https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/DefaultActionProxyFactory.java[DefaultActionProxyFactory]
+:struts-proxy-factory-link: https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/StrutsActionProxyFactory.java[StrutsActionProxyFactory]
+:ann-validation-interceptor-link: https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/AnnotationValidationInterceptor.java[AnnotationValidationInterceptor]
+:struts-default-xml-link: https://github.com/mikealdo/struts2components/blob/master/src/main/resources/struts-overridden-default.xml[struts-default.xml]
+:prepare-filter-link: https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/StrutsWithComponentsPrepareFilter.java[StrutsWithComponentsPrepareFilter]
+:scope-interceptor-link: https://struts.apache.org/docs/scope-interceptor.html[ScopeInterceptor] 
+:session-field-link: https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/annotations/SessionField.java[@SessionField]
+:session-field-interceptor-link: https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/SessionFieldInterceptor.java[SessionFieldInterceptor]
+:page-interceptor-link: https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/ComponentOnPageInitInterceptor.java[ComponentOnPageAwareInterceptor]
+:component-on-page-link: https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/components/ComponentOnPageAware.java[ComponentOnPageAware]
+:working-example-link: https://github.com/mikealdo/struts2components[working example]
+
+Have you ever hack (customize, rework) some software framework to do something which was not in framework design? No? I haven’t your lucky so there is a short story about hacking Struts2 web framework to be able use “components” aka for example JSF components. Yes, it’s strange because the main reason why to use Struts2 is their design to have only one Action class per one page serving content for view layer. But when you are on project which has some feature request which is impossible to do with this pattern and no chance to rewrite all the client software stack to use another framework … so read on.
+
+*Disclaimer*: Even when I think that Struts2 are no longer reasoable option for producing new software I spent with this framework valuable time and I think that this can be useful for such sufferer who are still fighting with it.
+
+== Be an manager of yourself
+
+This story is about software on which I was working 4 years ago. Maybe I am more experienced to say to managers NO now but at the time of writing this hack I was not so skilled. Even when now I know that the best software/feature is software/feature which is never written, in that project there were so many hacks that I and one of my colleague decided to be two more hackers (and from egoism perspective it was fun ;)). So if you find this blog post useful, I strongly recommend to see your decision from broader perspective and try to not use it because it can lead to hardly maintainable software, badly responsible applications and of course risk that with next minor update of Struts2 libraries can your application not work anymore (but surprisingly 4 years old code works with current version of Struts2, cool). Be a manager of yourself and use existing solutions which are designed to be your servant and not vice versa.
+
+== Hacking interceptors
+
+Two things I hate on Struts2 - possibility to create stacks of interceptors which can inherit from each other and there is no built-in check if some interceptor is not called twice before request. Maybe this changed recently, I don’t know but this (after several years of improving some software) leads to hardly maintainable .xml files with many stacks of interceptors just because we can do it and didn’t thinking about maintainability. But conceptually we can say that as a corner stone of Struts2 framework interceptors works in good manner and I will show you how to become interceptor master in 10 minutes.
+
+Second thing is inevitable tension to use inheritance in Action classes to reuse code. This simply leads to expectedly deep hierarchy of abstract and concrete classes which adding/disabling features here and there. And what you can do if you have two abstract action classes with some functionality and would like to use it in one page? Bad luck! So no more sharing code through class hierarchy anymore.
+
+To be frank to software which I was writing, it was not good piece of code. Legacy (sometimes 12+ years old) code, not refactored code, big technical debt backlog, missing tests, many proprietary solutions, old versions of open source libraries. But for obviously understandable reasons (money and broad portfolio of customers) software has living his own life. And without feeling of rewriting it (which was almost impossible due to expected constraints) we were developed solution for reuse code inside Struts2 solution (at the time of writing code I am not aware about any other solution on top of Struts2).
+
+== Be an architect
+
+After reading such useful thing as a {struts2-in-action-link} book, I was aware about interceptors, process of action and method invocation, approach for saving values into session and from/to request/response so I was able to design our hack. It’s based on custom overridden implementation of actions invocation functionality as we can see on picture below (see exclamation marks):
+
+
+== Component model
+
+Action is a Page. Action has a component(s). Component can have reference to Page. Component can be the Page itself.
+
+ 
+=== Concrete component.
+{sec-component-link}
+
+So quite easy model but the biggest problem here is how to call methods (aka business logic) inside component without needed to have boilerplate code inside parent Action to recalling components. So we would like to not have this inside action class:
+
+[source,java]
+----
+Action.sayHelloInSomeComponent() {
+     someComponent.sayHello();
+}
+----
+
+But Struts2 invocation is not generic, doesn’t find methods inside inner fields. So here is a first hack - {default-action-invocation-link}. We would like to have a algorithm which resolve method even inside inner field (if field is marked as Component). This method can be represented by dot notation on the view layer (links etc.) - “someComponent.sayHello” and which in fact doesn’t adding mess to parent action. See creation of link by Freemarker templating engine {freemarker-engine-link}. So at the first sight it should be easy to hack, but after some elaboration we ended with quite huge reworking of this class and some other were needed to adjust also - {default-workflow-interceptor-link}, {proxy-factory-link}, {struts-proxy-factory-link} and {ann-validation-interceptor-link}. Although it seems a lot of code inside reworked classes, all the important changed code is between comments “// Struts components” and “// END OF Struts components”.
+
+Also there is a need to load overridden {struts-default-xml-link} due to need of redefining just mentioned classes by using {prepare-filter-link}.
+
+After being able to call business logic inside components we need to way how to save properties of components inside session. There is {scope-interceptor-link} which handles this with  configuration of session fields inside xml. Instead of this we introduce annotation {session-field-link} and {session-field-interceptor-link} which handles session scoped variables for you. It can be used instead of ScopeInterceptor because it’s working for both cases - inside Action and inside Component.
+
+{page-interceptor-link} only set reference to Components which are marked with {component-on-page-link} interface to be able for example share some useful information between inner components.
+
+== View layer
+
+In that project we were using Freemarker so I am using it in example source code as well. I doesn’t see problem to use any other templating engine for your view layer. Also we developed way how to call components logic through AJAX but it’s not part of this blog post. If you are interested in just leave a comment.
+
+== What I can say more?
+
+On my GitHub is {working-example-link} of one Action with two same components and it’s working with the latest Struts2 version. In mentioned project we implemented surprisingly complex components on top of it (and added some of additional common functionality) like a tables, search engine and graph components. It worked quite good and there were no significant performance problems with this hack itself. I would be glad for your comments on our solution and especially negative comments for whole approach.
+
+*P.S.* If you enjoyed reading this blog post, could you do me favor and tweet it? Thanks!
