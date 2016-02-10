@@ -14,6 +14,11 @@
 :struts-default-xml-link: https://github.com/mikealdo/struts2components/blob/master/src/main/resources/struts-overridden-default.xml[struts-default.xml]
 :prepare-filter-link: https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/StrutsWithComponentsPrepareFilter.java[StrutsWithComponentsPrepareFilter]
 :scope-interceptor-link: https://struts.apache.org/docs/scope-interceptor.html[ScopeInterceptor] 
+:session-field-link: https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/annotations/SessionField.java[@SessionField]
+:session-field-interceptor-link: https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/SessionFieldInterceptor.java[SessionFieldInterceptor]
+:page-interceptor-link: https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/ComponentOnPageInitInterceptor.java[ComponentOnPageAwareInterceptor]
+:component-on-page-link: https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/components/ComponentOnPageAware.java[ComponentOnPageAware]
+:working-example-link: https://github.com/mikealdo/struts2components[working example]
 
 Have you ever hack (customize, rework) some software framework to do something which was not in framework design? No? I haven’t your lucky so there is a short story about hacking Struts2 web framework to be able use “components” aka for example JSF components. Yes, it’s strange because the main reason why to use Struts2 is their design to have only one Action class per one page serving content for view layer. But when you are on project which has some feature request which is impossible to do with this pattern and no chance to rewrite all the client software stack to use another framework … so read on.
 
@@ -55,16 +60,16 @@ But Struts2 invocation is not generic, doesn’t find methods inside inner field
 
 Also there is a need to load overridden {struts-default-xml-link} due to need of redefining just mentioned classes by using {prepare-filter-link}.
 
-After being able to call business logic inside components we need to way how to save properties of components inside session. There is {scope-interceptor-link} which handles this with  configuration of session fields inside xml. Instead of this we introduce annotation @SessionField and SessionFieldInterceptor which handles session scoped variables for you. It can be used instead of ScopeInterceptor because it’s working for both cases - inside Action and inside Component.
+After being able to call business logic inside components we need to way how to save properties of components inside session. There is {scope-interceptor-link} which handles this with  configuration of session fields inside xml. Instead of this we introduce annotation {session-field-link} and {session-field-interceptor-link} which handles session scoped variables for you. It can be used instead of ScopeInterceptor because it’s working for both cases - inside Action and inside Component.
 
-ComponentOnPageAwareInterceptor only set reference to Components which are marked with ComponentOnPageAware interface to be able for example share some useful information between inner components.
+{page-interceptor-link} only set reference to Components which are marked with {component-on-page-link} interface to be able for example share some useful information between inner components.
 
-View layer
+== View layer
 
 In that project we were using Freemarker so I am using it in example source code as well. I doesn’t see problem to use any other templating engine for your view layer. Also we developed way how to call components logic through AJAX but it’s not part of this blog post. If you are interested in just leave a comment.
 
-What I can say more?
+== What I can say more?
 
-On my GitHub is working example of one Action with two same components and it’s working with the latest Struts2 version. In mentioned project we implemented surprisingly complex components on top of it (and added some of additional common functionality) like a tables, search engine and graph components. It worked quite good and there were no significant performance problems with this hack itself. I would be glad for your comments on our solution and especially negative comments for whole approach.
+On my GitHub is {working-example-link} of one Action with two same components and it’s working with the latest Struts2 version. In mentioned project we implemented surprisingly complex components on top of it (and added some of additional common functionality) like a tables, search engine and graph components. It worked quite good and there were no significant performance problems with this hack itself. I would be glad for your comments on our solution and especially negative comments for whole approach.
 
-P.S. If you enjoyed reading this blog post, could you do me favor and tweet it? Thanks!
+*P.S.* If you enjoyed reading this blog post, could you do me favor and tweet it? Thanks!
