@@ -43,4 +43,4 @@ I believe that {continuous-delivery-link} is way how to deliver software in thes
 
 When you are planning to do real Continuous delivery you need to have your database changes under your control and need to have rollback functionality to provide “easy to return to last running software” feature. Liquibase is tool of choice for everybody who don’t want to spend time with developing own solution and have comprehensive tool for maintain database changes.
 
-P.S. If you enjoyed reading this blog post, could you do me favor and tweet it? Thanks!
+*P.S.* If you enjoyed reading this blog post, could you do me favor and tweet it? Thanks!
