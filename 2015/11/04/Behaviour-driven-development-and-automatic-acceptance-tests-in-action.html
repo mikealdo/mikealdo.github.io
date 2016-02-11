@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Behaviour driven development in action - Michal Davídek - Programming blog</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Behaviour driven development in action">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Behaviour driven development in action">
+    <meta property="og:description" content="">
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+
+    <link rel="stylesheet" type="text/css" href="//mikealdo.github.io/themes/uno/assets/css/uno.css?v=1.0.0" />
+
+    <link rel="canonical" href="https://mikealdo.github.io/2015/11/04/Behaviour-driven-development-and-automatic-acceptance-tests-in-action.html" />
+    
+    <meta property="og:site_name" content="Michal Davídek - Programming blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Behaviour driven development in action" />
+    <meta property="og:description" content="Have you ever heard about automatic acceptance testing? No? In short, these test are in the middle between developers and business (requirement specifiers). They are written in human (not only developer) readable language and in fact they are describing all..." />
+    <meta property="og:url" content="https://mikealdo.github.io/2015/11/04/Behaviour-driven-development-and-automatic-acceptance-tests-in-action.html" />
+    <meta property="og:image" content="https://mikealdo.github.io/images//covers/behaviour-driven-development-in-action.png" />
+    <meta property="article:published_time" content="2015-11-03T23:00:00.000Z" />
+    <meta property="article:modified_time" content="2016-02-11T13:21:13.233Z" />
+    <meta property="article:tag" content="continuous delivery" />
+    <meta property="article:tag" content="git" />
+    <meta property="article:tag" content="jenkins" />
+    <meta property="article:tag" content="stash" />
+    <meta property="article:tag" content="bdd" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Behaviour driven development in action" />
+    <meta name="twitter:description" content="Have you ever heard about automatic acceptance testing? No? In short, these test are in the middle between developers and business (requirement specifiers). They are written in human (not only developer) readable language and in fact they are describing all..." />
+    <meta name="twitter:url" content="https://mikealdo.github.io/2015/11/04/Behaviour-driven-development-and-automatic-acceptance-tests-in-action.html" />
+    <meta name="twitter:image:src" content="https://mikealdo.github.io/images//covers/behaviour-driven-development-in-action.png" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Michal Davídek - Programming blog",
+    "author": {
+        "@type": "Person",
+        "name": "Michal Davídek",
+        "image": "https://avatars.githubusercontent.com/u/14245058?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": null
+    },
+    "headline": "Behaviour driven development in action",
+    "url": "https://mikealdo.github.io/2015/11/04/Behaviour-driven-development-and-automatic-acceptance-tests-in-action.html",
+    "datePublished": "2015-11-03T23:00:00.000Z",
+    "dateModified": "2016-02-11T13:21:13.233Z",
+    "image": "https://mikealdo.github.io/images//covers/behaviour-driven-development-in-action.png",
+    "keywords": "continuous delivery,  git,  jenkins,  stash,  bdd",
+    "description": "Have you ever heard about automatic acceptance testing? No? In short, these test are in the middle between developers and business (requirement specifiers). They are written in human (not only developer) readable language and in fact they are describing all..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Michal Davídek - Programming blog" href="https://mikealdo.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+
+</head>
+<body class="post-template tag-continuous-delivery tag-git tag-jenkins tag-stash tag-bdd no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    <header class="panel-cover panel-cover--collapsed " >
+      <div class="panel-main">
+    
+        <div class="panel-main__inner panel-inverted">
+        <div class="panel-main__content">
+    
+            <h1 class="panel-cover__title panel-title"><a href="https://mikealdo.github.io" title="link to homepage for Michal Davídek - Programming blog">Michal Davídek - Programming blog</a></h1>
+            <hr class="panel-cover__divider" />
+            <p class="panel-cover__description">Developer community gave me a lot for free. This is my attempt to return at least something to all interested.</p>
+            <hr class="panel-cover__divider panel-cover__divider--secondary" />
+    
+            <div class="navigation-wrapper">
+    
+              <nav class="cover-navigation cover-navigation--primary">
+                <ul class="navigation">
+                  <li class="navigation__item"><a href="https://mikealdo.github.io/#blog" title="link to Michal Davídek - Programming blog blog" class="blog-button">Blog</a></li>
+                </ul>
+              </nav>
+    
+              
+              
+              <nav class="cover-navigation navigation--social">
+                <ul class="navigation">
+              
+              
+                  <!-- Twitter -->
+                  <li class="navigation__item">
+                    <a href="https://twitter.com/mikealdo007" title="Twitter account">
+                      <i class='icon icon-social-twitter'></i>
+                      <span class="label">Twitter</span>
+                    </a>
+                  </li>
+              
+                  <!-- Google Plus -->
+                  <li class="navigation__item">
+                    <a href="https://plus.google.com/+MichalDavidekCZ" title="Google+ account">
+                      <i class='icon icon-social-google-plus'></i>
+                      <span class="label">Google-plus</span>
+                    </a>
+                  </li>
+              
+                  <!-- Github -->
+                  <li class="navigation__item">
+                    <a href="https://github.com/mikealdo" title="Github account">
+                      <i class='icon icon-social-github'></i>
+                      <span class="label">Github</span>
+                    </a>
+                  </li>
+                  </li>
+              
+              
+              
+              
+                  <!-- LinkedIn -->
+                  <li class="navigation__item">
+                    <a href="https://www.linkedin.com/in/davidekmichal" title="LinkedIn account">
+                      <i class='icon icon-social-linkedin'></i>
+                      <span class="label">LinkedIn</span>
+                    </a>
+                  </li>
+              
+                  <!-- Email -->
+                  <li class="navigation__item">
+                    <a href="mailto:mdavidek1@gmail.com" title="Email mdavidek1@gmail.com">
+                      <i class='icon icon-mail'></i>
+                      <span class="label">Email</span>
+                    </a>
+                  </li>
+              
+                </ul>
+              </nav>
+              
+    
+            </div>
+    
+          </div>
+    
+        </div>
+    
+        <div class="panel-cover--overlay"></div>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="04 Nov 2015" class="post-meta__date date">04 Nov 2015</time> &#8226; <span class="post-meta__tags tags">on <a href="https://mikealdo.github.io/tag/continuous-delivery">continuous delivery</a>, <a href="https://mikealdo.github.io/tag/git"> git</a>, <a href="https://mikealdo.github.io/tag/jenkins"> jenkins</a>, <a href="https://mikealdo.github.io/tag/stash"> stash</a>, <a href="https://mikealdo.github.io/tag/bdd"> bdd</a></span>
+        <span class="post-meta__author author"><img src="https://avatars.githubusercontent.com/u/14245058?v=3" alt="profile image for Michal Davídek" class="avatar post-meta__avatar" /> by Michal Davídek</span>
+      </div>
+      <h1 class="post-title">Behaviour driven development in action</h1>
+      <div class="paragraph" style="width: 60%"><img src="https://mikealdo.github.io/images//covers/behaviour-driven-development-in-action.png" /></div>
+    </header>
+
+    <section class="post tag-continuous-delivery tag-git tag-jenkins tag-stash tag-bdd">
+      <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Have you ever heard about automatic <a href="https://en.wikipedia.org/wiki/Acceptance_testing">acceptance testing</a>? No? In short, these test are in the middle between developers and business (requirement specifiers). They are written in human (not only developer) readable language and in fact they are describing all the features which are belonging to the software.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cucumber">Cucumber</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>And what is <a href="https://cucumber.io">Cucumber</a>? Cucumber is a tool with own structure for "human readable" language with technical background and other things needed to have ability to execute these tests against working software and verify that software is working as expected.</p>
+</div>
+<div class="paragraph">
+<p>In these days is here tension to replace human testers with these tests and/or replace some kind of <a href="https://en.wikipedia.org/wiki/Software_requirements_specification">Requirement specification document</a>. Fact is that software is changing every day and is very hard to maitain documents with each change in software. So in ideal world when business specifier is requesting some feature he write this tests which are failing at start and passing after developer finish his implementation.</p>
+</div>
+<div class="paragraph">
+<p>Ok, here is end of theory and what about real life, hm? I was on two projects with this type of testing and after two years experience here is my commented list of positives and negatives:</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_identified_advantages">Identified advantages</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Best thing for newcomers on the project.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Working great as an documentation, reference guide and reference <em>how is this software used</em>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Support of tools in IDEs.</p>
+</li>
+<li>
+<p>Easy to run against various environments.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>It’s easy to set .properties files and profiles in your build system to run tests against various servers (test, stage, local etc.).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Easy to discuss and write down requirements with business people.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>When the requirements coming from business to developers there is always some misunderstanding. When business sees all scenarios in written form it’s easier to see if all counterparts are on the same page.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Much better than standalone documents.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Who is happy in searching 100+ pages in Microsoft word document or PDF, right?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Testers have more time to do exploratory testing.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>See next point.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>No more manual regression testing.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In most projects are acceptance test added afterwards the software is developed. But in most projects are firstly developed tests which cover basic functionality. From this we can conclude that testers don’t have to perform manual testing on that and have a free hands on something more usefull.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Easier refactoring of older code.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If you have comprehensive suite of tests, you can sleep well after some refactoring as well :).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Support continuous delivery because you&#8217;re not being stuck with time of your tester.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>sometimes is not easy to test something by hand (set up of scenario, test data, calling external services) so if you haven’t this covered by automatic scenarios it’s impossible do continuous delivery at all.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_drawbacks">Drawbacks</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Business people are only able to read acceptance test, not write them.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>After uncountable attempts deliveries of acceptance tests scenarios from business was not sufficient. There were still problems - step definitions doesn’t match developed ones, unnecessary steps, complex steps, steps which aren’t prescriptive etc. After all developers are writing these scenarios and business only verifies that they are right.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Tests doesn&#8217;t contain project dictionary - dev and buisness terms are not the same terms.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Missing project dictionary (and ubiquitous language indeed) is always a problem and it’s not only problem for acceptance testing. If your business analyst talking about e.g. “loans" and you are talking about “imprest” it’s a problem. Because after several times the confusion for others not included in your separate discussion grows.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Huge library of undocumented step definitions - hard to maintain and find steps.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Each developer solves his problem by his hands. Even when you have some convention there are still some grey space between developers and if some step doesn’t work for someone he is developing another one with same meaning immediately. Or some configuration is different for your case and current step doesn’t taking care. It’s not pleasant work with such a rapidly growing library and after some time it’s unmaintainable as any other code without the right care.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Untestable areas in software - not fully covered software.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>This is generally for tests added to working software. There is no simple way how to cover all current scenarios, it’s hard, expensive and not bulletproof. After several attempts in one project we end with covering all the basics plus every new feature has had new acceptance test. It was still huge success to have it but we still needed manual testers because some logic was not yet covered.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Teams on same repository are writing tests in different ways.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enforcing rules and coding standards as well as approach for creating a step definitions and code review for tests is the hard part also.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Huge amount of infrastructure work needed.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Way how to deploy applications on several environments to have working copy for running acceptance test is not easy. Maintain infrastructure takes many resources.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Developers are not able to write these tests before implementation.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>This is somehow my feeling. Just as it is with convincing developers about TDD it’s not easy to convince devs to write tests + prepare infrastructure for test being able to pass before implementation. Firstly it’s always a problem with choosing appropriate steps, choosing strategy how to test will cooperate with software and negotiation with business also.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Quality metrics on test codebase was not same as for production code.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Static analysis, checkstyle, nothing set up for test codebase by default. Problem is that with this fashion your test codebase will smell as any other unmaintainable code.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Testing of unneccessary features.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If you are adding tests into working software you are detecting features which are nobody use. But nobody wants to remove something which is working usually. And in worst case is somebody so diligent that he write test for it to cover it. Just wrong.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Long running and fragile tests.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If you are not able to run tests in parallel mode your tests are written badly and will be fragile in build environment. Acceptance tests are often very time consuming. So it’s common tension to execute them parallel.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>learning curve about infrastructure is all but not easy</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Contacting third-party providers, stubs for them, execution in continuous integration server … for newbies is a long running task to be familiar with all of that.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Tests were not executed before pushing changes to master.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Biggest problem so far. If you are not able to execute all tests before your implementation and tests are in master branch you are in big problem. See this one about read only master branch.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Needed to document how to execute tests and run on some environment.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Wiki pages are becoming standard so documenting of all information available for your test codebase is necessary.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_in_conclusion_lessons_learnt">In conclusion &amp; lessons learnt</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Automatic tests are really outstanding thing. Of course there are many things which are not easy and especially adding these tests to working software is unconscionably hard. But in the end they decrease time needed to deliver new features. They decrease time needed for manual tests and continuously improving testability of whole software. At one project was almost rule that implementing of acceptance tests for new feature took two (three) more times than the implementation itself - but in the end it was still much less than several manual testing by human on various environments.</p>
+</div>
+<div class="sect2">
+<h3 id="_small_set_of_lessons_learnt">Small set of lessons learnt:</h3>
+<div class="paragraph">
+<p>dedicate a person to be architect/lead developer of tests - improves maintainability, documentation and usage
+ensure that all the tests are running before deploying to production
+if you are collaborating with third-party software, create stub for them
+don’t use fragile assertions - use assertOrderWithIdAdded(12) instead of assertOrderAdded(1, orders.count())
+set up static code analysis and other tools for managing cleaning code
+use pull requests for defend codebase stability
+create documentation, approach for creating new tests visible for both developers and business analyst
+if you are testing API of your application, don’t create any artificial API used only by tests</p>
+</div>
+<div class="sect3">
+<h4 id="_have_you_automatic_acceptance_test_in_your_suite_as_well">Have you automatic acceptance test in your suite as well?</h4>
+<div class="paragraph">
+<p><strong>P.S.</strong> If you enjoyed reading this blog post, could you do me favor and tweet it? Thanksl</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+    </section>
+
+  </article>
+
+  
+  <section class="post-comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'mikealdo'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+  
+
+
+
+            <footer class="footer">
+                <span class="footer__copyright">&copy; 2016. All rights reserved.</span>
+                <span class="footer__copyright"><a href="http://uno.daleanthony.com" title="link to page for Uno Ghost theme">Uno theme</a> by <a href="http://daleanthony.com" title="link to website for Dale-Anthony">Dale-Anthony</a></span>
+                <span class="footer__copyright">Proudly published with <a href="http://hubpress.io" title="link to Hubpress website">Hubpress</a></span>
+            </footer>
+        </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//mikealdo.github.io/themes/uno/assets/js/main.js?v=1.0.0"></script>
+    
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-72815761-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+
+</body>
+</html>
