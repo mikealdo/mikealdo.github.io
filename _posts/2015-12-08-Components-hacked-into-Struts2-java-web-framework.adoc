@@ -40,13 +40,13 @@ To be frank to software which I was writing, it was not good piece of code. Lega
 
 After reading such useful thing as a {struts2-in-action-link} book, I was aware about interceptors, process of action and method invocation, approach for saving values into session and from/to request/response so I was able to design our hack. It’s based on custom overridden implementation of actions invocation functionality as we can see on picture below (see exclamation marks):
 
-:image::posts/struts-architecture-improved.png
+image::posts/struts-architecture-improved.png[title="Improved default Struts2 architecture", width="400"]
 
 == Component model
 
 Action is a Page. Action has a component(s). Component can have reference to Page. Component can be the Page itself.
 
-:image::posts/component-model.png
+image::posts/component-model.png[Component model]
 
  
 === Concrete component.
@@ -61,7 +61,7 @@ Action.sayHelloInSomeComponent() {
 }
 ----
 
-:image::posts/concrete-component.png
+image::posts/concrete-component.png[title = "Concrete component", width="300", height="100"]
 
 But Struts2 invocation is not generic, doesn’t find methods inside inner fields. So here is a first hack - {default-action-invocation-link}. We would like to have a algorithm which resolve method even inside inner field (if field is marked as Component). This method can be represented by dot notation on the view layer (links etc.) - “someComponent.sayHello” and which in fact doesn’t adding mess to parent action. See creation of link by Freemarker templating engine {freemarker-engine-link}. So at the first sight it should be easy to hack, but after some elaboration we ended with quite huge reworking of this class and some other were needed to adjust also - {default-workflow-interceptor-link}, {proxy-factory-link}, {struts-proxy-factory-link} and {ann-validation-interceptor-link}. Although it seems a lot of code inside reworked classes, all the important changed code is between comments “// Struts components” and “// END OF Struts components”.
 
