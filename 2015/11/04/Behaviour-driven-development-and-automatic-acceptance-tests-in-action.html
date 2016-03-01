@@ -42,7 +42,7 @@
     <meta property="og:url" content="https://mikealdo.github.io/2015/11/04/Behaviour-driven-development-and-automatic-acceptance-tests-in-action.html" />
     <meta property="og:image" content="https://mikealdo.github.io/images//covers/behaviour-driven-development-in-action.png" />
     <meta property="article:published_time" content="2015-11-03T23:00:00.000Z" />
-    <meta property="article:modified_time" content="2016-02-29T14:24:24.548Z" />
+    <meta property="article:modified_time" content="2016-03-01T19:18:39.033Z" />
     <meta property="article:tag" content="continuous delivery" />
     <meta property="article:tag" content="git" />
     <meta property="article:tag" content="jenkins" />
@@ -70,7 +70,7 @@
     "headline": "Behaviour driven development in action",
     "url": "https://mikealdo.github.io/2015/11/04/Behaviour-driven-development-and-automatic-acceptance-tests-in-action.html",
     "datePublished": "2015-11-03T23:00:00.000Z",
-    "dateModified": "2016-02-29T14:24:24.548Z",
+    "dateModified": "2016-03-01T19:18:39.033Z",
     "image": "https://mikealdo.github.io/images//covers/behaviour-driven-development-in-action.png",
     "keywords": "continuous delivery,  git,  jenkins,  stash,  bdd",
     "description": "Have you ever heard about automatic acceptance testing? No? In short, these test are in the middle between developers and business (requirement specifiers). They are written in human (not only developer) readable language and in fact they are describing all..."
@@ -95,7 +95,7 @@
           </a>
     
           <hr class="divider long" />
-          <p>Developer community gave me a lot for free. This is my attempt to return at least something to all interested.</p>
+          <p>Architecture, coding, open source.</p>
           <hr class="divider short" />
           <div class="navigation">
             <div class="profile contact">
@@ -443,15 +443,33 @@
 </div>
 <div class="sect2">
 <h3 id="_small_set_of_lessons_learnt">Small set of lessons learnt:</h3>
-<div class="paragraph">
-<p>dedicate a person to be architect/lead developer of tests - improves maintainability, documentation and usage
-ensure that all the tests are running before deploying to production
-if you are collaborating with third-party software, create stub for them
-don’t use fragile assertions - use assertOrderWithIdAdded(12) instead of assertOrderAdded(1, orders.count())
-set up static code analysis and other tools for managing cleaning code
-use pull requests for defend codebase stability
-create documentation, approach for creating new tests visible for both developers and business analyst
-if you are testing API of your application, don’t create any artificial API used only by tests</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Dedicate a person to be architect/lead developer of tests - improves maintainability, documentation and usage.</p>
+</li>
+<li>
+<p>Ensure that all the tests are running before deploying to production.</p>
+</li>
+<li>
+<p>If you are collaborating with third-party software, create stub for them.</p>
+</li>
+<li>
+<p>Don’t use fragile assertions - use assertOrderWithIdAdded(12) instead of assertOrderAdded(1, orders.count()).</p>
+</li>
+<li>
+<p>Set up static code analysis and other tools for managing quality of code even for test codebase.</p>
+</li>
+<li>
+<p>Use pull requests for defend codebase stability.</p>
+</li>
+<li>
+<p>Create documentation, approach for creating new tests visible for both developers and business analyst.</p>
+</li>
+<li>
+<p>If you are testing API of your application, don’t create any artificial API used only by tests.</p>
+</li>
+</ol>
 </div>
 <div class="sect3">
 <h4 id="_have_you_automatic_acceptance_test_in_your_suite_as_well">Have you automatic acceptance test in your suite as well?</h4>
