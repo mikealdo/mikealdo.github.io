@@ -1,5 +1,5 @@
 = Components hacked into Struts2
-:hp-image: /covers/components-hacked-into-struts2.jpg
+:hp-image: covers/components-hacked-into-struts2.jpg
 :hp-tags: struts2, components, architecture
 :hp-alt-title: Components hacked into Struts2 java web framework
 :published_at: 2015-12-08
