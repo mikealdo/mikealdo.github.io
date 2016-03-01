@@ -73,14 +73,14 @@ Automatic tests are really outstanding thing. Of course there are many things wh
 
 === Small set of lessons learnt:
 
-dedicate a person to be architect/lead developer of tests - improves maintainability, documentation and usage
-ensure that all the tests are running before deploying to production
-if you are collaborating with third-party software, create stub for them
-don’t use fragile assertions - use assertOrderWithIdAdded(12) instead of assertOrderAdded(1, orders.count())
-set up static code analysis and other tools for managing cleaning code
-use pull requests for defend codebase stability
-create documentation, approach for creating new tests visible for both developers and business analyst
-if you are testing API of your application, don’t create any artificial API used only by tests
+. Dedicate a person to be architect/lead developer of tests - improves maintainability, documentation and usage.
+. Ensure that all the tests are running before deploying to production.
+. If you are collaborating with third-party software, create stub for them.
+. Don’t use fragile assertions - use assertOrderWithIdAdded(12) instead of assertOrderAdded(1, orders.count()).
+. Set up static code analysis and other tools for managing quality of code even for test codebase.
+. Use pull requests for defend codebase stability.
+. Create documentation, approach for creating new tests visible for both developers and business analyst.
+. If you are testing API of your application, don’t create any artificial API used only by tests.
 
 ==== Have you automatic acceptance test in your suite as well?
 
