@@ -1,0 +1,12 @@
+6	test-data
+1	preparation?
+1	developers?
+1	Liquibase?
+1	testers?
+1	DBUnit?
+1	Excel?
+1	SQL?
+1	XML?
+1	API?
+--------------------CloudConfig v2.3--------------------
+{"ZM_shape":{"char":"f07b","scale":1.05,"top":10,"weightFactor":-3},"ZM_curShape":"fa-folder","ZM_curTheme":"t19","ZM_userWeightAdjust":-46,"ZM_userGridSizeAdjust":0,"ZM_canvasWidth":640,"ZM_canvasHeight":480,"ZM_googleFont":null,"CO_shape":"circle","CO_backgroundColor":"#fff","CO_colorArray":["#54bfa5","#222","#d6125c","#38b3f6","#e9c028","#545006","#3da4de","#4c0e27"],"CO_drawMask":false,"CO_maskColor":"rgba(76,14,39,0.1)","CO_fontFamily":"Pacifico","CO_wordDirection":"hor","CO_inverted":false}

@@ -1,0 +1,24 @@
+3	BDD
+2	cucumber
+2	testing
+1	continuous-delivery
+1	untestable-code
+1	static-analysis
+1	manual-testing
+1	smoke-testing
+1	code-coverage
+1	requirements
+1	environments
+1	maintenance
+1	checkstyle
+1	acceptance
+1	assertions
+1	fragility
+1	features
+1	reality
+1	theory
+1	atdd
+1	DDD
+1	API
+--------------------CloudConfig v2.3--------------------
+{"ZM_shape":{"char":"f135","weightFactor":-33},"ZM_curShape":"fa-rocket","ZM_curTheme":"t15","ZM_userWeightAdjust":-15,"ZM_userGridSizeAdjust":0,"ZM_canvasWidth":640,"ZM_canvasHeight":480,"ZM_googleFont":null,"CO_shape":"circle","CO_backgroundColor":"#fff","CO_colorArray":["#e23940","#003777"],"CO_drawMask":false,"CO_maskColor":"rgba(0,0,0,0.1)","CO_fontFamily":"Pacifico","CO_wordDirection":"updownhor","CO_inverted":false}
