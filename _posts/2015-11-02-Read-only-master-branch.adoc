@@ -16,7 +16,9 @@ Without needs to have pull request there were always some inconsistent commits w
 
 So firstly we implemented _"pull request build"_ to run whole build from your feature branch separately to verify that your changes doesn't break anything. But it was not enough because it was not preventing our architects, gurus, senior developers to commit "well intended" changes directly to master. Enforcing rule that each developer should use feature branches, pull requests, code review and pull request builds only by word simply didn't worked. Also rebasing feature branches with current master wasn't performed before pull request build in all times which caused similar types of problems.
 
-Avoiding direct merges to master (read-only master branch for everybody except automatic process) and allowing it only through UI (stash in our case) changed healthy of our builds dramatically. This button at the end was doing automatic rebase from master and build. If it was succesfull there were another allowed button to merge to master. If not, developer was enforced to resolve problem because without that he wasn't able to have his feature in master. We realized that this second "merge" button is better than automatic merge because we were using several repositories and merges to them needed to by synchronized. But for one repository it can be in one step of course.
+> Avoiding direct merges to master (read-only master branch for everybody except automatic process) and allowing it only through UI (stash in our case) changed healthy of our builds dramatically. 
+
+This button at the end was doing automatic rebase from master and build. If it was succesfull there were another allowed button to merge to master. If not, developer was enforced to resolve problem because without that he wasn't able to have his feature in master. We realized that this second "merge" button is better than automatic merge because we were using several repositories and merges to them needed to by synchronized. But for one repository it can be in one step of course.
 
 *Technologically*, we were using git and as a remote repository {stash-link}. Build server {jenkins-link}.
 
