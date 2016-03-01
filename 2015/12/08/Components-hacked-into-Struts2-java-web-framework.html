@@ -42,7 +42,7 @@
     <meta property="og:url" content="https://mikealdo.github.io/2015/12/08/Components-hacked-into-Struts2-java-web-framework.html" />
     <meta property="og:image" content="https://mikealdo.github.io/images/covers/components-hacked-into-struts2.jpg" />
     <meta property="article:published_time" content="2015-12-07T23:00:00.000Z" />
-    <meta property="article:modified_time" content="2016-03-01T19:29:34.421Z" />
+    <meta property="article:modified_time" content="2016-03-01T19:31:29.005Z" />
     <meta property="article:tag" content="struts2" />
     <meta property="article:tag" content="components" />
     <meta property="article:tag" content="architecture" />
@@ -68,7 +68,7 @@
     "headline": "Components hacked into Struts2",
     "url": "https://mikealdo.github.io/2015/12/08/Components-hacked-into-Struts2-java-web-framework.html",
     "datePublished": "2015-12-07T23:00:00.000Z",
-    "dateModified": "2016-03-01T19:29:34.421Z",
+    "dateModified": "2016-03-01T19:31:29.005Z",
     "image": "https://mikealdo.github.io/images/covers/components-hacked-into-struts2.jpg",
     "keywords": "struts2,  components,  architecture",
     "description": "Have you ever hack (customize, rework) some software framework to do something which was not in framework design? No? I haven’t your lucky so there is a short story about hacking Struts2 web framework to be able use “components”..."
@@ -240,10 +240,7 @@
 <div class="title">Figure 2. Component model</div>
 </div>
 <div class="sect2">
-<h3 id="_concrete_component">Concrete component.</h3>
-<div class="paragraph">
-<p><a href="https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/components/SecondSimpleComponent.java">SecondSimpleComponent</a></p>
-</div>
+<h3 id="_concrete_component">Concrete component</h3>
 <div class="paragraph">
 <p>So quite easy model but the biggest problem here is how to call methods (aka business logic) inside component without needed to have boilerplate code inside parent Action to recalling components. So we would like to not have this inside action class:</p>
 </div>
@@ -261,7 +258,7 @@
 <div class="title">Figure 3. Concrete component</div>
 </div>
 <div class="paragraph">
-<p>But Struts2 invocation is not generic, doesn’t find methods inside inner fields. So here is a first hack - <a href="https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/DefaultActionInvocation.java">DefaultActionInvocation</a>. We would like to have a algorithm which resolve method even inside inner field (if field is marked as Component). This method can be represented by dot notation on the view layer (links etc.) - “someComponent.sayHello” and which in fact doesn’t adding mess to parent action. See creation of link by Freemarker templating engine <a href="https://github.com/mikealdo/struts2components/blob/master/src/main/webapp/ftl/index.ftl">here</a>. So at the first sight it should be easy to hack, but after some elaboration we ended with quite huge reworking of this class and some other were needed to adjust also - <a href="https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/DefaultWorkflowInterceptor.java">DefaultWorkflowInterceptor</a>, <a href="https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/DefaultActionProxyFactory.java">DefaultActionProxyFactory</a>, <a href="https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/StrutsActionProxyFactory.java">StrutsActionProxyFactory</a> and <a href="https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/AnnotationValidationInterceptor.java">AnnotationValidationInterceptor</a>. Although it seems a lot of code inside reworked classes, all the important changed code is between comments “// Struts components” and “// END OF Struts components”.</p>
+<p>But Struts2 invocation is not generic, doesn’t find methods inside inner fields. So here is a first hack - <a href="https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/DefaultActionInvocation.java">DefaultActionInvocation</a>. We would like to have a algorithm which resolve method even inside inner field (if field is marked as Component). This method can be represented by dot notation on the view layer (links etc.) - “someComponent.sayHello” and which in fact doesn’t adding mess to parent action. See creation of link by Freemarker templating engine <a href="https://github.com/mikealdo/struts2components/blob/master/src/main/webapp/ftl/index.ftl">here</a>. So at the first sight it should be easy to hack, but after some elaboration we ended with quite huge reworking of this class and some other were needed to adjust also - <a href="https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/DefaultWorkflowInterceptor.java">DefaultWorkflowInterceptor</a>, <a href="https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/DefaultActionProxyFactory.java">DefaultActionProxyFactory</a>, <a href="https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/StrutsActionProxyFactory.java">StrutsActionProxyFactory</a> and <a href="https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/AnnotationValidationInterceptor.java">AnnotationValidationInterceptor</a>. Although it seems a lot of code inside reworked classes, all the important changed code is between comments “// Struts components” and “// END OF Struts components”. See concrete example in <a href="https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/components/SecondSimpleComponent.java">SecondSimpleComponent</a>.</p>
 </div>
 <div class="paragraph">
 <p>Also there is a need to load overridden <a href="https://github.com/mikealdo/struts2components/blob/master/src/main/resources/struts-overridden-default.xml">struts-default.xml</a> due to need of redefining just mentioned classes by using <a href="https://github.com/mikealdo/struts2components/blob/master/src/main/java/cz/mikealdo/struts2components/struts2/StrutsWithComponentsPrepareFilter.java">StrutsWithComponentsPrepareFilter</a>.</p>
