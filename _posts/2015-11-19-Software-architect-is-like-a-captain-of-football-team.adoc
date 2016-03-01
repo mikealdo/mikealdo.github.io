@@ -12,7 +12,7 @@ First of all, if you would like to be a successful architect or captain you need
 === Decision making
 Other than that your decisions and behavior should be understandable from broader perspective. 
 
-> At some stage there are no easy decision. 
+> At some stage there are no easy decisions. 
 
 Either you are taking decisions under pressure from business, from some friend of yours or you are strong enough to take independent solution. In both cases all team members which are receivers of your points should understand your arguments and be ok with that. Ok, there can be more than one good choice at some point and only time can in some situations show if your choice was right or not. But with given circumstances at decision time you have to be sure that your choice was right for software or football team. Once I threw away penalty shoot because refree was forcing us to win but with usage of his (influenced by third-party) power and not our skills. We (I) are usually playing some minor league where is more important delight from game than results. I still believe that my own decision which I taken without any discussion with other team members was understandable for almost whole team to have clear mind and sleep well. And almost whole team was ensuring me that it was right decision.
 
