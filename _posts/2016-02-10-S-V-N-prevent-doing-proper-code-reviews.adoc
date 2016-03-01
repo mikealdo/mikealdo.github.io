@@ -28,7 +28,8 @@ There is no way (at least I don’t know of anything) how to enforce and check i
 
 === Not possible to enforce always green "trunk" build
 Also SVN leads to this behaviour: When I am updating from SVN server, I am waiting for green build on CI server to update my local machine to prevent possible failed tests which my changes not causing. It’s mainly due to fact, that is impossible to have “always green build” in development branch (trunk) because all the commits are directly in that branch.
-NOTE: And after all this prevent doing continuous delivery in fact.
+
+> And after all this prevent doing continuous delivery in fact.
 
 == What else?
 Not saying that is impossible to find tools which works in good manner for code reviews upon SVN. But there is mental problem of users of SVN to actually do code reviews because it seems as technically expensive operation and (what is worse) feeling that it’s hard to convince anyone to change his code when the code is alive and working. Or maybe I am missing some software with killer features which are mitigating pain with working with SVN, is somewhere there?
