@@ -84,4 +84,4 @@ Automatic tests are really outstanding thing. Of course there are many things wh
 
 == Have you automatic acceptance test in your suite as well?
 
-*P.S.* If you enjoyed reading this blog post, could you do me favor and tweet it? Thanksl
+*P.S.* If you enjoyed reading this blog post, could you do me favor and tweet it and/or leave a comment? Thanks!
