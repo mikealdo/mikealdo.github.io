@@ -5,8 +5,9 @@
 :published_at: 2016-01-04
 :winter-is-coming-link: http://gameofthrones.wikia.com/wiki/Winter_is_Coming_(motto)[Winter is coming]
 :technical-debt-link: http://www.martinfowler.com/bliki/TechnicalDebt.html[technical debt]
+:building-own-house-link: https://mikealdo.github.io/2015/10/02/Software-architecture-like-a-building-own-house.html[building of own house and software architecture]
 
-Recently I have written blog post about similarities between building of own house and software architecture . And at last weekend I realized that there are more parallels inside house than one could expect. And thing came into my mind has many to do with refactoring and managing of {technical-debt-link} in software development.
+Recently I have written blog post about similarities between {building-own-house-link}. And at last weekend I realized that there are more parallels inside house than one could expect. And thing came into my mind has many to do with refactoring and managing of {technical-debt-link} in software development.
 
 == Winter is coming
 {winter-is-coming-link} is popular Stark motto from Game of Thrones series. Recently it was touched me in reality when I was trying to get rid of mess inside my garage to be able to park car inside (as nobody is happy to managing frozen car each morning). But as weeks before were going, garage was full of added unsorted things occupating place for my car. These things were adding with style "Now I have no time to find a proper place for it, I'll manage it later". This approach inevitably ended with my walking around, closing my eyes whenever I was entering garage (even not switching lights on) and cumulating (mostly unnecessary) things. 
