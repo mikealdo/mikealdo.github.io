@@ -1,5 +1,5 @@
 = SVN prevents doing proper code reviews
-:hp-image: /covers/svn-prevents-doing-proper-code-reviews.png
+:hp-image: covers/svn-prevents-doing-proper-code-reviews.png
 :hp-tags: code review, git, productivity, svn, vcs
 :hp-alt-title: SVN prevent doing proper code reviews
 :published_at: 2016-02-10
