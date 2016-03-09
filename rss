@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Michal Davídek - blog</title>
+    <link>https://mikealdo.github.io</link>
+    <description>Architecture, coding, open source.</description>
+    <language>en-UK</language>
+    <pubDate>Wed, 09 Mar 2016 19:50:33 GMT</pubDate>
+    <dc:creator>mdavidek1@gmail.com</dc:creator>
+    <dc:date>2016-03-09T19:50:33Z</dc:date>
+    <dc:language>en-UK</dc:language>
+    <item>
+      <title>Software architecture like a building own house</title>
+      <link>https://mikealdo.github.io/2015/10/02/Software-architecture-like-a-building-own-house.html</link>
+      <description>I heard several parables for SW architecture versus real life and their similarities or differences. And when I was finishing my working place in my own house I started thinking about own parable. Hard times I am living in my...</description>
+      <category>architecture</category>
+      <pubDate>Fri, 02 Oct 2015 00:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2015/10/02/Software-architecture-like-a-building-own-house.html</guid>
+      <dc:date>2015-10-02T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Merge vs. Rebase in Git</title>
+      <link>https://mikealdo.github.io/2015/10/05/Merge-vs-Rebase-in-Git.html</link>
+      <description>In Czech Republic we have one old school series of books from Jaroslav Foglar about boys groups and their fightings between each other. At one stage there were big decission time between two biggest groups and their leaders namely Losna...</description>
+      <category>continuous delivery</category>
+      <pubDate>Mon, 05 Oct 2015 00:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2015/10/05/Merge-vs-Rebase-in-Git.html</guid>
+      <dc:date>2015-10-05T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Read only master branch</title>
+      <link>https://mikealdo.github.io/2015/11/02/Read-only-master-branch.html</link>
+      <description>Continuous delivery Continuous delivery is about delivering high quality software to customer immediately after next feature is added to the codebase. This adding is based on version control system and now I would like to discuss one step in this...</description>
+      <category>continuous delivery</category>
+      <pubDate>Mon, 02 Nov 2015 01:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2015/11/02/Read-only-master-branch.html</guid>
+      <dc:date>2015-11-02T01:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Behaviour driven development in action</title>
+      <link>https://mikealdo.github.io/2015/11/04/Behaviour-driven-development-and-automatic-acceptance-tests-in-action.html</link>
+      <description>Have you ever heard about automatic acceptance testing? No? In short, these test are in the middle between developers and business (requirement specifiers). They are written in human (not only developer) readable language and in fact they are describing all...</description>
+      <category>continuous delivery</category>
+      <pubDate>Wed, 04 Nov 2015 01:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2015/11/04/Behaviour-driven-development-and-automatic-acceptance-tests-in-action.html</guid>
+      <dc:date>2015-11-04T01:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Software architect is like a captain of football team</title>
+      <link>https://mikealdo.github.io/2015/11/19/Software-architect-is-like-a-captain-of-football-team.html</link>
+      <description>I am software engineer for more than 9 years. I am captain of football teams for more than 20 years. And I have experience with leading football teams and with following of various types of software architects. I am not...</description>
+      <category>architecture</category>
+      <pubDate>Thu, 19 Nov 2015 01:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2015/11/19/Software-architect-is-like-a-captain-of-football-team.html</guid>
+      <dc:date>2015-11-19T01:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Components hacked into Struts2</title>
+      <link>https://mikealdo.github.io/2015/12/08/Components-hacked-into-Struts2-java-web-framework.html</link>
+      <description>Have you ever hack (customize, rework) some software framework to do something which was not in framework design? No? I haven’t your lucky so there is a short story about hacking Struts2 web framework to be able use “components”...</description>
+      <category>struts2</category>
+      <pubDate>Tue, 08 Dec 2015 01:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2015/12/08/Components-hacked-into-Struts2-java-web-framework.html</guid>
+      <dc:date>2015-12-08T01:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Testing database changes using Liquibase in continous delivery</title>
+      <link>https://mikealdo.github.io/2015/12/14/Testing-database-changes-using-Liquibase-in-continous-delivery.html</link>
+      <description>Almost every application needs to cooperate with database. In these agile times is database layer changing in daily order as every other things. When you are trying to adopt continous delivery for delivering features to your customers earlier or later...</description>
+      <category>architecture</category>
+      <pubDate>Mon, 14 Dec 2015 01:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2015/12/14/Testing-database-changes-using-Liquibase-in-continous-delivery.html</guid>
+      <dc:date>2015-12-14T01:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Managing technical debt in own garage</title>
+      <link>https://mikealdo.github.io/2016/01/04/Managing-technical-debt-in-own-garage.html</link>
+      <description>Recently I have written blog post about similarities between building of own house and software architecture. And at last weekend I realized that there are more parallels inside house than one could expect. And thing came into my mind has...</description>
+      <category>refactoring</category>
+      <pubDate>Mon, 04 Jan 2016 01:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2016/01/04/Managing-technical-debt-in-own-garage.html</guid>
+      <dc:date>2016-01-04T01:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Comparison of methods for preparing test data for your tests</title>
+      <link>https://mikealdo.github.io/2016/01/13/Comparison-of-methods-for-preparing-test-data-for-your-tests.html</link>
+      <description>Fact is that if your application cooperate with database and you are writing tests you need testing data. There are several ways how to maintain testing data which I ever seen, Each choice have some cons and pros so let&amp;...</description>
+      <category>dbunit</category>
+      <pubDate>Wed, 13 Jan 2016 01:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2016/01/13/Comparison-of-methods-for-preparing-test-data-for-your-tests.html</guid>
+      <dc:date>2016-01-13T01:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Why I am reading exactly one technical article per day</title>
+      <link>https://mikealdo.github.io/2016/01/19/Why-I-am-reading-exactly-one-technical-article-per-day.html</link>
+      <description>From time to time (ok, everyday) we are speaking about everything with cup of coffee with colleagues of mine at work. From time to time (now it’s right usage of that sentence) we are speaking about technical stuff around...</description>
+      <category>improvement</category>
+      <pubDate>Tue, 19 Jan 2016 01:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2016/01/19/Why-I-am-reading-exactly-one-technical-article-per-day.html</guid>
+      <dc:date>2016-01-19T01:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>SVN prevents doing proper code reviews</title>
+      <link>https://mikealdo.github.io/2016/02/10/S-V-N-prevent-doing-proper-code-reviews.html</link>
+      <description>After some time I am in company using SVN as version control system. After last 2 years of working almost exclusively with Git I awaked from the dream. Not only I was in troubles with basic commands, merging and branching...</description>
+      <category>code review</category>
+      <pubDate>Wed, 10 Feb 2016 01:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2016/02/10/S-V-N-prevent-doing-proper-code-reviews.html</guid>
+      <dc:date>2016-02-10T01:00:00Z</dc:date>
+    </item>
+  </channel>
+</rss>
