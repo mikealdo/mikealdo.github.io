@@ -5,9 +5,9 @@
     <link>https://mikealdo.github.io</link>
     <description>Architecture, coding, open source.</description>
     <language>en-UK</language>
-    <pubDate>Wed, 09 Mar 2016 19:50:33 GMT</pubDate>
+    <pubDate>Mon, 14 Mar 2016 15:56:06 GMT</pubDate>
     <dc:creator>mdavidek1@gmail.com</dc:creator>
-    <dc:date>2016-03-09T19:50:33Z</dc:date>
+    <dc:date>2016-03-14T15:56:06Z</dc:date>
     <dc:language>en-UK</dc:language>
     <item>
       <title>Software architecture like a building own house</title>
@@ -107,6 +107,15 @@
       <pubDate>Wed, 10 Feb 2016 01:00:00 GMT</pubDate>
       <guid>https://mikealdo.github.io/2016/02/10/S-V-N-prevent-doing-proper-code-reviews.html</guid>
       <dc:date>2016-02-10T01:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Pomodoro and developer life</title>
+      <link>https://mikealdo.github.io/2016/03/14/Pomodoro-and-happiness-in-developer-life.html</link>
+      <description>I heard about Pomodoro technique couple of times in recent years. As usually with adopting new technique or habit I was little bit sceptic about it because it was so prescriptive and from the first sight it looked as “usual”...</description>
+      <category>happiness</category>
+      <pubDate>Mon, 14 Mar 2016 01:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2016/03/14/Pomodoro-and-happiness-in-developer-life.html</guid>
+      <dc:date>2016-03-14T01:00:00Z</dc:date>
     </item>
   </channel>
 </rss>
