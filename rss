@@ -5,9 +5,9 @@
     <link>https://mikealdo.github.io</link>
     <description>Architecture, coding, open source.</description>
     <language>en-UK</language>
-    <pubDate>Mon, 14 Mar 2016 15:56:06 GMT</pubDate>
+    <pubDate>Fri, 18 Mar 2016 11:20:54 GMT</pubDate>
     <dc:creator>mdavidek1@gmail.com</dc:creator>
-    <dc:date>2016-03-14T15:56:06Z</dc:date>
+    <dc:date>2016-03-18T11:20:54Z</dc:date>
     <dc:language>en-UK</dc:language>
     <item>
       <title>Software architecture like a building own house</title>
@@ -116,6 +116,15 @@
       <pubDate>Mon, 14 Mar 2016 01:00:00 GMT</pubDate>
       <guid>https://mikealdo.github.io/2016/03/14/Pomodoro-and-happiness-in-developer-life.html</guid>
       <dc:date>2016-03-14T01:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Self-retrospective increases happiness of life</title>
+      <link>https://mikealdo.github.io/2016/03/18/Self-retrospective-increases-happiness-of-life.html</link>
+      <description>Recently I read good advice by @Kacanovski about doing self-retros. After some thinking about the idea I decided to adopt it to my work and personal life. After six weeks of doing it I can share some insights from practical...</description>
+      <category>happiness</category>
+      <pubDate>Fri, 18 Mar 2016 01:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2016/03/18/Self-retrospective-increases-happiness-of-life.html</guid>
+      <dc:date>2016-03-18T01:00:00Z</dc:date>
     </item>
   </channel>
 </rss>
