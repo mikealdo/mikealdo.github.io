@@ -7,7 +7,7 @@
 :tk-twitter: https://twitter.com/tkaczanowski[@Kacanovski]
 :self-retro-blog-post: http://tomek.kaczanowscy.pl/2016/01/2016-year-self-retro/[self-retros]
 :pomodores: https://mikealdo.github.io/2016/03/14/Pomodoro-and-happiness-in-developer-life.html[pomodoro technique]
-
+:pete-nowicky-link: https://unsplash.com/photos/8G_VvJrYKkE[pete nowicky|unsplash.com]
 Recently I read good advice by {tk-twitter} about doing {self-retro-blog-post}. After some thinking about the idea I decided to adopt it to my work and personal life. After six weeks of doing it I can share some insights from practical perspective.
 
 == Routine matters
@@ -29,3 +29,5 @@ I don’t know exactly why, but I had problems with my routine on third week. Ma
 If I can assess doing self-retro, it’s quite interesting and useful technique if it’s done on regular basis. It particularly helps achieve some work/personal life balance. It successfully beat feeling “I haven’t done anything today”. It helps focusing to important things firstly. So, useful, I recommend it for everyone. As I started with {pomodores} before doing self-retros, it was quite easy to adopt it because I had actual work done on detailed list already. I’ll stick to these to enhancements of my life because it has proven that it works and helps but as always I am open to anything else which can be even more useful. Do you know about something better?
 
 *P.S.* If you enjoyed reading this blog post, could you do me favor and tweet it or/and leave a comment? Thanks!
+
+*P.S.2* Cover by {pete-nowicky-link}. Thanks.
