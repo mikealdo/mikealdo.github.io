@@ -1,0 +1,39 @@
+= The Programmers Oath and my perspective
+:hp-image: /covers/the-programmers-oath.jpeg
+:hp-tags: development, personal-life, programming
+:hp-alt-title: The Programmers Oath and my perspective
+:published_at: 2016-03-25
+:ron-jeffries-oath-link: http://ronjeffries.com/articles/015-11/oath[this one by Ron Jeffries]
+:uncle-bob-oath: http://blog.cleancoder.com/uncle-bob/2015/11/18/TheProgrammersOath.html[to follow oath]
+:twitter-uncle-bob: https://twitter.com/unclebobmartin[Uncle bob]
+:twitter-ron-jeffries: https://twitter.com/RonJeffries[Ron Jeffries]
+:timon-studler-link: https://unsplash.com/photos/fI8yIH-rV5I[Timon Studler | UnSplash]
+
+Before months I have read such a suggestion to developers or programmers {uncle-bob-oath} in their work. And of course several responses such as {ron-jeffries-oath-link}. I believe that self-responsibility is the main sign of good developer and personally believe that such an oath have sense. I am actively playing football and as a game with long history there are unwritten rules developed by years of playing which majority of players follow (such as respect to opponent and not attacking of goalkeeper when he is in action on field). When someone break these rules it’s blamable no matter if he is teammate or opponent. And I believe that these unwritten rules helps to keep great spirit of game. With programmers oath it’s somehow the same and I appreciate Uncle Bob effort to produce this one. I have no such long history in developing (currently about 8 years) and can’t provide such a unworldliness as {twitter-uncle-bob} or {twitter-ron-jeffries} but it’s about all of us to take care about our industry, where it will be after several years. So there is my comments for individual points and if I can (will clear mind) incorporate the oath to my professional life.
+
+== I Promise that, to the best of my ability and judgement:
+. I will not produce harmful code.
+** I understand this point as suggestion to not take a jobs (or work on software) where is significant chance to produce code that will affect people in the world in bad way. And agree with the idea.
+. The code that I produce will always be my best work. I will not knowingly allow code that is defective either in behavior or structure to accumulate.
+** This is very hard to achieve. We aren’t always on greenfield projects and not always have some influence for affecting refactoring and improving code. There are always constraints such as time and money which we are tackling all the time and doing compromises in ratio for overall test coverage. Also we aren’t able to think about all possible ways how our code will be used and in which situations will be defective. So even when I got the idea, it’s almost impossible to achieve this in practice.
+. I will produce, with each release, a quick, sure, and repeatable proof that every element of the code works as it should.
+** This is about testing of produced code and agree completely with that and no objection for whole sentence.
+. I will make frequent, small, releases so that I do not impede the progress of others.
+** Even in 2016 exists many softwares which is almost impossible to deliver frequently and cost for implementation such a frequent delivery is quite unacceptable. But even when this is not saying that it’s about delivery for production, releases in development phase aren’t so easy to implement as well. Also the definition is somehow vague - what means frequent and small? As a idea to keep in mind ok but if I would seriously take this point as my personal rule, I will fight with the definition immediately. But completely agree with doing everything to don’t impede the progress of others, no objection here.
+. I will fearlessly and relentlessly improve the code at every opportunity. I will never make the code worse.
+** Agree with second sentence - don’t make the code worse and maybe I would add to this point - don’t produce any of code which isn’t aligned with intent of software. In first part is important “at every opportunity”. Does it mean at every touch a single line of code? Does it mean when it’s time for it? Does it mean when I am able to fight time for that opportunity? And what is the scope of improving? It’s a little bit vague. I believe that we should be able as a developers to fight against all impediments preventing us to improve the code - managers fairy-tails, time and costs, delivery time. Very often there are situations that everybody on project knows that there are places to improvement but these places are so rarely touched so the investment for improvement is just waste of time. For a long time I am following well know boy scout rule - Leave the camp in the better state than you found it. And for me it’s better then the first part of this oath point because there is scope mentioned - camp.
+. I will do all that I can to keep the productivity of myself, and others, as high as possible. I will do nothing that decreases that productivity.
+** I have a feeling that this one is about communication between developers. Every project, every software has some written or unwritten guidelines what to do in which situation. And change inside this needs to be discussed with the affected audience. No against this rule but some vagueness should be removed.
+. I will continuously ensure that others can cover for me, and that I can cover for them.
+** I understand this as to be proactive with handing over and explanations of code/part of application written by me. Also it can be about code reviews - to be sure that someone has looked on my code and understand intentions inside. Also about doing my code reviews in best way to have overview about changes done by others. Even when it’s not speaking about the form how it is done I agree with this point although the scope is unclear as well as in previous point.
+. I will produce estimates that are honest both in magnitude and precision. I will not make promises without certainty.
+** Estimates are tough. Estimates are our best guesses. But agree with the “honest” word inside this point. There is no apology for developer who is unable to say “I don’t have all the information needed so I am not providing any estimate”. There is also pretty hard commitment for the promises and personally I agree with that. When I am promising something, it will be fulfilled and no matter if I was wrong in some assumption. I am making promises only when there is the certainty so very likely this point make sense for me.
+. I will never stop learning and improving my craft.
+** No objection here. Learning and improving, be in touch with overall evolution of our industry is corner stone for every professional. There is no exception.
+
+== Conclusion
+Well, should we adopt ideas from this oath to our professional life? Yes. Even when I have some comments or objections for particular points and wording, there is no problem with the oath as a whole piece. We should be familiar with these rules and doing our bests to have pleasure from working in programming industry. But Should we sign this oath? If I’ll be honest - no. There are constraints which we as a developers have no chance to influence and following all the points is impossible. But keep this in mind and use it as unwritten ruleset (as in football mentioned above) it might help us continuously improving our industry.
+
+*P.S.* If you enjoyed reading this blog post, could you do me favor and tweet it or/and leave a comment? Thanks!
+
+*P.S.2* Cover photo by {timon-studler-link}
