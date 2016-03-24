@@ -1,7 +1,7 @@
 = Enhancing of developer’s blog with John Sonmez emailing course
 :hp-image: /covers/simple-programmer.jpeg
-:hp-tags: development, personal-life, programming
-:hp-alt-title: The Programmers Oath and my perspective
+:hp-tags: promotion, personal-life, blogging
+:hp-alt-title: Enhancing of developer’s blog with John Sonmez emailing course
 :published_at: 2016-03-24
 :programmer-link: http://simpleprogrammer.com[SimpleProgrammer.com]
 :blog-course-link: http://devcareerboost.com/blog-course/[emailing course]
