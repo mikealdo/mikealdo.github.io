@@ -1,0 +1,13 @@
+= Enhancing of developer’s blog with John Sonmez emailing course
+:hp-image: /covers/simple-programmer.jpeg
+:hp-tags: development, personal-life, programming
+:hp-alt-title: The Programmers Oath and my perspective
+:published_at: 2016-03-24
+:programmer-link: http://simpleprogrammer.com[SimpleProgrammer.com]
+:blog-course-link: http://devcareerboost.com/blog-course/[emailing course]
+:twitter-link: https://twitter.com/jsonmez[John Sonmez]
+
+== How to promote own blog
+When I decided to create a blog and feed it high quality content, I was aware how hard it would be. The biggest effort I have done - I started. Next phase of filling blog with content is in progress with various results. I am not always satisfied with level of my English, level of quality of content but I strongly belief that this is situation for almost all the blog beginners. And while I am hard working on the content, I am regularly looking for a ways how to propagate my stuff.
+
+I found out that promoting is hard when you are on the start and can be done in very bad way. Recently I found great source of tip and tricks how to do it better - {blog-course-link} by {twitter-link} and {programmer-link}. Even in first five emails I found many useful stuff which already helped me for my last posts. So if you are thinking about starting blogging or you have started already but you are little bit stuck with promoting your hard work, give it a try.
