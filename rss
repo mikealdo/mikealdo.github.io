@@ -5,9 +5,9 @@
     <link>https://mikealdo.github.io</link>
     <description>Architecture, coding, open source.</description>
     <language>en-UK</language>
-    <pubDate>Fri, 18 Mar 2016 11:20:54 GMT</pubDate>
+    <pubDate>Fri, 01 Apr 2016 08:09:03 GMT</pubDate>
     <dc:creator>mdavidek1@gmail.com</dc:creator>
-    <dc:date>2016-03-18T11:20:54Z</dc:date>
+    <dc:date>2016-04-01T08:09:03Z</dc:date>
     <dc:language>en-UK</dc:language>
     <item>
       <title>Software architecture like a building own house</title>
@@ -125,6 +125,33 @@
       <pubDate>Fri, 18 Mar 2016 01:00:00 GMT</pubDate>
       <guid>https://mikealdo.github.io/2016/03/18/Self-retrospective-increases-happiness-of-life.html</guid>
       <dc:date>2016-03-18T01:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Enhancing of developer’s blog with John Sonmez emailing course</title>
+      <link>https://mikealdo.github.io/2016/03/24/Enhancing-of-developers-blog-with-John-Sonmez-emailing-course.html</link>
+      <description>How to promote own blog When I decided to create a blog and feed it high quality content, I was aware how hard it would be. The biggest effort I have done - I started. Next phase of filling blog...</description>
+      <category>promotion</category>
+      <pubDate>Thu, 24 Mar 2016 01:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2016/03/24/Enhancing-of-developers-blog-with-John-Sonmez-emailing-course.html</guid>
+      <dc:date>2016-03-24T01:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>The Programmers Oath and my perspective</title>
+      <link>https://mikealdo.github.io/2016/03/25/The-Programmers-Oath-and-my-perspective.html</link>
+      <description>Before months I have read such a suggestion to developers or programmers to follow oath in their work. And of course several responses such as this one by Ron Jeffries. I believe that self-responsibility is the main sign of good...</description>
+      <category>development</category>
+      <pubDate>Fri, 25 Mar 2016 01:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2016/03/25/The-Programmers-Oath-and-my-perspective.html</guid>
+      <dc:date>2016-03-25T01:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Multiple libraries for assertions in your test classpath</title>
+      <link>https://mikealdo.github.io/2016/04/01/Multiple-libraries-for-assertions-in-your-test-classpath.html</link>
+      <description>You know that situation &amp;#8230;&amp;#8203; You are joining some bigger project based on Java technologies and there is 99 percent certainty that there will be several libraries used for unit testing and assertions inside. If you have good luck,...</description>
+      <category>unit testing</category>
+      <pubDate>Fri, 01 Apr 2016 00:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2016/04/01/Multiple-libraries-for-assertions-in-your-test-classpath.html</guid>
+      <dc:date>2016-04-01T00:00:00Z</dc:date>
     </item>
   </channel>
 </rss>
