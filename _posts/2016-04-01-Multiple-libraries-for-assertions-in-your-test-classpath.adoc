@@ -1,0 +1,97 @@
+= Multiple libraries for assertions in your test classpath
+:hp-image: /covers/multiple-libraries-in-your-test-classpath.jpeg
+:hp-tags: unit testing, libraries, architecture
+:hp-alt-title: Multiple libraries for assertions in your test classpath
+:published_at: 2016-04-01
+:google-truth-link: http://google.github.io/truth/[google truth]
+:assertj-link: http://joel-costigliola.github.io/assertj/[AssertJ]
+:mockito-link: http://mockito.org/[Mockito]
+:guava-link:http://guava-libraries.googlecode.com/svn-history/r144/trunk/javadoc/com/google/common/testing/package-summary.html[guava assert]
+:junit-link: http://junit.org/junit4/[JUnit]
+:test-ng-link: http://testng.org/doc/index.html[TestNG]
+:hamcrest-link: http://hamcrest.org/JavaHamcrest/[Hamcrest]
+:spring-test-link: http://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/util/Assert.html[spring]
+:intellij-idea-link: https://www.jetbrains.com/idea/[Intellij IDEA]
+:spock-link: https://github.com/spockframework[spock]
+:test-example-link: https://github.com/mikealdo/multiple-assertions-libraries[whole project with dependencies here]
+:twitter-link: https://twitter.com/mikealdo007[twitter]
+:mike-petrucci-link: https://unsplash.com/photos/f6Xv0xs9JWg[Mike Petrucci | UnSplash]
+
+== You know that situation ...
+
+You are joining some bigger project based on Java technologies and there is 99 percent certainty that there will be several libraries used for unit testing and assertions inside. If you have good luck, there will be no in-house developed library. When you are asking which one is the preferred one, each team member will claim his favourite one. Also for your team leads or architects or other decision makers is not clear when this stack of libraries became to grow and what is the preferred one to use. Even in code reviews is usage of such libraries disregarded often. If this is not your case, you can stop reading this, but in other case … read on.
+
+=== I have opinion that multiple assertion libraries on test classpath is bad
+
+. It increases mess in tests.
+. In decreases readability of tests.
+. Can cause overlooking of missing assertions.
+. Can cause overlooking of badly written assertions. (Do you know that in TestNG and JUnit are parameters (*actual, expected*) inside assert methods switched?)
+. There is decent chance that the problem will be growing in time.
+. Refactoring of “older” tests is not happening.
+
+== What is the real problem?
+So you have multiple libraries on your test classpath providing some assertion classes by default. Real problem is, that you are unable to avoid multiplicity in the assertions libraries due to fact, that mainly used frameworks used in Java world - {junit-link} and {test-ng-link} - have built-in assertions classes. These classes often does not offer best way how to asserts so you have temptation to use another one even for simplest assertion. The most used is in my opinion {assertj-link}. {mockito-link} (and other mocking libraries) brings another set of assertions. With {spring-test-link} it comes another set of assertions. And have {guava-link} in your classpath as well? Another Assert class there. Are you geeky and have {google-truth-link} on your test classpath as well? Well, it’s obvious that you have four or five classes which has even same name - Assert. It’s really annoying to even static import right assert with such count of same classes providing similar API.
+
+== Getting rid of problems
+Well, in my experience is impossible to avoid having multiple libraries providing some assertions facility:
+
+* You need mocking library for unit tests.
+* You need spring framework for you integration tests. (unless you are using spring in your project of course)
+* You need test framework to be able run the tests at all.
+* You are unsatisfied with readability and usability test framework built-in API for assertions.
+* And if you aren’t on green field project, getting rid of several libraries is the neverending story.
+
+So how to ensure that is used only your desired one?
+
+. Set up of your IDE to provide only desired assertion library.
+. Quality assurance tests.
+
+I am using {intellij-idea-link} and when you are static importing some class, you have a choice to disable providing particular class. This comes handy for newly written tests but when you are facing older tests you haven’t such a choice because there are asserts from other library. It’s clear that if you would like to have consistent way for asserting, you will need to rewrite all the tests which are not passing your criterias and clear your dependencies. This is step one. Step two is ensuring  that your test codebase follow coding standards and static analysis tools are unable to do this hard work for you. So you need the specialized test (quality assurance test) for checking that your test codebase meets criteria set by coding standards. In one project we have written tests for checking right annotations for test classes for integration and unit tests. Also there can be a test which is verifying that you are not importing assertions from other than preferred libraries - it’s not so easy to getting rid of not preferred libraries from dependencies in one step.
+
+Test bellow:
+
+. reads all the test classes from package
+. finds if there are dependencies for Google Truth
+. prints messages which classes aren’t following coding standards
+. {test-example-link}
+
+----
+@Test
+public void shouldVerifyOnlyOneAssertionLibraryInAllTheTests() throws Exception {
+    DependencyVisitor v = new DependencyVisitor();
+    for (Class<?> aClass : classes) {
+        String resourceName = "/cz/mikealdo/tests/" + aClass.getSimpleName() + ".class";
+        InputStream resourceAsStream = aClass.getResourceAsStream(resourceName);
+        new ClassReader(resourceAsStream).accept(v, 0);
+        Set<String> classPackages = v.getPackages();
+        for (String classPackage : classPackages) {
+            if (classPackage.contains("com/google/common/truth")) {
+                System.err.println("Google Truth library is not allowed for using in class " + aClass.getSimpleName());
+            }
+        }
+    }
+}
+----
+
+== What else
+This is my list of best practices for keeping test classpath clean:
+
+* One mocking library at most.
+* One assertion library per module.
+* Ideally one assertion library per project.
+* Continuously getting rid of deprecated asserts in older tests.
+* Replace google guava with Java 8 features (in case that you are on Java 8 already).
+* Unified way for exception assertions.
+* When you plan to use {spock-link}, separate this usage into separate module.
+* Even when {hamcrest-link} was good choice at previous times, use {assertj-link} instead and remove it from your dependencies.
+* When you plan to use cucumber, separate this testing approach into separate module.
+* Develop coding standards even for tests.
+* Develop as much as quality assurance tests you can to ensure that coding standards are followed.
+
+== In conclusion
+We should treat our testing codebase as a first class citizen and enforce same coding standards as we have for production codebase. Also we should continuously improve test codebase by refactoring and enhancing approaches used in tests. By using multiply assertions libraries you are giving developers opportunities to easily override coding standards which can be easily overlooked in code reviews. So exclusive use of one or other library might help to have consistently written tests even when it’s possible to have several ones on classpath.
+
+*P.S.* Follow me on {twitter-link}.
+
+*P.S.2* Cover image by {mike-petrucci-link}
