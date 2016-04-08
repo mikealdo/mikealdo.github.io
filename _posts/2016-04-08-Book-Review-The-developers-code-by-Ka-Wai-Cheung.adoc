@@ -1,0 +1,37 @@
+= Book Review - The developer's code by Ka Wai Cheung
+:hp-image: /covers/the-developers-code.jpeg
+:hp-tags: book-review, review, developers code
+:hp-alt-title: Book Review - The developer's code by Ka Wai Cheung
+:published_at: 2016-04-08
+:my-twitter-link: https://twitter.com/mikealdo007[@mikealdo007]
+:cheung-twitter-link: https://twitter.com/developerscode[Ka Wai Cheuing]
+:retrospective-link: https://mikealdo.github.io/2016/03/18/Self-retrospective-increases-happiness-of-life.html[self-retro]
+:book-link: https://pragprog.com/book/kcdc/the-developer-s-code[ebook]
+
+In last 2 years I am used to be a quite diligent reader. I have read many technical books and I would like to start with writing opinionated rewieves time to time. One of the reason is also supporting my {retrospective-link} life enhancement and have books burned into brain in deeper way. But I believe that you could be also interested in so read on.
+
+== The Developer’s code
+Recently I have read thin {book-link} basically about "the code live by" and lessons learned by experienced developer - {cheung-twitter-link}. I have a feeling that this book contains many interesting and useful ideas, thoughts and experiences. As I am already pretty established (in my eyes of course) developer, it works as good reminder for stay successful and be professional in all directions.
+
+=== Write code as a last resort
+Maybe I could start from end and one of the last chapter which is somehow resonating with me in relation to my current work. It’s about coding and first sentence you are seeing there is “Write code as a last resort”. It’s so much describing and it’s completely true. In my first days with programming I was used to sit in front of monitor and try something to write even without purpose. For trying or exploring it’s great idea but in professional life it doesn’t work. In professional life you need to take care about code written, take care that code is aligned with overall architecture and has significant positive impact to customers and also other developers. There is need to be full understanding what is supposed to be written and how exactly will the code behave. When it’s not clear even from some perspective, you should resist all the temptation to write some code before clarification. Indeed, we all should be able to say “no” to our analysts or even customers - not all “needed” features are possible to include to the software. Quite often (surprisingly) is the best solution don't programming at all. And the last thing - if you need to try or explore something, do that by tests or anywhere else than in production code.
+
+=== Working with clients
+This is tough part of our professional lifes. Even when we are not always in direct contact with end users, there is always someone who is responsible for the project of the product - analyst, project manager etc. - and responsible for the work needed to be done. Usually these “clients” don’t know (and even don’t want know) how the application is built. Author is proposing to teach our clients how we are working, how code is working and why it’s impossible to include this and that into software. I agree with the idea “Does it make application better?” but this is not always the case we are facing in our usual life. We are often in the end of communication channels without any influence to decisions. But there are still good points as a “offering alternative solutions” or “understanding each other viewpoints”.
+
+=== Teaching other developers
+There is one idea which I like - lie to simplify. Author is proposing to let go the intricate details of the domain at first. Reveal only stuff that will get your student most of the way to understanding a concept well. This is something which I am using almost every day and what I was appreciating in my younger years. The best learning starts with high-level overview and details are often not needed at all or can be easily learned afterwards. Also there is other useful thought - beware of course of knowledge. I agree with that, sometimes I am forgetting that I have some deeper knowledge than my co-worker and speaking in too specific terms.
+
+=== Facing the complexity
+One thought for all - “Hard to code” might mean “hard to use” (end even hard to work with to code). Complexity always grow. Each new feature increases complexity and we should always do as much as possible to circumvent it by following patterns and good habits. Also author is pointing to the fact - know when to refactor - which I am also agreeing. When the developer have the temptation to predict future it’s very often waste of time.
+
+=== The quality what we do
+From chapter about productivity I would highlight one idea - keep simple and only one personal to-do list. Author is speaking mainly about work so one list for working items. Even when is proposed to use online tool, for me personally it’s hard to have it “easily accessible” as I am not always online. For me plain old paper still wins. Indeed, paper provides me so great flexibility to have it in my way so I doubt that any application can provide me the self. I am using Evernote for my notes and tried to keep my list (or one list for personal items and one for working) but it was not so productive as paper.
+
+=== Motivation
+Despite other ideas, also there I have one favourite idea - Test your work first in the morning. I am used to end my working day with preparing test methods with proper names without actual implementation. Missing implementation of such test cases is the first thing which I am seeing at the monitor next morning. It leads to me to get context of my previous work as fast as possible and start with working almost immediately without need to hardly thinking where I was in previous day. Also it helps a lot against procrastination so after filling missing implementation I am much more satisfied with myself than I was when starting my days with emails, twitter etc.
+
+== Summary
+If you are asking if I can recommend this book, then yes. If you are beginning programmer than this might be good candidate for you as entry point to the programming landscape. It’s full of meaningful ideas and even when you thinks that you know every aspect which author is talking about, it can work as great reminder if you are still following the good habits. Sure, some topics are somehow tied to the authors companies which he was working for and in other companies or cases it can’t work. So for experienced programmers there are obviously better books but still has something to offer for everyone I believe.
+
+*P.S.* If you enjoyed this post, you can follow me on twitter {my-twitter-link} to stay in touch with my articles and other thoughts. I am sharing my book lists in {goodreads-link}, so you can follow me there as well.
