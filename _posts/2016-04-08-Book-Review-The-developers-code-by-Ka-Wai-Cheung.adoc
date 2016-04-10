@@ -1,6 +1,6 @@
 = Book Review - The developer's code by Ka Wai Cheung
-:hp-image: /covers/the-developers-code.jpeg
-:hp-tags: book-review, review, developers code
+:hp-image: /covers/the-developers-code.jpg
+:hp-tags: book-review, review, developers code, programming
 :hp-alt-title: Book Review - The developer's code by Ka Wai Cheung
 :published_at: 2016-04-08
 :my-twitter-link: https://twitter.com/mikealdo007[@mikealdo007]
