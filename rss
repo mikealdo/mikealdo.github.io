@@ -5,9 +5,9 @@
     <link>https://mikealdo.github.io</link>
     <description>Architecture, coding, open source.</description>
     <language>en-UK</language>
-    <pubDate>Fri, 01 Apr 2016 08:09:03 GMT</pubDate>
+    <pubDate>Sun, 10 Apr 2016 06:12:01 GMT</pubDate>
     <dc:creator>mdavidek1@gmail.com</dc:creator>
-    <dc:date>2016-04-01T08:09:03Z</dc:date>
+    <dc:date>2016-04-10T06:12:01Z</dc:date>
     <dc:language>en-UK</dc:language>
     <item>
       <title>Software architecture like a building own house</title>
@@ -152,6 +152,15 @@
       <pubDate>Fri, 01 Apr 2016 00:00:00 GMT</pubDate>
       <guid>https://mikealdo.github.io/2016/04/01/Multiple-libraries-for-assertions-in-your-test-classpath.html</guid>
       <dc:date>2016-04-01T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Book Review - The developer's code by Ka Wai Cheung</title>
+      <link>https://mikealdo.github.io/2016/04/08/Book-Review-The-developers-code-by-Ka-Wai-Cheung.html</link>
+      <description>In last 2 years I am used to be a quite diligent reader. I have read many technical books and I would like to start with writing opinionated rewieves time to time. One of the reason is also supporting my...</description>
+      <category>book-review</category>
+      <pubDate>Fri, 08 Apr 2016 00:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2016/04/08/Book-Review-The-developers-code-by-Ka-Wai-Cheung.html</guid>
+      <dc:date>2016-04-08T00:00:00Z</dc:date>
     </item>
   </channel>
 </rss>
