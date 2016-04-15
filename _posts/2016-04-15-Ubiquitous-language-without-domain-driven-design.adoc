@@ -43,4 +43,5 @@ In the most central principles, ubiquitous language (and domain driven design of
 Ubiquitous language or project glossary with simple descriptions is basement of every software project even you are not practicing other parts of domain-driven design. We are, after all, modelling business domain with our software. So project glossary is about reducing confusion and translation time for all contributors to our software. You can kick-off own glossary for yourself primarily but it can happen that after some effort it can be central place maintained by everyone. It’s hard to have patience with tackling of all the difficulties maintaining of such document by yourself but it will reward you with cleaner software, better work done and decreased probability of bugs introduction.
 
 *P.S.* If you enjoyed this post, you can follow me on {my-twitter-link} to stay in touch with my further articles and other thoughts.
+
 *P.S.2* Cover image by {cover-link}.
