@@ -5,9 +5,9 @@
     <link>https://mikealdo.github.io</link>
     <description>Architecture, coding, open source.</description>
     <language>en-UK</language>
-    <pubDate>Sun, 10 Apr 2016 06:12:51 GMT</pubDate>
+    <pubDate>Fri, 15 Apr 2016 19:28:18 GMT</pubDate>
     <dc:creator>mdavidek1@gmail.com</dc:creator>
-    <dc:date>2016-04-10T06:12:51Z</dc:date>
+    <dc:date>2016-04-15T19:28:18Z</dc:date>
     <dc:language>en-UK</dc:language>
     <item>
       <title>Software architecture like a building own house</title>
@@ -161,6 +161,15 @@
       <pubDate>Fri, 08 Apr 2016 00:00:00 GMT</pubDate>
       <guid>https://mikealdo.github.io/2016/04/08/Book-Review-The-developers-code-by-Ka-Wai-Cheung.html</guid>
       <dc:date>2016-04-08T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Ubiquitous language without domain-driven design</title>
+      <link>https://mikealdo.github.io/2016/04/15/Ubiquitous-language-without-domain-driven-design.html</link>
+      <description>Shared team language, project dictionary, terms. In software development we all speaking about business domain terms but rarely taking care about unifying our language between each other when speaking about the very same things. As I am independent software developer,...</description>
+      <category>domain-driven design</category>
+      <pubDate>Fri, 15 Apr 2016 00:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2016/04/15/Ubiquitous-language-without-domain-driven-design.html</guid>
+      <dc:date>2016-04-15T00:00:00Z</dc:date>
     </item>
   </channel>
 </rss>
