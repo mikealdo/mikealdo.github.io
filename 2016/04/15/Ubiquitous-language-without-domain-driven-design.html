@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ubiquitous language without domain-driven design</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-57x57.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="60x60" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-60x60.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="72x72" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-72x72.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="76x76" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-76x76.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="114x114" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-114x114.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="120x120" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-120x120.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="144x144" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-144x144.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="152x152" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-152x152.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-180x180.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-32x32.png?v=wAAv6Wqe6l?v=1.0.0" sizes="32x32">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-194x194.png?v=wAAv6Wqe6l?v=1.0.0" sizes="194x194">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-96x96.png?v=wAAv6Wqe6l?v=1.0.0" sizes="96x96">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/android-chrome-192x192.png?v=wAAv6Wqe6l?v=1.0.0" sizes="192x192">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-16x16.png?v=wAAv6Wqe6l?v=1.0.0" sizes="16x16">
+    <link rel="manifest" href="//mikealdo.github.io/themes/uno-zen/assets/img/manifest.json?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="shortcut icon" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon.ico?v=wAAv6Wqe6l?v=1.0.0">
+    <meta name="msapplication-TileColor" content="#e74c3c">
+    <meta name="msapplication-TileImage" content="//mikealdo.github.io/themes/uno-zen/assets/img/mstile-144x144.png?v=wAAv6Wqe6l?v=1.0.0">
+    <meta name="msapplication-config" content="//mikealdo.github.io/themes/uno-zen/assets/img/browserconfig.xml?v=wAAv6Wqe6l?v=1.0.0">
+    <meta name="theme-color" content="#e74c3c">
+    <link rel="stylesheet" type="text/css" href="//mikealdo.github.io/themes/uno-zen/assets/css/uno-zen.css?v=1.0.0" />
+    <link rel="canonical" href="https://mikealdo.github.io/2016/04/15/Ubiquitous-language-without-domain-driven-design.html" />
+    
+    <meta property="og:site_name" content="Michal Davídek - blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Ubiquitous language without domain-driven design" />
+    <meta property="og:description" content="Shared team language, project dictionary, terms. In software development we all speaking about business domain terms but rarely taking care about unifying our language between each other when speaking about the very same things. As I am independent software developer,..." />
+    <meta property="og:url" content="https://mikealdo.github.io/2016/04/15/Ubiquitous-language-without-domain-driven-design.html" />
+    <meta property="og:image" content="https://mikealdo.github.io/images//covers/ubiquitous-language-without-ddd.jpeg" />
+    <meta property="article:published_time" content="2016-04-14T22:00:00.000Z" />
+    <meta property="article:modified_time" content="2016-04-15T04:07:40.594Z" />
+    <meta property="article:tag" content="domain-driven design" />
+    <meta property="article:tag" content="ubiquitous language" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ubiquitous language without domain-driven design" />
+    <meta name="twitter:description" content="Shared team language, project dictionary, terms. In software development we all speaking about business domain terms but rarely taking care about unifying our language between each other when speaking about the very same things. As I am independent software developer,..." />
+    <meta name="twitter:url" content="https://mikealdo.github.io/2016/04/15/Ubiquitous-language-without-domain-driven-design.html" />
+    <meta name="twitter:image:src" content="https://mikealdo.github.io/images//covers/ubiquitous-language-without-ddd.jpeg" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Michal Davídek - blog",
+    "author": {
+        "@type": "Person",
+        "name": "Michal Davídek",
+        "image": "https://avatars.githubusercontent.com/u/14245058?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": null
+    },
+    "headline": "Ubiquitous language without domain-driven design",
+    "url": "https://mikealdo.github.io/2016/04/15/Ubiquitous-language-without-domain-driven-design.html",
+    "datePublished": "2016-04-14T22:00:00.000Z",
+    "dateModified": "2016-04-15T04:07:40.594Z",
+    "image": "https://mikealdo.github.io/images//covers/ubiquitous-language-without-ddd.jpeg",
+    "keywords": "domain-driven design,  ubiquitous language",
+    "description": "Shared team language, project dictionary, terms. In software development we all speaking about business domain terms but rarely taking care about unifying our language between each other when speaking about the very same things. As I am independent software developer,..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Michal Davídek - blog" href="https://mikealdo.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+  </head>
+  <body class="post-template tag-domain-driven-design tag-ubiquitous-language">
+    <header id="menu-button" class="expanded">
+      <a><i class="icon icon-list"></i></a>
+    </header>
+    <aside class="cover" style="background: url(/images/background-cover.jpg) center/cover no-repeat fixed">
+      <div class="cover container">
+        <div class="profile">
+          <a id="avatar-link" title="link to homepage for Michal Davídek - blog" href="https://mikealdo.github.io/#open">
+            <img src="/images/michal-davidek.png" alt="Michal Davídek - blog avatar" class="profile avatar rounded hvr-buzz-out" />
+            <h1 id="profile-title">Michal Davídek - blog</h1>
+            <h3 id="profile-resume"></h3>
+          </a>
+    
+          <hr class="divider long" />
+          <p>Architecture, coding, open source.</p>
+          <hr class="divider short" />
+          <div class="navigation">
+            <div class="profile contact">
+              
+              <nav class="navigation right">
+                <ul class="social expanded">
+              
+              
+                  <!-- Twitter -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://twitter.com/mikealdo007" title="Twitter account">
+                      <i class='icon icon-social-twitter'></i>
+                      <span class="label">Twitter</span>
+                    </a>
+                  </li>
+              
+                  <!-- Google Plus -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://plus.google.com/+MichalDavidekCZ" title="Google+ account">
+                      <i class='icon icon-social-google-plus'></i>
+                      <span class="label">Google-plus</span>
+                    </a>
+                  </li>
+              
+                  <!-- Github -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://github.com/mikealdo" title="Github account">
+                      <i class='icon icon-social-github'></i>
+                      <span class="label">Github</span>
+                    </a>
+                  </li>
+                  </li>
+              
+              
+              
+              
+                  <!-- LinkedIn -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://www.linkedin.com/in/davidekmichal" title="LinkedIn account">
+                      <i class='icon icon-social-linkedin'></i>
+                      <span class="label">LinkedIn</span>
+                    </a>
+                  </li>
+              
+                  <!-- Email -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="mailto:mdavidek1@gmail.com" title="Email mdavidek1@gmail.com">
+                      <i class='icon icon-mail'></i>
+                      <span class="label">Email</span>
+                    </a>
+                  </li>
+              
+                </ul>
+              </nav>
+              <!-- <section class="icon icon-search" id="search-container">
+      <hr class="divider short" />
+      <form id="search-form">
+        <input type="text", name="search", placeholder="git, css, javascript,..." id="search-field" />
+      </form>
+    </section>
+     -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <section id="search-results"></section>
+      <section class="content">
+        
+
+  <article class="post tag-domain-driven-design tag-ubiquitous-language">
+    <header>
+      <div class="post meta">
+        <time datetime="15 Apr 2016">15 Apr 2016</time>
+        <span class="post tags">in <a href="https://mikealdo.github.io/tag/domain-driven-design">domain-driven design</a> <a href="https://mikealdo.github.io/tag/ubiquitous-language"> ubiquitous language</a></span>
+
+
+        <span class="post reading-time"> ~ <span></span> read.</span>
+      </div>
+      <a alt="Tweet 'Ubiquitous language without domain-driven design'" href="https://twitter.com/intent/tweet?text=Ubiquitous%20language%20without%20domain-driven%20design%20%C2%BB&amp;hashtags=domain-driven design, ubiquitous language&amp;url=https://mikealdo.github.io/2016/04/15/Ubiquitous-language-without-domain-driven-design.html">
+        <img id="post-image" src=https://mikealdo.github.io/images//covers/ubiquitous-language-without-ddd.jpeg alt="Ubiquitous language without domain-driven design">
+        <h1 class="icon-reverse icon-social-twitter-post" id="post-title">Ubiquitous language without domain-driven design</h1>
+      </a>
+    </header>
+
+    <div id="post-content" class="post tag-domain-driven-design tag-ubiquitous-language">
+      <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Shared team language, project dictionary, terms. In software development we all speaking about business domain terms but rarely taking care about unifying our language between each other when speaking about the very same things. As I am independent software developer, I am switching projects in more or less one year period. In all projects I am facing similar problems and the biggest issue I am continuously fighting with is absence of using ubiquitous language. Thing is that I am not idealist about practicing domain driven design in all types of projects (there aren’t always green field projects in the world) but I believe that the ubiquitous language as was defined in <a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215">Domain driven design</a> by <a href="https://twitter.com/ericevans0">Eric Evans</a> can (and should) be adopted in all the projects.</p>
+</div>
+<div class="paragraph">
+<p>Software development is challenging, and one of the challenges of professional software development is that programmers aren&#8217;t necessarily experts in the areas for which they write software. When I started on these projects, I knew nothing about those things. After some years of experience I have developed some sense to tackle new business domain even without sufficient materials but missing of ubiquitous language is my biggest complaint before learning something.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_being_on_the_same_page">Being on the same page</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For projects which are in growing state (but basically for all) is essential to have sharp learning curve for incomers. Being on the same page with all the types of members or influencers of that project helps to avoiding mistakes, bugs and have significant impact to maintainability of produced software. Absence of ubiquitous language or project glossary is in my eyes strategic failure of most projects and leads to missed deadlines, buggy behaviour and higher cost of maintaining the software. Here is my list of specific symptoms of problems derived from missing ubiquitous language:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Developers are unable to describe parts of the business domain to the other developers.</p>
+</li>
+<li>
+<p>There is more than one version of documentation used across project members.</p>
+</li>
+<li>
+<p>Analysts are speaking about terms which are not included in codebase or there are slight modifications in names.</p>
+</li>
+<li>
+<p>Analysts haven’t unified their language at all and each analyst is speaking about same thing with different terms.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Also they disagree on concepts often and they are actually wrong about some because they haven’t thought of every aspect before.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Documentation is spawned across huge documents or wiki pages where is easy to forget the context.</p>
+</li>
+<li>
+<p>Codebase is mix of framework designs, patterns and business domain without clear borders.</p>
+</li>
+<li>
+<p>Inside codebase are such classes as managers, processors or so.</p>
+</li>
+<li>
+<p>There are existing mind maps inside brains of current developers about terms used by developers and by analysts.</p>
+</li>
+<li>
+<p>Hiring programmers with expertise in a particular domain doesn’t help in expected amount and doesn’t eliminate problems at all.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>About this hiring I would say, that better choice between a great programmer with no domain experience and a poor programmer with lots of domain experience is the great programmer.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>In the codebase are still remaining historical parts which are currently not used.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_kick_off_of_own_project_glossary_and_contribute_to_the_tracking_system">Kick-off of own Project glossary and contribute to the tracking system</h3>
+<div class="paragraph">
+<p>When you are seeing any of problems mentioned above, you have bad luck and need to absorb all the mental maps from others to have at least some picture about business domain of produced software. It’s even harder because you aren’t expert in that business domain because you were working in others often. So what about kick-off your own project glossary just for memorizing the given knowledge and after having something just publish for others? In my experience, this is very helpful and using your glossary in every discussion with analyst or other developer helps to sharping terms and even helps as reminder for others that there is something smelling.</p>
+</div>
+<div class="paragraph">
+<p>So you’ll create a glossary of terms with simple definitions. After several discussions (not directly speaking about terms) you’ll include the similarities for same terms and historical terms. As you include definitions you can’t help but develop reusable phrases for the language because you are forced to write in the language of the domain. You will discover which parts of codebase are touching which business terms and attach those parts or even class names to the glossary as well.</p>
+</div>
+<div class="paragraph">
+<p>After such a hard work you will have something for discussion with everybody - analysts, other developers, project managers. I can guarantee that if they will see your effort it will be hard for them to not taking into account the problem with all the mixed terms. Also you should feel encouraged to create some tickets, issues in your tracking system to rewrite this and that class or even fields, methods inside classes which would not mean hard work to tackle it but it helps with getting rid of mixed terms inside codebase.</p>
+</div>
+<div class="paragraph">
+<p>In the most central principles, ubiquitous language (and domain driven design of course) is about discussion, listening and understanding a business value. You can base this discussion on your project glossary and even invoke such discussion in project team which will directly leads to spread the right language across project team.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_in_conclusion">In conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ubiquitous language or project glossary with simple descriptions is basement of every software project even you are not practicing other parts of domain-driven design. We are, after all, modelling business domain with our software. So project glossary is about reducing confusion and translation time for all contributors to our software. You can kick-off own glossary for yourself primarily but it can happen that after some effort it can be central place maintained by everyone. It’s hard to have patience with tackling of all the difficulties maintaining of such document by yourself but it will reward you with cleaner software, better work done and decreased probability of bugs introduction.</p>
+</div>
+<div class="paragraph">
+<p><strong>P.S.</strong> If you enjoyed this post, you can follow me on <a href="https://twitter.com/mikealdo007">@mikealdo007</a> to stay in touch with my further articles and other thoughts.
+<strong>P.S.2</strong> Cover image by <a href="https://unsplash.com/photos/Oaqk7qqNh_c">Patrick Tomasso | unsplash.com</a>.</p>
+</div>
+</div>
+</div>
+    </div>
+
+    <div class="post related">
+
+    </div>
+
+    <footer class="post comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        var disqus_shortname = 'mikealdo'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </footer>
+
+  </article>
+
+
+        <footer>
+          <span class="copyright">
+            &copy; 2016. All rights reserved. Built with <a href="https://github.com/Kikobeats/uno-zen" target="_blank">Uno Zen</a> under <a href="http://hubpress.io/" target="_blank">HubPress</a>.
+          </span>
+        </footer>
+      </section>
+    </main>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+    <script src="//mikealdo.github.io/themes/uno-zen/assets/js/uno-zen.js?v=1.0.0" type="text/javascript" charset="utf-8"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-72815761-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
