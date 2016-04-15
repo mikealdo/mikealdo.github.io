@@ -1,0 +1,46 @@
+= Ubiquitous language without domain-driven design
+:hp-image: /covers/ubiquitous-language-without-ddd.jpeg
+:hp-tags: domain-driven design, ubiquitous language
+:hp-alt-title: Ubiquitous language without domain-driven design
+:published_at: 2016-04-15
+:my-twitter-link: https://twitter.com/mikealdo007[@mikealdo007]
+:cover-link: https://unsplash.com/photos/Oaqk7qqNh_c[Patrick Tomasso | unsplash.com]
+:eric-evans-twitter-link: https://twitter.com/ericevans0[Eric Evans]
+:ddd-book-link: http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215[Domain driven design]
+
+Shared team language, project dictionary, terms. In software development we all speaking about business domain terms but rarely taking care about unifying our language between each other when speaking about the very same things. As I am independent software developer, I am switching projects in more or less one year period. In all projects I am facing similar problems and the biggest issue I am continuously fighting with is absence of using ubiquitous language. Thing is that I am not idealist about practicing domain driven design in all types of projects (there aren’t always green field projects in the world) but I believe that the ubiquitous language as was defined in {ddd-book-link} by {eric-evans-twitter-link} can (and should) be adopted in all the projects.
+
+Software development is challenging, and one of the challenges of professional software development is that programmers aren't necessarily experts in the areas for which they write software. When I started on these projects, I knew nothing about those things. After some years of experience I have developed some sense to tackle new business domain even without sufficient materials but missing of ubiquitous language is my biggest complaint before learning something.
+
+== Being on the same page
+
+For projects which are in growing state (but basically for all) is essential to have sharp learning curve for incomers. Being on the same page with all the types of members or influencers of that project helps to avoiding mistakes, bugs and have significant impact to maintainability of produced software. Absence of ubiquitous language or project glossary is in my eyes strategic failure of most projects and leads to missed deadlines, buggy behaviour and higher cost of maintaining the software. Here is my list of specific symptoms of problems derived from missing ubiquitous language:
+
+* Developers are unable to describe parts of the business domain to the other developers.
+* There is more than one version of documentation used across project members.
+* Analysts are speaking about terms which are not included in codebase or there are slight modifications in names.
+* Analysts haven’t unified their language at all and each analyst is speaking about same thing with different terms.
+** Also they disagree on concepts often and they are actually wrong about some because they haven’t thought of every aspect before.
+* Documentation is spawned across huge documents or wiki pages where is easy to forget the context.
+* Codebase is mix of framework designs, patterns and business domain without clear borders.
+* Inside codebase are such classes as managers, processors or so.
+* There are existing mind maps inside brains of current developers about terms used by developers and by analysts.
+* Hiring programmers with expertise in a particular domain doesn’t help in expected amount and doesn’t eliminate problems at all.
+** About this hiring I would say, that better choice between a great programmer with no domain experience and a poor programmer with lots of domain experience is the great programmer.
+* In the codebase are still remaining historical parts which are currently not used.
+
+=== Kick-off of own Project glossary and contribute to the tracking system
+
+When you are seeing any of problems mentioned above, you have bad luck and need to absorb all the mental maps from others to have at least some picture about business domain of produced software. It’s even harder because you aren’t expert in that business domain because you were working in others often. So what about kick-off your own project glossary just for memorizing the given knowledge and after having something just publish for others? In my experience, this is very helpful and using your glossary in every discussion with analyst or other developer helps to sharping terms and even helps as reminder for others that there is something smelling.
+
+So you’ll create a glossary of terms with simple definitions. After several discussions (not directly speaking about terms) you’ll include the similarities for same terms and historical terms. As you include definitions you can’t help but develop reusable phrases for the language because you are forced to write in the language of the domain. You will discover which parts of codebase are touching which business terms and attach those parts or even class names to the glossary as well.
+
+After such a hard work you will have something for discussion with everybody - analysts, other developers, project managers. I can guarantee that if they will see your effort it will be hard for them to not taking into account the problem with all the mixed terms. Also you should feel encouraged to create some tickets, issues in your tracking system to rewrite this and that class or even fields, methods inside classes which would not mean hard work to tackle it but it helps with getting rid of mixed terms inside codebase.
+
+In the most central principles, ubiquitous language (and domain driven design of course) is about discussion, listening and understanding a business value. You can base this discussion on your project glossary and even invoke such discussion in project team which will directly leads to spread the right language across project team.
+
+== In conclusion
+Ubiquitous language or project glossary with simple descriptions is basement of every software project even you are not practicing other parts of domain-driven design. We are, after all, modelling business domain with our software. So project glossary is about reducing confusion and translation time for all contributors to our software. You can kick-off own glossary for yourself primarily but it can happen that after some effort it can be central place maintained by everyone. It’s hard to have patience with tackling of all the difficulties maintaining of such document by yourself but it will reward you with cleaner software, better work done and decreased probability of bugs introduction.
+
+*P.S.* If you enjoyed this post, you can follow me on {my-twitter-link} to stay in touch with my further articles and other thoughts.
+*P.S.2* Cover image by {cover-link}.
