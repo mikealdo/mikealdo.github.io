@@ -1,0 +1,54 @@
+= Innovation versus technological debt
+:hp-image: /covers/innovation-versus-technical-debt.jpeg
+:hp-tags: technical debt, development
+:hp-alt-title: Innovation versus technological debt
+:published_at: 2016-04-22
+:oath-link: https://mikealdo.github.io/2016/03/25/The-Programmers-Oath-and-my-perspective.html[reaction to Uncle Bob]
+:ul-link: https://mikealdo.github.io/2016/04/15/Ubiquitous-language-without-domain-driven-design.html[my previous post]
+:ddd-link: https://en.wikipedia.org/wiki/Domain-driven_design[domain-driven design]
+:cs-link: https://en.wikipedia.org/wiki/Coding_conventions[coding standards]
+:review-link: https://en.wikipedia.org/wiki/Code_review[code reviews]
+:not-school-link: http://www.yegor256.com/2015/02/16/it-is-not-a-school.html[not a school]
+:my-twitter-link: https://twitter.com/mikealdo007[twitter]
+:cover-link: https://unsplash.com/photos/I8OhOu-wLO4[Tirza van Dijk | unsplash.com]
+
+In software projects is always present tension between producing new features and keeping maintainability of the software. If maintainability is hard (bugs are hard to detect and fix for example) and we are spending much more time with maintaining than with implementing new features, we have significant technical debt. Keeping right balance between cost of fixing this debt and producing features which are in fact producing revenue is in essential for business success. In this article I would point to some advices how we as a software developers can help to keep this balance.
+
+== Technical debt side
+=== Keeping big picture of architecture in mind
+First of all, we need to have clear picture about architecture and business goals of the software being produced. Without that we can too early skip into implementation details or overlook another possibilities when implementing new features. Also it helps to avoid unnecessary work and prevents introducing features which are not aligned with goals or architecture.
+
+=== Deal firstly with mostly touched codebase
+Golden rule with facing technological debt is - deal firstly with areas which are touched at most. It’s simple, if you will focus on the code which is rarely modified by  developers, rarely needs some adjustments due to business reasons, you are working on the bad place. I am not saying that this code doesn’t need the refactoring or getting rid of technical debt, but obviously there are more intensive places to take care about. And how to find out which areas are most touched? knizka advice, software find out
+
+=== Using ubiquitous language
+As I was advicing in {ul-link}, it’s generally important to use ubiquitous language in all discussions, descriptions and let this language speak in the code. You haven’t had to follow all the {ddd-link} advices, but being able to speak about same things with same terms is essential to not adding further technical debt.
+
+=== Coding standards
+Technical debt is even not having {cs-link}. Also not having coding standards for your test codebase is big problem. If you have coding standards, you should continuously improve them with new rules and remove obsolete rules. Coding standards document should be living document because when it’s static page with last modification last year, nobody will take care. Also it should be base for doing {review-link} and all the team members should follow these rules in checking code during code review.
+
+=== Including technical debt items into backlog
+It’s well deserved that you need to keep tracking technical debt along the feature items. If you are agile, you will need to slightly accommodate the technical debt resolving in standard team life. In one project we had one technical debt item to getting rid in each sprint. In other we had technical debt hat for a member from the team who was resolving technical debt items for whole sprint. Doesn’t matter in which manner you will work and how big amount of time you will allocate at the start. But you definitely need some way how you will measure success of getting rid of technical debt. In one project we had simple counter - average time for feature to be delivered to customer. On the start we was on sixty something days and when we have one guy resolving technical debt per sprint we have 14 something in couple of months. Of course there were other circumstances which was affecting our velocity but for half of the stories it ended with cleaner and simpler implementation right due to fact of resolved technical debt.
+
+=== Programmers oath perspective
+In {oath-link} I am advicing to follow Programmer’s oath. I strongly believe that doing our best to not introduce potential technical debt and follow industry best practicies is big advance in software development. You don’t need to sign this document because all the facts aren’t possible to follow at the same time, but just keep this in mind and your work will be technical debt free.
+
+== Innovation side
+=== Keeping your project manager (team leader) in touch
+Time to time I am in company when the project manager or team leader is too far from implementation and architecture. They are solving only manager’s stuff with these spreadsheets, estimates, meetings and planning. And often is happening that after some time it’s hard for such person to understand why implementations take longer and longer time and why is not possible to incorporate this and that feature to the software. So it’s on us, developers, to continuously improving knowledge about the software of our managers and raising objections whenever we are seeing why exactly the new features doesn’t fit to the software. I am time to time looking to the tracking system and looking on the backlog of planned items to be on track what’s going on. This helps me to have clear picture what the managers thinks needs to be done and give me time to speak early about possible problems.
+
+=== Innovation debt
+Have you heard about it? It’s about not giving sufficient time to learn to developers. Tight schedules of new features, pressure from clients, all of these issues can postpone all the learning process to “never” area. And it’s bad because after some time, motivation is going down, best developers run away, productivity is dropping. We can help with introducing hackatons, which are great opportunities to face some company problems but only driven by developers. Or Code retreats to share knowledge around coding and current technologies. In Google the stuff members have one day a week for doing something which is not tied to their project. To do anything which can help in other projects or totally new approach for something. Or simply learn something. It’s important that content of this day is totally only up to every single person. Maybe one day would be too much at the start but you need to convince your managers that it’s better to have some time to learn than cry that someone left the project.
+
+=== Help with hiring
+As I am in industry for more than 8 years, I am taking care about my colleagues. Our industry is {not-school-link}. Whenever I am joining new project, is especially important to have qualified colleagues. And even my last years I am working as external developer I am always happy to help with hiring new members when I can influence my further colleagues. Interviews are not so favourite between developers so you can elaborate a little and come with better approach. I would guess that this little help will definitely be appreciated by your managers or leads.
+
+=== Help with describing of features
+If feature requests (innovation) aren’t sufficiently described, it’s always flag of “I am not thinking enough” approach. We have occasionally tension to decline features which are not properly described and have negative meaning about them from the start. I would suggest to be as much as helpful you can to provide suggestions, affected areas or unspoken questions about feature which can really help others to be understanding of impact and feasibility.
+
+== In conclusion
+Majority of us would agree that technological debt needs to be managed primarily by us, developers. But we should be quite diligent in more areas to have proper working environment, staying motivate and productive. Being active, helping with dealing with innovation also will reward us. Communication will be clearer, motivation will remain and you will have much more better feeling of produced stuff.
+
+*P.S.* If you enjoyed this post, you can follow me on {my-twitter-link} to stay in touch with my further articles and other thoughts.
+
+*P.S.2* Cover image by {cover-link}.
