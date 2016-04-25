@@ -1,7 +1,7 @@
-= Innovation versus technological debt
+= Innovation versus technical debt
 :hp-image: /covers/innovation-versus-technical-debt.jpeg
 :hp-tags: technical debt, development
-:hp-alt-title: Innovation versus technological debt
+:hp-alt-title: Innovation versus technical debt
 :published_at: 2016-04-22
 :oath-link: https://mikealdo.github.io/2016/03/25/The-Programmers-Oath-and-my-perspective.html[reaction to Uncle Bob]
 :ul-link: https://mikealdo.github.io/2016/04/15/Ubiquitous-language-without-domain-driven-design.html[my previous post]
