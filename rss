@@ -5,9 +5,9 @@
     <link>https://mikealdo.github.io</link>
     <description>Architecture, coding, open source.</description>
     <language>en-UK</language>
-    <pubDate>Fri, 15 Apr 2016 19:28:18 GMT</pubDate>
+    <pubDate>Tue, 26 Apr 2016 05:15:37 GMT</pubDate>
     <dc:creator>mdavidek1@gmail.com</dc:creator>
-    <dc:date>2016-04-15T19:28:18Z</dc:date>
+    <dc:date>2016-04-26T05:15:37Z</dc:date>
     <dc:language>en-UK</dc:language>
     <item>
       <title>Software architecture like a building own house</title>
@@ -170,6 +170,15 @@
       <pubDate>Fri, 15 Apr 2016 00:00:00 GMT</pubDate>
       <guid>https://mikealdo.github.io/2016/04/15/Ubiquitous-language-without-domain-driven-design.html</guid>
       <dc:date>2016-04-15T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Innovation versus technical debt</title>
+      <link>https://mikealdo.github.io/2016/04/22/Innovation-versus-technical-debt.html</link>
+      <description>In software projects is always present tension between producing new features and keeping maintainability of the software. If maintainability is hard (bugs are hard to detect and fix for example) and we are spending much more time with maintaining than...</description>
+      <category>technical debt</category>
+      <pubDate>Fri, 22 Apr 2016 00:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2016/04/22/Innovation-versus-technical-debt.html</guid>
+      <dc:date>2016-04-22T00:00:00Z</dc:date>
     </item>
   </channel>
 </rss>
