@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>10 biggest mistakes in using static analysis</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-57x57.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="60x60" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-60x60.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="72x72" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-72x72.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="76x76" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-76x76.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="114x114" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-114x114.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="120x120" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-120x120.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="144x144" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-144x144.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="152x152" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-152x152.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-180x180.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-32x32.png?v=wAAv6Wqe6l?v=1.0.0" sizes="32x32">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-194x194.png?v=wAAv6Wqe6l?v=1.0.0" sizes="194x194">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-96x96.png?v=wAAv6Wqe6l?v=1.0.0" sizes="96x96">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/android-chrome-192x192.png?v=wAAv6Wqe6l?v=1.0.0" sizes="192x192">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-16x16.png?v=wAAv6Wqe6l?v=1.0.0" sizes="16x16">
+    <link rel="manifest" href="//mikealdo.github.io/themes/uno-zen/assets/img/manifest.json?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="shortcut icon" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon.ico?v=wAAv6Wqe6l?v=1.0.0">
+    <meta name="msapplication-TileColor" content="#e74c3c">
+    <meta name="msapplication-TileImage" content="//mikealdo.github.io/themes/uno-zen/assets/img/mstile-144x144.png?v=wAAv6Wqe6l?v=1.0.0">
+    <meta name="msapplication-config" content="//mikealdo.github.io/themes/uno-zen/assets/img/browserconfig.xml?v=wAAv6Wqe6l?v=1.0.0">
+    <meta name="theme-color" content="#e74c3c">
+    <link rel="stylesheet" type="text/css" href="//mikealdo.github.io/themes/uno-zen/assets/css/uno-zen.css?v=1.0.0" />
+    <link rel="canonical" href="https://mikealdo.github.io/2016/04/29/10-biggest-mistakes-in-using-static-analysis.html" />
+    
+    <meta property="og:site_name" content="Michal Davídek - blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="10 biggest mistakes in using static analysis" />
+    <meta property="og:description" content="Static analysis is in software engineering for the respected time. Static analysis tools are generally used by developers as part of the development and component testing process. The key aspect is that the code (or other artefact) is not executed..." />
+    <meta property="og:url" content="https://mikealdo.github.io/2016/04/29/10-biggest-mistakes-in-using-static-analysis.html" />
+    <meta property="og:image" content="https://mikealdo.github.io/images//covers/10-biggest-mistakes-in-using-static-analysis.jpeg" />
+    <meta property="article:published_time" content="2016-04-28T22:00:00.000Z" />
+    <meta property="article:modified_time" content="2016-05-01T07:37:44.359Z" />
+    <meta property="article:tag" content="static analysis" />
+    <meta property="article:tag" content="code coverage" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="10 biggest mistakes in using static analysis" />
+    <meta name="twitter:description" content="Static analysis is in software engineering for the respected time. Static analysis tools are generally used by developers as part of the development and component testing process. The key aspect is that the code (or other artefact) is not executed..." />
+    <meta name="twitter:url" content="https://mikealdo.github.io/2016/04/29/10-biggest-mistakes-in-using-static-analysis.html" />
+    <meta name="twitter:image:src" content="https://mikealdo.github.io/images//covers/10-biggest-mistakes-in-using-static-analysis.jpeg" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Michal Davídek - blog",
+    "author": {
+        "@type": "Person",
+        "name": "Michal Davídek",
+        "image": "https://avatars.githubusercontent.com/u/14245058?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": null
+    },
+    "headline": "10 biggest mistakes in using static analysis",
+    "url": "https://mikealdo.github.io/2016/04/29/10-biggest-mistakes-in-using-static-analysis.html",
+    "datePublished": "2016-04-28T22:00:00.000Z",
+    "dateModified": "2016-05-01T07:37:44.359Z",
+    "image": "https://mikealdo.github.io/images//covers/10-biggest-mistakes-in-using-static-analysis.jpeg",
+    "keywords": "static analysis,  code coverage",
+    "description": "Static analysis is in software engineering for the respected time. Static analysis tools are generally used by developers as part of the development and component testing process. The key aspect is that the code (or other artefact) is not executed..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Michal Davídek - blog" href="https://mikealdo.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+  </head>
+  <body class="post-template tag-static-analysis tag-code-coverage">
+    <header id="menu-button" class="expanded">
+      <a><i class="icon icon-list"></i></a>
+    </header>
+    <aside class="cover" style="background: url(/images/background-cover.jpg) center/cover no-repeat fixed">
+      <div class="cover container">
+        <div class="profile">
+          <a id="avatar-link" title="link to homepage for Michal Davídek - blog" href="https://mikealdo.github.io/#open">
+            <img src="/images/michal-davidek.png" alt="Michal Davídek - blog avatar" class="profile avatar rounded hvr-buzz-out" />
+            <h1 id="profile-title">Michal Davídek - blog</h1>
+            <h3 id="profile-resume"></h3>
+          </a>
+    
+          <hr class="divider long" />
+          <p>Architecture, coding, open source.</p>
+          <hr class="divider short" />
+          <div class="navigation">
+            <div class="profile contact">
+              
+              <nav class="navigation right">
+                <ul class="social expanded">
+              
+              
+                  <!-- Twitter -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://twitter.com/mikealdo007" title="Twitter account">
+                      <i class='icon icon-social-twitter'></i>
+                      <span class="label">Twitter</span>
+                    </a>
+                  </li>
+              
+                  <!-- Google Plus -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://plus.google.com/+MichalDavidekCZ" title="Google+ account">
+                      <i class='icon icon-social-google-plus'></i>
+                      <span class="label">Google-plus</span>
+                    </a>
+                  </li>
+              
+                  <!-- Github -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://github.com/mikealdo" title="Github account">
+                      <i class='icon icon-social-github'></i>
+                      <span class="label">Github</span>
+                    </a>
+                  </li>
+                  </li>
+              
+              
+              
+              
+                  <!-- LinkedIn -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://www.linkedin.com/in/davidekmichal" title="LinkedIn account">
+                      <i class='icon icon-social-linkedin'></i>
+                      <span class="label">LinkedIn</span>
+                    </a>
+                  </li>
+              
+                  <!-- Email -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="mailto:mdavidek1@gmail.com" title="Email mdavidek1@gmail.com">
+                      <i class='icon icon-mail'></i>
+                      <span class="label">Email</span>
+                    </a>
+                  </li>
+              
+                </ul>
+              </nav>
+              <!-- <section class="icon icon-search" id="search-container">
+      <hr class="divider short" />
+      <form id="search-form">
+        <input type="text", name="search", placeholder="git, css, javascript,..." id="search-field" />
+      </form>
+    </section>
+     -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <section id="search-results"></section>
+      <section class="content">
+        
+
+  <article class="post tag-static-analysis tag-code-coverage">
+    <header>
+      <div class="post meta">
+        <time datetime="29 Apr 2016">29 Apr 2016</time>
+        <span class="post tags">in <a href="https://mikealdo.github.io/tag/static-analysis">static analysis</a> <a href="https://mikealdo.github.io/tag/code-coverage"> code coverage</a></span>
+
+
+        <span class="post reading-time"> ~ <span></span> read.</span>
+      </div>
+      <a alt="Tweet '10 biggest mistakes in using static analysis'" href="https://twitter.com/intent/tweet?text=10%20biggest%20mistakes%20in%20using%20static%20analysis%20%C2%BB&amp;hashtags=static analysis, code coverage&amp;url=https://mikealdo.github.io/2016/04/29/10-biggest-mistakes-in-using-static-analysis.html">
+        <img id="post-image" src=https://mikealdo.github.io/images//covers/10-biggest-mistakes-in-using-static-analysis.jpeg alt="10 biggest mistakes in using static analysis">
+        <h1 class="icon-reverse icon-social-twitter-post" id="post-title">10 biggest mistakes in using static analysis</h1>
+      </a>
+    </header>
+
+    <div id="post-content" class="post tag-static-analysis tag-code-coverage">
+      <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong><a href="https://en.wikipedia.org/wiki/Static_program_analysis">Static analysis</a></strong> is in software engineering for the respected time. <strong><a href="https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis">Static analysis tools</a></strong> are generally used by developers as part of the development and component testing process. The key aspect is that the code (or other artefact) is not executed or run but the tool itself is executed, and the source code we are interested in is the input data to the tool. It’s started with the compilers and derived technologies around that are well established in software development world. Each technology applicable for static analysis can choose between several alternatives, set up own rules and have benefits from using them. What is most surprising for me is that even with huge set of tools, possibilities, the static analysis is not properly used and disregarded at most projects.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_well_done_here_is_the_list_with_common_mistakes">Well done, here is the list with common mistakes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="__1_violations_doesn_t_mean_failing_build">#1 - Violations doesn’t mean failing build</h3>
+<div class="paragraph">
+<p>Static analysis should help us to discover all the potential problems and raise a red flag whenever the codebase didn’t met the rules. Biggest mistake you can do is producing warnings only and not let the build fail when vilolations against the rules are thrown. It leads to immediate start of ignore mode for anybody to pay attention to static analysis. When you are following strategy that you can ship regardless of static analysis results, it’s definitely bad, see mistake #10.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__2_rules_are_set_by_architects_and_developers_aren_t_in_the_process">#2 - Rules are set by architects and developers aren’t in the process</h3>
+<div class="paragraph">
+<p>Engagement of the developers itself is essential for having static analysis effective. If the developers can’t affect the tools, are unable to cooperate on the rules, engagement will be slow, none or both. Developers are the ones who are taking care about code quality in every day life so you need to be friendly to allow them to participate on the rules, tools and overall process.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__3_not_set_rules_from_start_of_the_project">#3 - Not set rules from start of the project</h3>
+<div class="paragraph">
+<p>Setting up static code analysis and removal of the problems after decent work on project is done, can be literally nightmare. It’s so much easier to set up tools for checking quality of the code on start of the project and enforce them from the start. For pet projects probably doesn’t make sense to set up these tools but I have seen pretty big number of projects which started as pet projects and ended as regular project. So maybe is the solution recognizing the right time for adding static analysis to the project.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__4_coding_standards_not_aligned_with_static_analysis">#4 - Coding standards not aligned with static analysis</h3>
+<div class="paragraph">
+<p>If coding standards are speaking differently than rules in static analysis, it’s definitely wrong and can be very misleading. These two guys should be playing same game. Being careful about coding standards and having them aligned with static analysis it’s essential to have clear intention what’s good for project and what’s not. Also lack of documentation about static analysis itself - how to</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>install it</p>
+</li>
+<li>
+<p>use it</p>
+</li>
+<li>
+<p>setup the build</p>
+</li>
+<li>
+<p>setup the continuous integration server</p>
+</li>
+<li>
+<p>mitigate the violations</p>
+</li>
+<li>
+<p>how/when suppress violations</p>
+</li>
+<li>
+<p>handle legacy code - strategy for legacy</p>
+</li>
+<li>
+<p>and which parts of software aren’t checked and why (don’t test what you can’t change).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This lack of documentation is a problem because it can easily break the engagement by team members and proper use of all the tools.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__5_tools_are_not_enhanced_with_own_rules">#5 - Tools are not enhanced with own rules</h3>
+<div class="paragraph">
+<p>You can believe me, there is always something special in your software which should be checked as early as possible by static analysis.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__6_tools_are_not_complemented_with_quality_assurance_tests">#6 - Tools are not complemented with quality assurance tests</h3>
+<div class="paragraph">
+<p>There are things which static analysis can’t discover - for example configuration of the product, some special runtime behaviour. What you should provide is good suite of quality assurance tests. These tests doesn’t test functionality of software but they are ensuring that the codebase is following coding standards in different way than static analysis. It’s common mistake to believe that static analysis is the only one tool which can get rid of all the problems.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__7_default_code_inspections_set_in_ides">#7 - Default code inspections set in IDEs</h3>
+<div class="paragraph">
+<p>When you are using some unified <a href="https://www.jetbrains.com/idea/">IDEs</a> for developing software, you should provide default project configuration for such IDE. For example settitngs.jar for the <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">Intellij IDEA</a>. There are list of code inspections set for almost each programming language and environment and you should carefully set all the rules and disable/enable the rules according to coding standards and static analysis. Within every new rule in static analysis or coding standards, these settings needs be aligned as well.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__8_code_coverage_threshold_is_not_set_or_regularly_increased">#8 - Code coverage threshold is not set or regularly increased</h3>
+<div class="paragraph">
+<p><a href="https://en.wikipedia.org/wiki/Code_coverage">Code coverage</a> is one of the tool from the static analysis toolset. It verify that your production codebase is checked by unit and/or integration tests. It’s common mistake if there isn&#8217;t set threshold meaning failing build whenever the code coverage is under the threshold. And it’s even worse if this threshold isn’t regularly increased. It doesn’t need to be increased by number of percent but whenever the code coverage is increased, the threshold should be increased as well to ensuring that new code added won’t be covered by the tests.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__9_compliants_to_false_positives">#9 - Compliants to false positives</h3>
+<div class="paragraph">
+<p>Yes, there are pretty obvious possibilities that analysis will throw false positives. You should take care about all the violations and those which are false positives should be handled inside code with some kind of suppression with comment why it’s false positives and why it can be ignored.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__10_when_adding_static_analysis_starting_with_too_many_rules">#10 - When adding static analysis, starting with too many rules</h3>
+<div class="paragraph">
+<p>Less rules that are followed are better than many that aren’t. Adding static analysis to product after some work is done is tough. But not having static analysis on your side it’s worse. So if you haven’t sufficient time to incorporate comprehensive set of tools and rules, start with some minimal number and work on improvements continuously. It’s even the rule for the static analysis for greenfield projects - static analysis is continuous process and you should take care about that in regular manner. Adding rules, avoiding inconvenient ones, this is product of careful way of having ensured quality.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_extra_one_lack_of_management_buy_in">Extra one - Lack of management buy-in</h3>
+<div class="paragraph">
+<p>If you haven’t management on your side, there is no simple way how to have sufficient time for taking care about static analysis. It’s not short run, it’s the long one and definitely not the easy one. And time consuming as well so you need to have management which has understanding of return of such investment, have set allowed time, requirements and goals.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion">Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Static analysis is great. Using it is hard. Using it properly is very hard. With carefulness, sufficient time and regular improvements will be any project rewarded with huge benefits - cleaner code, quality, less bugs and better maintenance. Don’t do mistakes listed above and your benefits will be guaranteed.</p>
+</div>
+<div class="paragraph">
+<p><strong>P.S.</strong> If you enjoyed this post, you can follow me on <a href="https://twitter.com/mikealdo007">twitter</a> to stay in touch with my further articles and other thoughts.</p>
+</div>
+<div class="paragraph">
+<p><strong>P.S.2</strong> Cover image by <a href="https://unsplash.com/photos/ryoZbN7HzU8">Jeremy Thomas | unsplash.com</a>.</p>
+</div>
+</div>
+</div>
+    </div>
+
+    <div class="post related">
+
+    </div>
+
+    <footer class="post comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        var disqus_shortname = 'mikealdo'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </footer>
+
+  </article>
+
+
+        <footer>
+          <span class="copyright">
+            &copy; 2016. All rights reserved. Built with <a href="https://github.com/Kikobeats/uno-zen" target="_blank">Uno Zen</a> under <a href="http://hubpress.io/" target="_blank">HubPress</a>.
+          </span>
+        </footer>
+      </section>
+    </main>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+    <script src="//mikealdo.github.io/themes/uno-zen/assets/js/uno-zen.js?v=1.0.0" type="text/javascript" charset="utf-8"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-72815761-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
