@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kinds of Static analysis tools</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-57x57.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="60x60" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-60x60.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="72x72" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-72x72.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="76x76" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-76x76.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="114x114" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-114x114.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="120x120" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-120x120.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="144x144" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-144x144.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="152x152" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-152x152.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-180x180.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-32x32.png?v=wAAv6Wqe6l?v=1.0.0" sizes="32x32">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-194x194.png?v=wAAv6Wqe6l?v=1.0.0" sizes="194x194">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-96x96.png?v=wAAv6Wqe6l?v=1.0.0" sizes="96x96">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/android-chrome-192x192.png?v=wAAv6Wqe6l?v=1.0.0" sizes="192x192">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-16x16.png?v=wAAv6Wqe6l?v=1.0.0" sizes="16x16">
+    <link rel="manifest" href="//mikealdo.github.io/themes/uno-zen/assets/img/manifest.json?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="shortcut icon" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon.ico?v=wAAv6Wqe6l?v=1.0.0">
+    <meta name="msapplication-TileColor" content="#e74c3c">
+    <meta name="msapplication-TileImage" content="//mikealdo.github.io/themes/uno-zen/assets/img/mstile-144x144.png?v=wAAv6Wqe6l?v=1.0.0">
+    <meta name="msapplication-config" content="//mikealdo.github.io/themes/uno-zen/assets/img/browserconfig.xml?v=wAAv6Wqe6l?v=1.0.0">
+    <meta name="theme-color" content="#e74c3c">
+    <link rel="stylesheet" type="text/css" href="//mikealdo.github.io/themes/uno-zen/assets/css/uno-zen.css?v=1.0.0" />
+    <link rel="canonical" href="https://mikealdo.github.io/2016/05/06/Kinds-of-Static-analysis-tools.html" />
+    
+    <meta property="og:site_name" content="Michal Davídek - blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Kinds of Static analysis tools" />
+    <meta property="og:description" content="I like clean code. I like code where is visible quality with the first touch of code. And I like predictable codebases which can be seen as written by one developer. And I like static analysis because it significantly helps..." />
+    <meta property="og:url" content="https://mikealdo.github.io/2016/05/06/Kinds-of-Static-analysis-tools.html" />
+    <meta property="og:image" content="https://mikealdo.github.io/images//covers/kinds-of-static-analysis-tools.jpeg" />
+    <meta property="article:published_time" content="2016-05-05T22:00:00.000Z" />
+    <meta property="article:modified_time" content="2016-05-08T04:19:44.973Z" />
+    <meta property="article:tag" content="static analysis" />
+    <meta property="article:tag" content="learning" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kinds of Static analysis tools" />
+    <meta name="twitter:description" content="I like clean code. I like code where is visible quality with the first touch of code. And I like predictable codebases which can be seen as written by one developer. And I like static analysis because it significantly helps..." />
+    <meta name="twitter:url" content="https://mikealdo.github.io/2016/05/06/Kinds-of-Static-analysis-tools.html" />
+    <meta name="twitter:image:src" content="https://mikealdo.github.io/images//covers/kinds-of-static-analysis-tools.jpeg" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Michal Davídek - blog",
+    "author": {
+        "@type": "Person",
+        "name": "Michal Davídek",
+        "image": "https://avatars.githubusercontent.com/u/14245058?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": null
+    },
+    "headline": "Kinds of Static analysis tools",
+    "url": "https://mikealdo.github.io/2016/05/06/Kinds-of-Static-analysis-tools.html",
+    "datePublished": "2016-05-05T22:00:00.000Z",
+    "dateModified": "2016-05-08T04:19:44.973Z",
+    "image": "https://mikealdo.github.io/images//covers/kinds-of-static-analysis-tools.jpeg",
+    "keywords": "static analysis,  learning",
+    "description": "I like clean code. I like code where is visible quality with the first touch of code. And I like predictable codebases which can be seen as written by one developer. And I like static analysis because it significantly helps..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Michal Davídek - blog" href="https://mikealdo.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+  </head>
+  <body class="post-template tag-static-analysis tag-learning">
+    <header id="menu-button" class="expanded">
+      <a><i class="icon icon-list"></i></a>
+    </header>
+    <aside class="cover" style="background: url(/images/background-cover.jpg) center/cover no-repeat fixed">
+      <div class="cover container">
+        <div class="profile">
+          <a id="avatar-link" title="link to homepage for Michal Davídek - blog" href="https://mikealdo.github.io/#open">
+            <img src="/images/michal-davidek.png" alt="Michal Davídek - blog avatar" class="profile avatar rounded hvr-buzz-out" />
+            <h1 id="profile-title">Michal Davídek - blog</h1>
+            <h3 id="profile-resume"></h3>
+          </a>
+    
+          <hr class="divider long" />
+          <p>Architecture, coding, open source.</p>
+          <hr class="divider short" />
+          <div class="navigation">
+            <div class="profile contact">
+              
+              <nav class="navigation right">
+                <ul class="social expanded">
+              
+              
+                  <!-- Twitter -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://twitter.com/mikealdo007" title="Twitter account">
+                      <i class='icon icon-social-twitter'></i>
+                      <span class="label">Twitter</span>
+                    </a>
+                  </li>
+              
+                  <!-- Google Plus -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://plus.google.com/+MichalDavidekCZ" title="Google+ account">
+                      <i class='icon icon-social-google-plus'></i>
+                      <span class="label">Google-plus</span>
+                    </a>
+                  </li>
+              
+                  <!-- Github -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://github.com/mikealdo" title="Github account">
+                      <i class='icon icon-social-github'></i>
+                      <span class="label">Github</span>
+                    </a>
+                  </li>
+                  </li>
+              
+              
+              
+              
+                  <!-- LinkedIn -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://www.linkedin.com/in/davidekmichal" title="LinkedIn account">
+                      <i class='icon icon-social-linkedin'></i>
+                      <span class="label">LinkedIn</span>
+                    </a>
+                  </li>
+              
+                  <!-- Email -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="mailto:mdavidek1@gmail.com" title="Email mdavidek1@gmail.com">
+                      <i class='icon icon-mail'></i>
+                      <span class="label">Email</span>
+                    </a>
+                  </li>
+              
+                </ul>
+              </nav>
+              <!-- <section class="icon icon-search" id="search-container">
+      <hr class="divider short" />
+      <form id="search-form">
+        <input type="text", name="search", placeholder="git, css, javascript,..." id="search-field" />
+      </form>
+    </section>
+     -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <section id="search-results"></section>
+      <section class="content">
+        
+
+  <article class="post tag-static-analysis tag-learning">
+    <header>
+      <div class="post meta">
+        <time datetime="06 May 2016">06 May 2016</time>
+        <span class="post tags">in <a href="https://mikealdo.github.io/tag/static-analysis">static analysis</a> <a href="https://mikealdo.github.io/tag/learning"> learning</a></span>
+
+
+        <span class="post reading-time"> ~ <span></span> read.</span>
+      </div>
+      <a alt="Tweet 'Kinds of Static analysis tools'" href="https://twitter.com/intent/tweet?text=Kinds%20of%20Static%20analysis%20tools%20%C2%BB&amp;hashtags=static analysis, learning&amp;url=https://mikealdo.github.io/2016/05/06/Kinds-of-Static-analysis-tools.html">
+        <img id="post-image" src=https://mikealdo.github.io/images//covers/kinds-of-static-analysis-tools.jpeg alt="Kinds of Static analysis tools">
+        <h1 class="icon-reverse icon-social-twitter-post" id="post-title">Kinds of Static analysis tools</h1>
+      </a>
+    </header>
+
+    <div id="post-content" class="post tag-static-analysis tag-learning">
+      <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>I like clean code. I like code where is visible quality with the first touch of code. And I like predictable codebases which can be seen as written by one developer. And I like static analysis because it significantly helps to achieve all the mentioned things. In my <a href="https://mikealdo.github.io/2016/04/29/10-biggest-mistakes-in-using-static-analysis.html">last article</a> I wrote about mistakes in using static analysis in software projects. Now I would like to go a step forward and give an advice how to choose the right tool(s). I would say that even with subset of these tools you will have huge benefits as less bugs, better maintainability, cleaner and simpler code. Let’s start with a theory and motivation &#8230;&#8203;</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_one_tool_is_almost_nothing">One tool is almost nothing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When it comes to choice static analysis tools, in the first line of possibilities are tools widely accepted by community - in java landscape <a href="https://pmd.github.io/">PMD</a>, <a href="http://findbugs.sourceforge.net">FindBugs</a> and <a href="http://checkstyle.sourceforge.net">CheckStyle</a>. One of these tools is almost on each project but rarely there are more than two of them. And it’s wrong! Maybe is hard to convince anybody responsible for that project, maybe it’s even harder to make codebase compliant to all of these tools. Without any doubts, static analysis has proven his usefulness and we should be very interested in to use it. But not only one tool, but several tools at once.</p>
+</div>
+<div class="paragraph">
+<p>I believe that not using more than one or two tools is, that we are using wrong and vague arguments and statements about static analysis. When I am listening to “there are pretty much false positives” or “these tools are checking the same things” without particular example, I am bit angry. So what are my arguments when I am talking about SA tools? In my perspective, there are five categories in which are tools distributed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>tools checking <strong>conventions</strong></p>
+</li>
+<li>
+<p>tools avoiding using <strong>bad practices</strong></p>
+</li>
+<li>
+<p>tools finding <strong>potential bugs</strong></p>
+</li>
+<li>
+<p>tools checking <strong>architectural issues</strong></p>
+</li>
+<li>
+<p>tools measuring <strong>code coverage</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you are architect, lead developer, project manager or any developer interested in project, would you like to perform checking rules enforcing code conventions, best practices, no silly technical bugs, clean architecture and good code coverage within each build of your software? Then continue reading, all you need is static analysis and tools for all the mentioned categories. From this dividing is obvious that one tool is not sufficient and tools are complementing each other.</p>
+</div>
+<div class="sect2">
+<h3 id="_convention_checking_tools">Convention checking tools</h3>
+<div class="paragraph">
+<p>These tools aims to check code conventions - naming, format and usage of comments. Rules inside are very simple and using them helps with uniform looking and consistent code. It has no impact to performance or stability, but enables people in team work together and get rid of useless discussion - typical tabs or spaces. You can guess who is typical member of this tools in Java landscape - I will reveal on the end of the article. These tools should be aligned with code conventions of the project and always need to have custom configuration to spare the team from the avalanche of irrelevant feedback.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bad_practices_checking">Bad practices checking</h3>
+<div class="paragraph">
+<p>Rules inside are checking well known behaviours that systematically lead to difficulties over time, for example dead code or complex long methods. It can be seen as a friend who is kindly reminding that developed code contains something smelling or missing (for example missing hashCode implementation when equals provided).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_finding_potential_bugs">Finding potential bugs</h3>
+<div class="paragraph">
+<p>There are many places in code with many parameters needed to be taken into account to spot some buggy behaviour. And it’s even harder because understanding of the buggy behaviour means to go through a sequences of code. For example TODO my example. Also tools for Java are often working on bytecode level, so it can check things that are almost impossible spot (or overseen) at the source level.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_architectural_issues">Architectural issues</h3>
+<div class="paragraph">
+<p>While conventional static analysis tools are focusing on checking source code, architectural static analysis is focusing on overall architecture of the software. For example not using data access layer directly inside UI, checking usage of some framework annotations only in particular classes. I wasn’t aware about that tools for a long time. Instead I was used to write something internally called “Quality assurance tests” which has had one goal - for example prevent improper usage of annotations or verify that some annotation is present on class implementing given interface. And this is exactly what can do architectural static analysis tool.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_code_coverage_tool">Code coverage tool</h3>
+<div class="paragraph">
+<p>Tools are basically checking execution of the production code by running unit and integration tests. It checks every condition and every line of code if it were executed and provide a percentage how many code was executed to not executed. Industry standards are very questionable and are very different project to project. I have seen thresholds on 80% and 55% as well. In my opinion there is big mistake in using such tool - checking coverage for different kinds of the tests altogether. Execution of the tests should be divided in build process and code coverage should have different thresholds set for different groups of test. For example for unit test it should be close to 100%, for integration close to 80% and for end-to-end test close to 50%.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_else">What else &#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I would say that important is one more category - learning. As the tools are written by the developers for the developers, you can benefit from using them to learn something new. Instead of treating the rules as a bad policeman, you need to treat them as a friend who are leading you the right direction. Every time you will have some violations, you will learn something new and you will better developer. With this comes into my mind, that static analysis is industry standard, so it’s bad if you are not having incorporated to your project.</p>
+</div>
+<div class="paragraph">
+<p><strong>P.S.</strong> If you enjoyed this post, you can follow me on <a href="https://twitter.com/mikealdo007">twitter</a> to stay in touch with my further articles and other thoughts.</p>
+</div>
+<div class="paragraph">
+<p><strong>P.S.2</strong> Cover image by <a href="https://unsplash.com/photos/qG-hPxoAnRE">Johnson Wang | unsplash.com</a>.</p>
+</div>
+</div>
+</div>
+    </div>
+
+    <div class="post related">
+
+    </div>
+
+    <footer class="post comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        var disqus_shortname = 'mikealdo'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </footer>
+
+  </article>
+
+
+        <footer>
+          <span class="copyright">
+            &copy; 2016. All rights reserved. Built with <a href="https://github.com/Kikobeats/uno-zen" target="_blank">Uno Zen</a> under <a href="http://hubpress.io/" target="_blank">HubPress</a>.
+          </span>
+        </footer>
+      </section>
+    </main>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+    <script src="//mikealdo.github.io/themes/uno-zen/assets/js/uno-zen.js?v=1.0.0" type="text/javascript" charset="utf-8"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-72815761-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
