@@ -1,10 +1,10 @@
 = Static analysis tools for Java landscape in 2016
-:hp-image: /covers/.jpeg
+:hp-image: /covers/static-analysis-tools-for-java-landscape-in-2016.jpg
 :hp-tags: static analysis tools
 :hp-alt-title: Static analysis tools for Java landscape in 2016
 :published_at: 2016-05-13
 :my-twitter-link: https://twitter.com/mikealdo007[twitter]
-:cover-link:
+:cover-link: https://unsplash.com/photos/IClZBVw5W5A[Todd Quackenbush | unsplash.com]
 :mistakes-link: https://mikealdo.github.io/2016/04/29/10-biggest-mistakes-in-using-static-analysis.html[mistakes in using static analysis]
 :kinds-link: https://mikealdo.github.io/2016/05/06/Kinds-of-Static-analysis-tools.html[kinds of static analysis tools]
 :last-article-link: https://mikealdo.github.io/2016/05/06/Kinds-of-Static-analysis-tools.html[last article]
