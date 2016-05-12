@@ -1,0 +1,76 @@
+= Static analysis tools for Java landscape in 2016
+:hp-image: /covers/.jpeg
+:hp-tags: static analysis tools
+:hp-alt-title: Static analysis tools for Java landscape in 2016
+:published_at: 2016-05-13
+:my-twitter-link: https://twitter.com/mikealdo007[twitter]
+:cover-link:
+:mistakes-link: https://mikealdo.github.io/2016/04/29/10-biggest-mistakes-in-using-static-analysis.html[mistakes in using static analysis]
+:kinds-link: https://mikealdo.github.io/2016/05/06/Kinds-of-Static-analysis-tools.html[kinds of static analysis tools]
+:last-article-link: https://mikealdo.github.io/2016/05/06/Kinds-of-Static-analysis-tools.html[last article]
+:own-rules-checkstyle-link: https://github.com/blundell/CreateYourOwnCheckStyleCheck[Check this.]
+:additional-checkstyle-link: https://github.com/sevntu-checkstyle/sevntu.checkstyle[Additional checkstyle rules]
+:pmd-link: https://pmd.github.io/[PMD]
+:findbugs-link: http://findbugs.sourceforge.net/[FindBugs]
+:fb-added-link: http://fb-contrib.sourceforge.net/[Additional detectors for FindBugs]
+:pmd-own-rules-link: http://pmd.sourceforge.net/snapshot/customizing/howtowritearule.html[Check this.]
+:jdepend-link: http://clarkware.com/software/JDepend.html#credits[JDepend]
+:jarchitect-link: http://www.jarchitect.com/features[JArchitect]
+:checkstyle-link: http://checkstyle.sourceforge.net/[CheckStyle]
+:error-prone-link: https://github.com/google/error-prone[Error Prone]
+:infer-link: http://fbinfer.com/docs/infer-bug-types.html[Infer]
+:macker-link: http://sourceforge.net/projects/macker[Macker]
+:jacoco-link: http://eclemma.org/jacoco/[JaCoCo]
+:cobertura-link: http://cobertura.github.io/cobertura/[Cobertura]
+:clover-link: https://www.atlassian.com/software/clover?_ga=1.95384286.37164455.1455027393[Clover]
+:comparison-link-attlassian:  https://confluence.atlassian.com/display/CLOVER/Comparison+of+code+coverage+tools [comparison of code coverate tools by Atlassian]
+:another-comparison:  https://dzone.com/articles/code-coverage-tools-comparison[another usefull comparison]
+
+In two recent articles I was talking about {mistakes-link} and {kinds-link}. As a last part of this mini series about static analysis I would provide my preferred toolset for Java landscape. As I am mainly Java developer and I am in industry for more than 8 years, I have experience with various tools. There are pretty good possibilities for choice and many of them are providing possibility to extension. Maybe I am wrong, but there is no significant new big player in static analysis so the year 2016 in title can be easily replaced with 2015 or even 2014.
+
+== How to incorporate tools to the project
+Frankly, I would pick one tool for each category provided in {last-article-link} and incorporate them into project. This is probably very exhausting goal on the start so I would start with one tool and incrementally add the next ones. I would prefer to start with incorporation of tool checking potential bugs - without any doubt any violation or warning means possible bug or mistake. After solving violations, incorporation to build lifecycle and being familiar with the tool I would add next tool - about bad practices checking. And the last one would be checking code conventions as these are most discussed and hard to agree among team members. So start with subset of rules and continuously add further.
+
+== Recommended tools for Java development for each category
+
+* Conventions
+** Industry standard:{checkstyle-link}
+*** allowing creation of own  rules. {own-rules-checkstyle-link}
+*** {additional-checkstyle-link}
+** IDEs code inspections
+*** even when these rules aren’t enforced by build process, it’s critical to use shared settings of these inspections through team members. It can be set to be playing the same game as a static analysis tools and avoid unnecessary failing builds
+* Bad practices
+** Industry standard:{pmd-link}
+*** allowing creation of own rules. {pmd-own-rules-link}
+** Other possibilities
+*** JDepend - cyclic dependency tool, it’s complementary to PMD and may come with more violations than PMD
+* Potential bugs
+** Industry standard: {findbugs-link}
+*** can be used as analyser for libraries when source code is not available as well (to get impression about quality of such library)
+*** {fb-added-link}
+** Other possibilities
+*** {error-prone-link} - is checking bugs at compile time so it’s fail-fast static analysis tool.
+*** {infer-link} - Facebook last year tool for finding bugs seems to be pretty ambitious but as the authors are saying - it’s a long way to have comprehensive set of rules inside and they are still on the start. It seems that theories stands behind this software are very reasonable so it can be future of static analysis in further years.
+*** nice thing is that it’s running only on the changed code so it’s significantly faster than other tools which are starting from scratch all the time
+* Architectural issues
+** Macker
+*** last update 2013, no clear future.
+*** Macker is checking architecture problems, for example using database access code directly from UI. It is configurable and provides further benefits upon CheckStyle rules. So it’s supporting good conventions on the code.
+* Code coverage
+** {jacoco-link}
+** {cobertura-link}
+** {clover-link} (commercial)
+** Comparison of tools - {comparison-link-attlassian} and {another-comparison}
+*** Well, in this category is my opinion not strong. Each of these tools works pretty well and have similar outputs. If it's not problem with money I would reccomend Clover which has more metrics than others, it's able to show top risks and it's actively developed and supported.
+* Have it all toghether
+** Qulice
+*** This is most complete tool for static analysis which I have seen so far. It combines PMD, FindBugs, CheckStyle, Cobertura and plenty of own rules. It breaks build for even the smallest violations so it has great positive impact to the codebase.
+** Sonar
+*** Sonar is great for aggregation of PMD, Checkstyle and Findbugs reports to providing big picture about software. Sad thing is that it’s only read-only thing and rarely is someone starting action after checking sonar report. This is why I would recommend using Qulice.
+
+== Conclusion
+The last statement - please, use static analysis in even smallest project. As I stated in last article, there is significant chance that you and your team will learn something and become better developers. Start with small set of rules and incrementally enhance static analysis with additional rules and even tools.
+
+*P.S.* If you enjoyed this post, you can follow me on {my-twitter-link} to stay in touch with my further articles and other thoughts.
+
+*P.S.2* Cover image by {cover-link}.
