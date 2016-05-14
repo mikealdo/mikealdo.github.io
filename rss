@@ -5,9 +5,9 @@
     <link>https://mikealdo.github.io</link>
     <description>Architecture, coding, open source.</description>
     <language>en-UK</language>
-    <pubDate>Sat, 14 May 2016 06:06:12 GMT</pubDate>
+    <pubDate>Sat, 14 May 2016 06:09:42 GMT</pubDate>
     <dc:creator>mdavidek1@gmail.com</dc:creator>
-    <dc:date>2016-05-14T06:06:12Z</dc:date>
+    <dc:date>2016-05-14T06:09:42Z</dc:date>
     <dc:language>en-UK</dc:language>
     <item>
       <title>Software architecture like a building own house</title>
@@ -197,6 +197,15 @@
       <pubDate>Fri, 06 May 2016 00:00:00 GMT</pubDate>
       <guid>https://mikealdo.github.io/2016/05/06/Kinds-of-Static-analysis-tools.html</guid>
       <dc:date>2016-05-06T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Static analysis tools for Java landscape in 2016</title>
+      <link>https://mikealdo.github.io/2016/05/13/Static-analysis-tools-for-Java-landscape-in-2016.html</link>
+      <description>In two recent articles I was talking about mistakes in using static analysis and kinds of static analysis tools. As a last part of this mini series about static analysis I would provide my preferred toolset for Java landscape. As...</description>
+      <category>static analysis tools</category>
+      <pubDate>Fri, 13 May 2016 00:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2016/05/13/Static-analysis-tools-for-Java-landscape-in-2016.html</guid>
+      <dc:date>2016-05-13T00:00:00Z</dc:date>
     </item>
   </channel>
 </rss>
