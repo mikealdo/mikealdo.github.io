@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Static analysis tools for Java landscape in 2016</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-57x57.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="60x60" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-60x60.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="72x72" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-72x72.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="76x76" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-76x76.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="114x114" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-114x114.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="120x120" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-120x120.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="144x144" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-144x144.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="152x152" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-152x152.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-180x180.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-32x32.png?v=wAAv6Wqe6l?v=1.0.0" sizes="32x32">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-194x194.png?v=wAAv6Wqe6l?v=1.0.0" sizes="194x194">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-96x96.png?v=wAAv6Wqe6l?v=1.0.0" sizes="96x96">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/android-chrome-192x192.png?v=wAAv6Wqe6l?v=1.0.0" sizes="192x192">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-16x16.png?v=wAAv6Wqe6l?v=1.0.0" sizes="16x16">
+    <link rel="manifest" href="//mikealdo.github.io/themes/uno-zen/assets/img/manifest.json?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="shortcut icon" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon.ico?v=wAAv6Wqe6l?v=1.0.0">
+    <meta name="msapplication-TileColor" content="#e74c3c">
+    <meta name="msapplication-TileImage" content="//mikealdo.github.io/themes/uno-zen/assets/img/mstile-144x144.png?v=wAAv6Wqe6l?v=1.0.0">
+    <meta name="msapplication-config" content="//mikealdo.github.io/themes/uno-zen/assets/img/browserconfig.xml?v=wAAv6Wqe6l?v=1.0.0">
+    <meta name="theme-color" content="#e74c3c">
+    <link rel="stylesheet" type="text/css" href="//mikealdo.github.io/themes/uno-zen/assets/css/uno-zen.css?v=1.0.0" />
+    <link rel="canonical" href="https://mikealdo.github.io/2016/05/13/Static-analysis-tools-for-Java-landscape-in-2016.html" />
+    
+    <meta property="og:site_name" content="Michal Davídek - blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Static analysis tools for Java landscape in 2016" />
+    <meta property="og:description" content="In two recent articles I was talking about mistakes in using static analysis and kinds of static analysis tools. As a last part of this mini series about static analysis I would provide my preferred toolset for Java landscape. As..." />
+    <meta property="og:url" content="https://mikealdo.github.io/2016/05/13/Static-analysis-tools-for-Java-landscape-in-2016.html" />
+    <meta property="og:image" content="https://mikealdo.github.io/images//covers/static-analysis-tools-for-java-landscape-in-2016.jpg" />
+    <meta property="article:published_time" content="2016-05-12T22:00:00.000Z" />
+    <meta property="article:modified_time" content="2016-05-14T06:07:17.585Z" />
+    <meta property="article:tag" content="static analysis tools" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Static analysis tools for Java landscape in 2016" />
+    <meta name="twitter:description" content="In two recent articles I was talking about mistakes in using static analysis and kinds of static analysis tools. As a last part of this mini series about static analysis I would provide my preferred toolset for Java landscape. As..." />
+    <meta name="twitter:url" content="https://mikealdo.github.io/2016/05/13/Static-analysis-tools-for-Java-landscape-in-2016.html" />
+    <meta name="twitter:image:src" content="https://mikealdo.github.io/images//covers/static-analysis-tools-for-java-landscape-in-2016.jpg" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Michal Davídek - blog",
+    "author": {
+        "@type": "Person",
+        "name": "Michal Davídek",
+        "image": "https://avatars.githubusercontent.com/u/14245058?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": null
+    },
+    "headline": "Static analysis tools for Java landscape in 2016",
+    "url": "https://mikealdo.github.io/2016/05/13/Static-analysis-tools-for-Java-landscape-in-2016.html",
+    "datePublished": "2016-05-12T22:00:00.000Z",
+    "dateModified": "2016-05-14T06:07:17.585Z",
+    "image": "https://mikealdo.github.io/images//covers/static-analysis-tools-for-java-landscape-in-2016.jpg",
+    "keywords": "static analysis tools",
+    "description": "In two recent articles I was talking about mistakes in using static analysis and kinds of static analysis tools. As a last part of this mini series about static analysis I would provide my preferred toolset for Java landscape. As..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Michal Davídek - blog" href="https://mikealdo.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+  </head>
+  <body class="post-template tag-static-analysis-tools">
+    <header id="menu-button" class="expanded">
+      <a><i class="icon icon-list"></i></a>
+    </header>
+    <aside class="cover" style="background: url(/images/background-cover.jpg) center/cover no-repeat fixed">
+      <div class="cover container">
+        <div class="profile">
+          <a id="avatar-link" title="link to homepage for Michal Davídek - blog" href="https://mikealdo.github.io/#open">
+            <img src="/images/michal-davidek.png" alt="Michal Davídek - blog avatar" class="profile avatar rounded hvr-buzz-out" />
+            <h1 id="profile-title">Michal Davídek - blog</h1>
+            <h3 id="profile-resume"></h3>
+          </a>
+    
+          <hr class="divider long" />
+          <p>Architecture, coding, open source.</p>
+          <hr class="divider short" />
+          <div class="navigation">
+            <div class="profile contact">
+              
+              <nav class="navigation right">
+                <ul class="social expanded">
+              
+              
+                  <!-- Twitter -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://twitter.com/mikealdo007" title="Twitter account">
+                      <i class='icon icon-social-twitter'></i>
+                      <span class="label">Twitter</span>
+                    </a>
+                  </li>
+              
+                  <!-- Google Plus -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://plus.google.com/+MichalDavidekCZ" title="Google+ account">
+                      <i class='icon icon-social-google-plus'></i>
+                      <span class="label">Google-plus</span>
+                    </a>
+                  </li>
+              
+                  <!-- Github -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://github.com/mikealdo" title="Github account">
+                      <i class='icon icon-social-github'></i>
+                      <span class="label">Github</span>
+                    </a>
+                  </li>
+                  </li>
+              
+              
+              
+              
+                  <!-- LinkedIn -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://www.linkedin.com/in/davidekmichal" title="LinkedIn account">
+                      <i class='icon icon-social-linkedin'></i>
+                      <span class="label">LinkedIn</span>
+                    </a>
+                  </li>
+              
+                  <!-- Email -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="mailto:mdavidek1@gmail.com" title="Email mdavidek1@gmail.com">
+                      <i class='icon icon-mail'></i>
+                      <span class="label">Email</span>
+                    </a>
+                  </li>
+                    <!-- RSS -->
+                    <li class="social item hvr-grow-rotate">
+                        <a href="/rss" title="Subscribe to RSS">
+                            <i class='icon icon-rss'></i>
+                            <span class="label">RSS</span>
+                        </a>
+                    </li>
+                </ul>
+              </nav>
+              <!-- <section class="icon icon-search" id="search-container">
+      <hr class="divider short" />
+      <form id="search-form">
+        <input type="text", name="search", placeholder="git, css, javascript,..." id="search-field" />
+      </form>
+    </section>
+     -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <section id="search-results"></section>
+      <section class="content">
+        
+
+  <article class="post tag-static-analysis-tools">
+    <header>
+      <div class="post meta">
+        <time datetime="13 May 2016">13 May 2016</time>
+        <span class="post tags">in <a href="https://mikealdo.github.io/tag/static-analysis-tools">static analysis tools</a></span>
+
+
+        <span class="post reading-time"> ~ <span></span> read.</span>
+      </div>
+      <a alt="Tweet 'Static analysis tools for Java landscape in 2016'" href="https://twitter.com/intent/tweet?text=Static%20analysis%20tools%20for%20Java%20landscape%20in%202016%20%C2%BB&amp;hashtags=static analysis tools&amp;url=https://mikealdo.github.io/2016/05/13/Static-analysis-tools-for-Java-landscape-in-2016.html">
+        <img id="post-image" src=https://mikealdo.github.io/images//covers/static-analysis-tools-for-java-landscape-in-2016.jpg alt="Static analysis tools for Java landscape in 2016">
+        <h1 class="icon-reverse icon-social-twitter-post" id="post-title">Static analysis tools for Java landscape in 2016</h1>
+      </a>
+    </header>
+
+    <div id="post-content" class="post tag-static-analysis-tools">
+      <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In two recent articles I was talking about <a href="https://mikealdo.github.io/2016/04/29/10-biggest-mistakes-in-using-static-analysis.html">mistakes in using static analysis</a> and <a href="https://mikealdo.github.io/2016/05/06/Kinds-of-Static-analysis-tools.html">kinds of static analysis tools</a>. As a last part of this mini series about static analysis I would provide my preferred toolset for Java landscape. As I am mainly Java developer and I am in industry for more than 8 years, I have experience with various tools. There are pretty good possibilities for choice and many of them are providing possibility to extension. Maybe I am wrong, but there is no significant new big player or game changer in static analysis so the year 2016 in title can be easily replaced with 2015 or even 2014.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_to_incorporate_tools_to_the_project">How to incorporate tools to the project</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Frankly, I would pick one tool for each category provided in <a href="https://mikealdo.github.io/2016/05/06/Kinds-of-Static-analysis-tools.html">last article</a> and incorporate them into project. This is probably very exhausting goal on the start so I would start with one tool and incrementally add the next ones. I would prefer to start with incorporation of tool checking potential bugs - without any doubt any violation or warning means possible bug or mistake. After solving violations, incorporation to build lifecycle and being familiar with the tool I would add next tool - about bad practices checking. And the last one would be checking code conventions as these are most discussed and hard to agree among team members. So start with subset of rules and continuously add further.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_recommended_tools_for_java_development_for_each_category">Recommended tools for Java development for each category</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Conventions</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Industry standard:http://checkstyle.sourceforge.net/[CheckStyle]</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Allowing creation of own  rules. <a href="https://github.com/blundell/CreateYourOwnCheckStyleCheck">Check this.</a></p>
+</li>
+<li>
+<p><a href="https://github.com/sevntu-checkstyle/sevntu.checkstyle">Additional checkstyle rules</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>IDEs code inspections</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Even when these rules aren’t enforced by build process, it’s critical to use shared settings of these inspections through team members. It can be set to be playing the same game as a static analysis tools and avoid unnecessary failing builds.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Bad practices</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Industry standard: <a href="https://pmd.github.io/">PMD</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>allowing creation of own rules. <a href="http://pmd.sourceforge.net/snapshot/customizing/howtowritearule.html">Check this.</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Other possibilities</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://clarkware.com/software/JDepend.html#credits">JDepend</a> - cyclic dependency tool, it’s complementary to PMD and may come with more violations than PMD.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Potential bugs</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Industry standard: <a href="http://findbugs.sourceforge.net/">FindBugs</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Can be used as analyser for libraries when source code is not available as well (to get impression about quality of such library).</p>
+</li>
+<li>
+<p><a href="http://fb-contrib.sourceforge.net/">Additional detectors for FindBugs</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Other possibilities</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/google/error-prone">Error Prone</a> - is checking bugs at compile time so it’s fail-fast static analysis tool.</p>
+</li>
+<li>
+<p><a href="http://fbinfer.com/docs/infer-bug-types.html">Infer</a> - Facebook last year tool for finding bugs seems to be pretty ambitious but as the authors are saying - it’s a long way to have comprehensive set of rules inside and they are still on the start. It seems that theories stands behind this software are very reasonable so it can be future of static analysis in further years. Nice thing is that it’s running only on the changed code so it’s significantly faster than other tools which are starting from scratch all the time.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Architectural issues</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Macker</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Last update 2013, no clear future.</p>
+</li>
+<li>
+<p>Macker is checking architecture problems, for example using database access code directly from UI. It is configurable and provides further benefits upon CheckStyle rules. So it’s supporting good conventions on the code.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Code coverage</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://eclemma.org/jacoco/">JaCoCo</a></p>
+</li>
+<li>
+<p><a href="http://cobertura.github.io/cobertura/">Cobertura</a></p>
+</li>
+<li>
+<p><a href="https://www.atlassian.com/software/clover?_ga=1.95384286.37164455.1455027393">Clover</a> (commercial)</p>
+</li>
+<li>
+<p>Comparison of tools - <a href="https://confluence.atlassian.com/display/CLOVER/Comparison+of+code+coverage+tools">comparison of code coverate tools by Atlassian</a> and <a href="https://dzone.com/articles/code-coverage-tools-comparison">another usefull comparison</a>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Well, in this category is my opinion not strong. Each of these tools works pretty well and have similar outputs. If it&#8217;s not problem with money I would reccomend Clover which has more metrics than others, it&#8217;s able to show top risks and it&#8217;s actively developed and supported.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Have it all toghether</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Qulice</p>
+<div class="ulist">
+<ul>
+<li>
+<p>This is most complete tool for static analysis which I have seen so far. It combines PMD, FindBugs, CheckStyle, Cobertura and plenty of own rules. It breaks build for even the smallest violations so it has great positive impact to the codebase.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Sonar</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Sonar is great for aggregation of PMD, Checkstyle and Findbugs reports to providing big picture about software. Sad thing is that it’s only read-only thing and rarely is someone starting action after checking sonar report. This is why I would recommend using Qulice.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion">Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The last statement - please, use static analysis in even smallest project. As I stated in last article, there is significant chance that you and your team will learn something and become better developers. Start with small set of rules and incrementally enhance static analysis with additional rules and even tools.</p>
+</div>
+<div class="paragraph">
+<p><strong>P.S.</strong> If you enjoyed this post, you can follow me on <a href="https://twitter.com/mikealdo007">twitter</a> to stay in touch with my further articles and other thoughts.</p>
+</div>
+<div class="paragraph">
+<p><strong>P.S.2</strong> Cover image by <a href="https://unsplash.com/photos/IClZBVw5W5A">Todd Quackenbush | unsplash.com</a>.</p>
+</div>
+</div>
+</div>
+    </div>
+
+    <div class="post related">
+
+    </div>
+
+    <footer class="post comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        var disqus_shortname = 'mikealdo'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </footer>
+
+  </article>
+
+
+        <footer>
+          <span class="copyright">
+            &copy; 2016. All rights reserved. Built with <a href="https://github.com/Kikobeats/uno-zen" target="_blank">Uno Zen</a> under <a href="http://hubpress.io/" target="_blank">HubPress</a>.
+          </span>
+        </footer>
+      </section>
+    </main>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+    <script src="//mikealdo.github.io/themes/uno-zen/assets/js/uno-zen.js?v=1.0.0" type="text/javascript" charset="utf-8"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-72815761-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
