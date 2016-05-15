@@ -25,6 +25,8 @@
 :clover-link: https://www.atlassian.com/software/clover?_ga=1.95384286.37164455.1455027393[Clover]
 :comparison-link-attlassian:  https://confluence.atlassian.com/display/CLOVER/Comparison+of+code+coverage+tools[comparison of code coverate tools by Atlassian]
 :another-comparison:  https://dzone.com/articles/code-coverage-tools-comparison[another usefull comparison]
+:qulice-link: http://www.qulice.com/index.html[Qulice]
+:sonar-link: http://www.sonarqube.org/[SonarQube]
 
 In two recent articles I was talking about {mistakes-link} and {kinds-link}. As a last part of this mini series about static analysis I would provide my preferred toolset for Java landscape. As I am mainly Java developer and I am in industry for more than 8 years, I have experience with various tools. There are pretty good possibilities for choice and many of them are providing possibility to extension. Maybe I am wrong, but there is no significant new big player or game changer in static analysis so the year 2016 in title can be easily replaced with 2015 or even 2014.
 
@@ -62,9 +64,9 @@ Frankly, I would pick one tool for each category provided in {last-article-link}
 ** Comparison of tools - {comparison-link-attlassian} and {another-comparison}.
 *** Well, in this category is my opinion not strong. Each of these tools works pretty well and have similar outputs. If it's not problem with money I would reccomend Clover which has more metrics than others, it's able to show top risks and it's actively developed and supported.
 * *Have it all toghether*
-** Qulice
+** {qulice-link}
 *** This is most complete tool for static analysis which I have seen so far. It combines PMD, FindBugs, CheckStyle, Cobertura and plenty of own rules. It breaks build for even the smallest violations so it has great positive impact to the codebase.
-** Sonar
+** {sonar-link}
 *** Sonar is great for aggregation of PMD, Checkstyle and Findbugs reports to providing big picture about software. Sad thing is that it’s only read-only thing and rarely is someone starting action after checking sonar report. This is why I would recommend using Qulice.
 
 == Conclusion
