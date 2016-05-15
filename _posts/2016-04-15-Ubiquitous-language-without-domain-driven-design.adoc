@@ -22,7 +22,7 @@ For projects which are in growing state (but basically for all) is essential to 
 * Analysts haven’t unified their language at all and each analyst is speaking about the same thing with different terms.
 ** Also, they disagree on concepts often and they are actually wrong about some because they haven’t thought of every aspect before.
 * Documentation is spawned across huge documents or wiki pages where is easy to forget the context.
-* The codebase is mix of framework designs, patterns, and business domain without clear borders.
+* The codebase is a mix of framework designs, patterns, and business domain without clear borders.
 * Inside codebase are such classes as managers, processors or so.
 * There are existing mind maps inside brains of current developers about terms used by developers and by analysts.
 * Hiring programmers with expertise in a particular domain don't help in expected amount and doesn’t eliminate problems at all.
