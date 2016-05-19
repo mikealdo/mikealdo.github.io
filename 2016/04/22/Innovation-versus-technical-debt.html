@@ -38,17 +38,17 @@
     <meta property="og:site_name" content="Michal Davídek - blog" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Innovation versus technical debt" />
-    <meta property="og:description" content="In software projects is always present tension between producing new features and keeping maintainability of the software. If maintainability is hard (bugs are hard to detect and fix for example) and we are spending much more time with maintaining than..." />
+    <meta property="og:description" content="In software projects, there is always present tension between producing new features and keeping the maintainability of the software. If maintainability is hard (bugs are hard to detect and fix for example) and we are spending much more time maintaining..." />
     <meta property="og:url" content="https://mikealdo.github.io/2016/04/22/Innovation-versus-technical-debt.html" />
     <meta property="og:image" content="https://mikealdo.github.io/images//covers/innovation-versus-technical-debt.jpeg" />
     <meta property="article:published_time" content="2016-04-21T22:00:00.000Z" />
-    <meta property="article:modified_time" content="2016-05-11T15:01:23.171Z" />
+    <meta property="article:modified_time" content="2016-05-19T07:21:42.046Z" />
     <meta property="article:tag" content="technical debt" />
     <meta property="article:tag" content="development" />
     
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Innovation versus technical debt" />
-    <meta name="twitter:description" content="In software projects is always present tension between producing new features and keeping maintainability of the software. If maintainability is hard (bugs are hard to detect and fix for example) and we are spending much more time with maintaining than..." />
+    <meta name="twitter:description" content="In software projects, there is always present tension between producing new features and keeping the maintainability of the software. If maintainability is hard (bugs are hard to detect and fix for example) and we are spending much more time maintaining..." />
     <meta name="twitter:url" content="https://mikealdo.github.io/2016/04/22/Innovation-versus-technical-debt.html" />
     <meta name="twitter:image:src" content="https://mikealdo.github.io/images//covers/innovation-versus-technical-debt.jpeg" />
     
@@ -67,10 +67,10 @@
     "headline": "Innovation versus technical debt",
     "url": "https://mikealdo.github.io/2016/04/22/Innovation-versus-technical-debt.html",
     "datePublished": "2016-04-21T22:00:00.000Z",
-    "dateModified": "2016-05-11T15:01:23.171Z",
+    "dateModified": "2016-05-19T07:21:42.046Z",
     "image": "https://mikealdo.github.io/images//covers/innovation-versus-technical-debt.jpeg",
     "keywords": "technical debt,  development",
-    "description": "In software projects is always present tension between producing new features and keeping maintainability of the software. If maintainability is hard (bugs are hard to detect and fix for example) and we are spending much more time with maintaining than..."
+    "description": "In software projects, there is always present tension between producing new features and keeping the maintainability of the software. If maintainability is hard (bugs are hard to detect and fix for example) and we are spending much more time maintaining..."
 }
     </script>
 
@@ -189,47 +189,47 @@
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>In software projects is always present tension between producing new features and keeping maintainability of the software. If maintainability is hard (bugs are hard to detect and fix for example) and we are spending much more time with maintaining than with implementing new features, we have significant technical debt. Keeping right balance between cost of fixing this debt and producing features which are in fact producing revenue is in essential for business success. In this article I would point to some advices how we as a software developers can help to keep this balance.</p>
+<p>In software projects, there is always present tension between producing new features and keeping the maintainability of the software. If maintainability is hard (bugs are hard to detect and fix for example) and we are spending much more time maintaining than with implementing new features, we have significant technical debt. Keeping the right balance between the cost of fixing this debt and producing features which are in fact creating revenue is essential for business success. In this article, I will point to some advice on how we as software developers can help to keep this balance.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_technical_debt_side">Technical debt side</h2>
+<h2 id="_technical_debt">Technical Debt</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_keeping_big_picture_of_architecture_in_mind">Keeping big picture of architecture in mind</h3>
+<h3 id="_keep_the_big_architecture_picture_in_mind">Keep the Big Architecture Picture in Mind</h3>
 <div class="paragraph">
-<p>First of all, we need to have clear picture about architecture and business goals of the software being produced. Without that we can too early skip into implementation details or overlook another possibilities when implementing new features. Also it helps to avoid unnecessary work and prevents introducing features which are not aligned with goals or architecture.</p>
+<p>First of all, we need to have a clear picture about architecture and business goals of the software being produced. Without that, we can too often skip implementation details or overlook another possibility when implementing new features. Also, it helps to avoid unnecessary work and prevents new features which are not aligned with goals or architecture.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_deal_firstly_with_mostly_touched_codebase">Deal firstly with mostly touched codebase</h3>
+<h3 id="_deal_with_the_most_touched_codebase">Deal With the Most-touched Codebase</h3>
 <div class="paragraph">
-<p>Golden rule with facing technological debt is - deal firstly with areas which are touched at most. It’s simple, if you will focus on the code which is rarely modified by  developers, rarely needs some adjustments due to business reasons, you are working on the bad place. I am not saying that this code doesn’t need the refactoring or getting rid of technical debt, but obviously there are more intensive places to take care about. And how to find out which areas are most touched? knizka advice, software find out</p>
+<p>The golden rule with facing technical debt is first to deal with areas which are touched the most. It’s simple, if you focus on the code which is rarely modified by developers and rarely needs adjustments due to business reasons, you are working in the wrong place. I am not saying that this code doesn’t need refactoring, or you&#8217;re not getting rid of technical debt, but obviously, there are more important places to take care about.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_using_ubiquitous_language">Using ubiquitous language</h3>
+<h3 id="_use_ubiquitous_language">Use Ubiquitous Language</h3>
 <div class="paragraph">
-<p>As I was advicing in <a href="https://mikealdo.github.io/2016/04/15/Ubiquitous-language-without-domain-driven-design.html">my previous post</a>, it’s generally important to use ubiquitous language in all discussions, descriptions and let this language speak in the code. You haven’t had to follow all the <a href="https://en.wikipedia.org/wiki/Domain-driven_design">domain-driven design</a> advices, but being able to speak about same things with same terms is essential to not adding further technical debt.</p>
+<p>As I was advancing in <a href="https://mikealdo.github.io/2016/04/15/Ubiquitous-language-without-domain-driven-design.html">my previous post</a>, it’s important to use ubiquitous language in all discussions and descriptions, and let this language speak in the code. You don&#8217;t need to follow all <a href="https://en.wikipedia.org/wiki/Domain-driven_design">domain-driven design</a>, but being able to talk about the same things with the same terms is essential to not adding further technical debt.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_coding_standards">Coding standards</h3>
 <div class="paragraph">
-<p>Technical debt is even not having <a href="https://en.wikipedia.org/wiki/Coding_conventions">coding standards</a>. Also not having coding standards for your test codebase is big problem. If you have coding standards, you should continuously improve them with new rules and remove obsolete rules. Coding standards document should be living document because when it’s static page with last modification last year, nobody will take care. Also it should be base for doing <a href="https://en.wikipedia.org/wiki/Code_review">code reviews</a> and all the team members should follow these rules in checking code during code review.</p>
+<p>Technical debt does not even have <a href="https://en.wikipedia.org/wiki/Coding_conventions">coding standards</a>. Also, not having coding standards for your test codebase is the big problem. If you have coding standards, you should continuously improve them with new rules and remove obsolete rules. A coding standards document should be a living document because when it&#8217;s a static page with the most recent modification being a year old, nobody will care. Also, it should be the basis for doing <a href="https://en.wikipedia.org/wiki/Code_review">code reviews</a>, and all team members should follow these rules in checking code.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_including_technical_debt_items_into_backlog">Including technical debt items into backlog</h3>
+<h3 id="_including_technical_debt_items_into_the_backlog">Including Technical Debt Items Into the Backlog</h3>
 <div class="paragraph">
-<p>It’s well deserved that you need to keep tracking technical debt along the feature items. If you are agile, you will need to slightly accommodate the technical debt resolving in standard team life. In one project we had one technical debt item to getting rid in each sprint. In other we had technical debt hat for a member from the team who was resolving technical debt items for whole sprint. Doesn’t matter in which manner you will work and how big amount of time you will allocate at the start. But you definitely need some way how you will measure success of getting rid of technical debt. In one project we had simple counter - average time for feature to be delivered to customer. On the start we was on sixty something days and when we have one guy resolving technical debt per sprint we have 14 something in couple of months. Of course there were other circumstances which was affecting our velocity but for half of the stories it ended with cleaner and simpler implementation right due to fact of resolved technical debt.</p>
+<p>It’s well known that you need to keep tracking technical debt along feature items. If you are agile, you will need slightly to accommodate the resolution of technical debt in standard team life. In one project we had one technical debt item to get rid of in each sprint. In another, we had technical debt that for a member of the team who was resolving technical debt items for the whole sprint. Doesn’t matter in which manner you will work and how big amount of time you will allocate at the start. But you need some way how you will measure the success of getting rid of technical debt. In one project we had simple counter — average time for the feature to be delivered to the customer. From the start we were on sixty something days and when we have one guy resolving technical debt per sprint we have 14 something in a couple of months. Of course, there were other circumstances which were affecting our velocity but for half of the stories it ended with cleaner and simpler implementation right due to the fact of resolved technical debt.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_programmers_oath_perspective">Programmers oath perspective</h3>
+<h3 id="_programmers_oath_perspective">Programmers Oath Perspective</h3>
 <div class="paragraph">
-<p>In <a href="https://mikealdo.github.io/2016/03/25/The-Programmers-Oath-and-my-perspective.html">reaction to Uncle Bob</a> I am advicing to follow Programmer’s oath. I strongly believe that doing our best to not introduce potential technical debt and follow industry best practicies is big advance in software development. You don’t need to sign this document because all the facts aren’t possible to follow at the same time, but just keep this in mind and your work will be technical debt free.</p>
+<p>In <a href="https://mikealdo.github.io/2016/03/25/The-Programmers-Oath-and-my-perspective.html">reaction to Uncle Bob</a>, I am advising to follow Programmer’s oath. I firmly believe that doing our best not to introduce potential technical debt and follow industry best practices is a significant advance in software development. You don’t need to sign this document because all the facts aren’t possible to follow at the same time, but just keep this in mind and your work will be technical debt free.</p>
 </div>
 </div>
 </div>
@@ -238,27 +238,27 @@
 <h2 id="_innovation_side">Innovation side</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_keeping_your_project_manager_team_leader_in_touch">Keeping your project manager (team leader) in touch</h3>
+<h3 id="_keep_your_project_manager_or_team_leader_in_touch">Keep your Project Manager (or Team Leader) in touch</h3>
 <div class="paragraph">
-<p>Time to time I am in company when the project manager or team leader is too far from implementation and architecture. They are solving only manager’s stuff with these spreadsheets, estimates, meetings and planning. And often is happening that after some time it’s hard for such person to understand why implementations take longer and longer time and why is not possible to incorporate this and that feature to the software. So it’s on us, developers, to continuously improving knowledge about the software of our managers and raising objections whenever we are seeing why exactly the new features doesn’t fit to the software. I am time to time looking to the tracking system and looking on the backlog of planned items to be on track what’s going on. This helps me to have clear picture what the managers thinks needs to be done and give me time to speak early about possible problems.</p>
+<p>Time to time I am in the company when the project manager or team leader is too far from the implementation and architecture. They are solving only director’s stuff with spreadsheets, estimates, meetings, and planning. After some time, it&#8217;s difficult for such person to understand why implementations take longer and longer time. And why isn&#8217;t possible to incorporate this and that feature to the software. It’s about us, developers, to continuously improve the knowledge of our managers and raising the objections whenever we see why exactly the new features doesn’t fit the software. I am time to time looking for the tracking system and watching the backlog of planned items be on track what’s going on. It helps me to have the clear picture what the managers thinks needs to be done and give me time to speak early about possible problems.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_innovation_debt">Innovation debt</h3>
 <div class="paragraph">
-<p>Have you heard about it? It’s about not giving sufficient time to learn to developers. Tight schedules of new features, pressure from clients, all of these issues can postpone all the learning process to “never” area. And it’s bad because after some time, motivation is going down, best developers run away, productivity is dropping. We can help with introducing hackatons, which are great opportunities to face some company problems but only driven by developers. Or Code retreats to share knowledge around coding and current technologies. In Google the stuff members have one day a week for doing something which is not tied to their project. To do anything which can help in other projects or totally new approach for something. Or simply learn something. It’s important that content of this day is totally only up to every single person. Maybe one day would be too much at the start but you need to convince your managers that it’s better to have some time to learn than cry that someone left the project.</p>
+<p>Have you ever heard about it? It’s about not giving sufficient time for learning to developers. Tight schedules, pressure from clients, all of these issues can postpone all the learning process to “never” area. And it’s bad, because, after some time, motivation is going down, best developers run away, productivity is dropping. We can help with introducing hackathons, which are great opportunities to face some company problems but only driven by developers. Or Code Retreats to share knowledge around coding and current technologies. In Google, the staff members have one day a week for doing something which is not tied to their project. They can do anything which can help in other projects, or they can investigate the entirely new approach for something. Or simply learn something. It’s important that content of this day is totally only up to every single person. Maybe one day would be too much at the start, but you need to convince your managers that it’s better to have some time to learn than cry that someone left the project.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_help_with_hiring">Help with hiring</h3>
 <div class="paragraph">
-<p>As I am in industry for more than 8 years, I am taking care about my colleagues. Our industry is <a href="http://www.yegor256.com/2015/02/16/it-is-not-a-school.html">not a school</a>. Whenever I am joining new project, is especially important to have qualified colleagues. And even my last years I am working as external developer I am always happy to help with hiring new members when I can influence my further colleagues. Interviews are not so favourite between developers so you can elaborate a little and come with better approach. I would guess that this little help will definitely be appreciated by your managers or leads.</p>
+<p>As I am in industry for more than eight years, I am taking care about my colleagues. Our industry is <a href="http://www.yegor256.com/2015/02/16/it-is-not-a-school.html">not a school</a>. Whenever I am joining the new project, is of particular importance to have the qualified colleagues. I am always happy to help with hiring new team members when I can influence my further colleagues. Interviews are disliked between developers so you can elaborate a little and come with the better approach. I would guess that your managers or leads will appreciate this small help.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_help_with_describing_of_features">Help with describing of features</h3>
 <div class="paragraph">
-<p>If feature requests (innovation) aren’t sufficiently described, it’s always flag of “I am not thinking enough” approach. We have occasionally tension to decline features which are not properly described and have negative meaning about them from the start. I would suggest to be as much as helpful you can to provide suggestions, affected areas or unspoken questions about feature which can really help others to be understanding of impact and feasibility.</p>
+<p>If feature requests (aka innovation) aren’t sufficiently described, it’s always flag of “I am not thinking enough” approach. We have occasionally tension to decline features which are not correctly described and to have negative meaning about them from the start. I would suggest being as much as helpful you can to provide suggestions, affected areas or unspoken questions about a feature. It can help others to be understanding of the impact and feasibility.</p>
 </div>
 </div>
 </div>
@@ -267,10 +267,10 @@
 <h2 id="_in_conclusion">In conclusion</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Majority of us would agree that technological debt needs to be managed primarily by us, developers. But we should be quite diligent in more areas to have proper working environment, staying motivate and productive. Being active, helping with dealing with innovation also will reward us. Communication will be clearer, motivation will remain and you will have much more better feeling of produced stuff.</p>
+<p>The majority of us would agree that technological debt needs to be managed primarily by us, developers. But we should be quite diligent in more areas to have the proper working environment, staying motivate and productive. Being active, helping with dealing with innovation will reward us. Communication will be clearer. Motivation will remain, and you will have a much better feeling of produced stuff.</p>
 </div>
 <div class="paragraph">
-<p><strong>P.S.</strong> If you enjoyed this post, you can follow me on <a href="https://twitter.com/mikealdo007">twitter</a> to stay in touch with my further articles and other thoughts.</p>
+<p><strong>P.S.</strong> If you enjoyed this post, you could follow me on <a href="https://twitter.com/mikealdo007">twitter</a> to stay in touch with my further articles and other thoughts.</p>
 </div>
 <div class="paragraph">
 <p><strong>P.S.2</strong> Cover image by <a href="https://unsplash.com/photos/I8OhOu-wLO4">Tirza van Dijk | unsplash.com</a>.</p>
