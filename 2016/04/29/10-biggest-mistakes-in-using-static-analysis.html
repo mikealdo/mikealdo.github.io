@@ -38,17 +38,17 @@
     <meta property="og:site_name" content="Michal Davídek - blog" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="10 biggest mistakes in using static analysis" />
-    <meta property="og:description" content="Static analysis is in software engineering for the respected time. Static analysis tools are generally used by developers as part of the development and component testing process. The key aspect is that the code (or other artefact) is not executed..." />
+    <meta property="og:description" content="Static analysis is in software engineering for the important time. Developers use Static analysis tools as part of the development and component testing process. The key aspect is that the code (or another artifact) is not executed or run but..." />
     <meta property="og:url" content="https://mikealdo.github.io/2016/04/29/10-biggest-mistakes-in-using-static-analysis.html" />
     <meta property="og:image" content="https://mikealdo.github.io/images//covers/10-biggest-mistakes-in-using-static-analysis.jpeg" />
     <meta property="article:published_time" content="2016-04-28T22:00:00.000Z" />
-    <meta property="article:modified_time" content="2016-05-11T15:01:23.170Z" />
+    <meta property="article:modified_time" content="2016-05-19T09:20:16.406Z" />
     <meta property="article:tag" content="static analysis" />
     <meta property="article:tag" content="code coverage" />
     
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="10 biggest mistakes in using static analysis" />
-    <meta name="twitter:description" content="Static analysis is in software engineering for the respected time. Static analysis tools are generally used by developers as part of the development and component testing process. The key aspect is that the code (or other artefact) is not executed..." />
+    <meta name="twitter:description" content="Static analysis is in software engineering for the important time. Developers use Static analysis tools as part of the development and component testing process. The key aspect is that the code (or another artifact) is not executed or run but..." />
     <meta name="twitter:url" content="https://mikealdo.github.io/2016/04/29/10-biggest-mistakes-in-using-static-analysis.html" />
     <meta name="twitter:image:src" content="https://mikealdo.github.io/images//covers/10-biggest-mistakes-in-using-static-analysis.jpeg" />
     
@@ -67,10 +67,10 @@
     "headline": "10 biggest mistakes in using static analysis",
     "url": "https://mikealdo.github.io/2016/04/29/10-biggest-mistakes-in-using-static-analysis.html",
     "datePublished": "2016-04-28T22:00:00.000Z",
-    "dateModified": "2016-05-11T15:01:23.170Z",
+    "dateModified": "2016-05-19T09:20:16.406Z",
     "image": "https://mikealdo.github.io/images//covers/10-biggest-mistakes-in-using-static-analysis.jpeg",
     "keywords": "static analysis,  code coverage",
-    "description": "Static analysis is in software engineering for the respected time. Static analysis tools are generally used by developers as part of the development and component testing process. The key aspect is that the code (or other artefact) is not executed..."
+    "description": "Static analysis is in software engineering for the important time. Developers use Static analysis tools as part of the development and component testing process. The key aspect is that the code (or another artifact) is not executed or run but..."
 }
     </script>
 
@@ -189,35 +189,35 @@
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong><a href="https://en.wikipedia.org/wiki/Static_program_analysis">Static analysis</a></strong> is in software engineering for the respected time. <strong><a href="https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis">Static analysis tools</a></strong> are generally used by developers as part of the development and component testing process. The key aspect is that the code (or other artefact) is not executed or run but the tool itself is executed, and the source code we are interested in is the input data to the tool. It’s started with the compilers and derived technologies around that are well established in software development world. Each technology applicable for static analysis can choose between several alternatives, set up own rules and have benefits from using them. What is most surprising for me is that even with huge set of tools, possibilities, the static analysis is not properly used and disregarded at most projects.</p>
+<p><strong><a href="https://en.wikipedia.org/wiki/Static_program_analysis">Static analysis</a></strong> is in software engineering for the important time. Developers use <strong><a href="https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis">Static analysis tools</a></strong> as part of the development and component testing process. The key aspect is that the code (or another artifact) is not executed or run but the tool itself is executed, and the source code we are interested in is the input data to the tool. It’s started with the compilers and derived technologies around that are well established in software development world. Each technology applicable for static analysis can choose between several alternatives, set up own rules and have benefited from using them. What is most surprising to me is that even with a huge set of tools, possibilities, the static analysis is not properly used and disregarded at most projects.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_well_done_here_is_the_list_with_common_mistakes">Well done, here is the list with common mistakes</h2>
+<h2 id="_well_done_here_is_the_list_of_common_mistakes">Well done, here is the list of common mistakes</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="__1_violations_doesn_t_mean_failing_build">#1 - Violations doesn’t mean failing build</h3>
 <div class="paragraph">
-<p>Static analysis should help us to discover all the potential problems and raise a red flag whenever the codebase didn’t met the rules. Biggest mistake you can do is producing warnings only and not let the build fail when vilolations against the rules are thrown. It leads to immediate start of ignore mode for anybody to pay attention to static analysis. When you are following strategy that you can ship regardless of static analysis results, it’s definitely bad, see mistake #10.</p>
+<p>Static analysis should help us to discover all the potential problems and raise a red flag whenever the codebase didn’t meet the rules. The biggest mistake you can do is producing warnings only and not let the build fail when violations against the rules were thrown. It leads to the immediate start off ignoring mode for anybody to pay attention to static analysis. When you are following a strategy that you can ship regardless of static analysis results, it’s bad, see mistake #10.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="__2_rules_are_set_by_architects_and_developers_aren_t_in_the_process">#2 - Rules are set by architects and developers aren’t in the process</h3>
 <div class="paragraph">
-<p>Engagement of the developers itself is essential for having static analysis effective. If the developers can’t affect the tools, are unable to cooperate on the rules, engagement will be slow, none or both. Developers are the ones who are taking care about code quality in every day life so you need to be friendly to allow them to participate on the rules, tools and overall process.</p>
+<p>Engagement of the developers itself is essential for having static analysis effective. If the developers can’t affect the tools, are unable to cooperate with the rules, engagement will be slow, none or both. Developers are the ones who are taking care of code quality in everyday life, so you need to be friendly to allow them to participate in the rules, tools and overall process.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="__3_not_set_rules_from_start_of_the_project">#3 - Not set rules from start of the project</h3>
+<h3 id="__3_not_set_standards_from_start_of_the_project">#3 - Not set standards from start of the project</h3>
 <div class="paragraph">
-<p>Setting up static code analysis and removal of the problems after decent work on project is done, can be literally nightmare. It’s so much easier to set up tools for checking quality of the code on start of the project and enforce them from the start. For pet projects probably doesn’t make sense to set up these tools but I have seen pretty big number of projects which started as pet projects and ended as regular project. So maybe is the solution recognizing the right time for adding static analysis to the project.</p>
+<p>Setting up static code analysis and removal of the problems after decent work on the project is done, can be nightmare. It’s so much easier to set up tools for checking the quality of the code at the start of the project and enforce them from the outset. For pet projects probably doesn’t make sense to set up these tools but I have seen a pretty significant number of projects which started as pet projects and ended as a regular project. So maybe is the solution recognizing the right time for adding static analysis to the project.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="__4_coding_standards_not_aligned_with_static_analysis">#4 - Coding standards not aligned with static analysis</h3>
 <div class="paragraph">
-<p>If coding standards are speaking differently than rules in static analysis, it’s definitely wrong and can be very misleading. These two guys should be playing same game. Being careful about coding standards and having them aligned with static analysis it’s essential to have clear intention what’s good for project and what’s not. Also lack of documentation about static analysis itself - how to</p>
+<p>If coding standards are speaking differently than rules in static analysis, it’s wrong and can be very misleading. These two guys should be playing the same game. Being careful about coding standards and having them aligned with static analysis it’s essential to have clear intention what’s useful for project and what’s not. Also lack of documentation about static analysis itself - how to</p>
 </div>
 <div class="ulist">
 <ul>
@@ -231,19 +231,19 @@
 <p>setup the build</p>
 </li>
 <li>
-<p>setup the continuous integration server</p>
+<p>set up the continuous integration server</p>
 </li>
 <li>
 <p>mitigate the violations</p>
 </li>
 <li>
-<p>how/when suppress violations</p>
+<p>how/when to suppress violations</p>
 </li>
 <li>
 <p>handle legacy code - strategy for legacy</p>
 </li>
 <li>
-<p>and which parts of software aren’t checked and why (don’t test what you can’t change).</p>
+<p>and which parts of the software aren’t checked and why (don’t test what you can’t change).</p>
 </li>
 </ul>
 </div>
@@ -254,43 +254,43 @@
 <div class="sect2">
 <h3 id="__5_tools_are_not_enhanced_with_own_rules">#5 - Tools are not enhanced with own rules</h3>
 <div class="paragraph">
-<p>You can believe me, there is always something special in your software which should be checked as early as possible by static analysis.</p>
+<p>You can believe me; there is always something special in your software which should be checked as early as possible by static analysis.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="__6_tools_are_not_complemented_with_quality_assurance_tests">#6 - Tools are not complemented with quality assurance tests</h3>
 <div class="paragraph">
-<p>There are things which static analysis can’t discover - for example configuration of the product, some special runtime behaviour. What you should provide is good suite of quality assurance tests. These tests doesn’t test functionality of software but they are ensuring that the codebase is following coding standards in different way than static analysis. It’s common mistake to believe that static analysis is the only one tool which can get rid of all the problems.</p>
+<p>There are things which static analysis can’t discover - for an example configuration of the product, some specific runtime behavior. What you should provide is the good suite of quality assurance tests. These tests don&#8217;t test the functionality of the software, but they are ensuring that the codebase is following coding standards in the different way than static analysis. It’s common mistake to believe that static analysis is the only one tool which can get rid of all the problems.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="__7_default_code_inspections_set_in_ides">#7 - Default code inspections set in IDEs</h3>
 <div class="paragraph">
-<p>When you are using some unified <a href="https://www.jetbrains.com/idea/">IDEs</a> for developing software, you should provide default project configuration for such IDE. For example settitngs.jar for the <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">Intellij IDEA</a>. There are list of code inspections set for almost each programming language and environment and you should carefully set all the rules and disable/enable the rules according to coding standards and static analysis. Within every new rule in static analysis or coding standards, these settings needs be aligned as well.</p>
+<p>When you are using some unified <a href="https://www.jetbrains.com/idea/">IDEs</a> for developing software, you should provide default project configuration for such IDE. For example settitngs.jar for the <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">Intellij IDEA</a>. There is list of code inspections set for almost each programming language and environment, and you should carefully set all the rules and disable/enable the rules according to coding standards and static analysis. Within every new rule in static analysis or coding standards, these settings needs be aligned as well.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="__8_code_coverage_threshold_is_not_set_or_regularly_increased">#8 - Code coverage threshold is not set or regularly increased</h3>
 <div class="paragraph">
-<p><a href="https://en.wikipedia.org/wiki/Code_coverage">Code coverage</a> is one of the tool from the static analysis toolset. It verify that your production codebase is checked by unit and/or integration tests. It’s common mistake if there isn&#8217;t set threshold meaning failing build whenever the code coverage is under the threshold. And it’s even worse if this threshold isn’t regularly increased. It doesn’t need to be increased by number of percent but whenever the code coverage is increased, the threshold should be increased as well to ensuring that new code added won’t be covered by the tests.</p>
+<p><a href="https://en.wikipedia.org/wiki/Code_coverage">Code coverage</a> is one of the tools from the static analysis toolset. It verifies that unit and integration tests check your production codebase. It’s common mistake if there isn&#8217;t set threshold meaning failing build whenever the code coverage is under the threshold. And it’s even worse not increasing of this threshold regularly. It doesn’t need to be increased by some percents but whenever we are increasing the code coverage, the threshold should be increased as well to ensuring that new code added won’t be covered by the tests.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="__9_compliants_to_false_positives">#9 - Compliants to false positives</h3>
+<h3 id="__9_complaints_to_false_positives">#9 - Complaints to false positives</h3>
 <div class="paragraph">
-<p>Yes, there are pretty obvious possibilities that analysis will throw false positives. You should take care about all the violations and those which are false positives should be handled inside code with some kind of suppression with comment why it’s false positives and why it can be ignored.</p>
+<p>Yes, there are pretty obvious possibilities that analysis will throw false positives. You should take care about all the violations, and those which are false positives should be handled inside code with some suppression with a comment why it’s false positives and why we can safely ignore them.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="__10_when_adding_static_analysis_starting_with_too_many_rules">#10 - When adding static analysis, starting with too many rules</h3>
 <div class="paragraph">
-<p>Less rules that are followed are better than many that aren’t. Adding static analysis to product after some work is done is tough. But not having static analysis on your side it’s worse. So if you haven’t sufficient time to incorporate comprehensive set of tools and rules, start with some minimal number and work on improvements continuously. It’s even the rule for the static analysis for greenfield projects - static analysis is continuous process and you should take care about that in regular manner. Adding rules, avoiding inconvenient ones, this is product of careful way of having ensured quality.</p>
+<p>Fewer rules we are following are better than many that aren’t. Adding static analysis to the product after some development is tough. But not having static analysis on your side it’s worse. So if you haven’t sufficient time to incorporate a comprehensive set of tools and rules, start with some minimal number and work on improvements continuously. It’s even the standard for the static analysis for greenfield projects - static analysis is the continuous process, and you should take care about that in a regular manner. Adding rules, avoiding inconvenient ones, this is the product of a careful way of having ensured quality.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_extra_one_lack_of_management_buy_in">Extra one - Lack of management buy-in</h3>
 <div class="paragraph">
-<p>If you haven’t management on your side, there is no simple way how to have sufficient time for taking care about static analysis. It’s not short run, it’s the long one and definitely not the easy one. And time consuming as well so you need to have management which has understanding of return of such investment, have set allowed time, requirements and goals.</p>
+<p>If you have not management on your side, there is no simple way how to have sufficient time for taking care about static analysis. It’s not the short run, it’s the long one and not the easy one. And time-consuming as well so you need to have management which has an understanding of return on such investment, have set allowed time, requirements and goals.</p>
 </div>
 </div>
 </div>
@@ -299,7 +299,7 @@
 <h2 id="_conclusion">Conclusion</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Static analysis is great. Using it is hard. Using it properly is very hard. With carefulness, sufficient time and regular improvements will be any project rewarded with huge benefits - cleaner code, quality, less bugs and better maintenance. Don’t do mistakes listed above and your benefits will be guaranteed.</p>
+<p>Static analysis is great. Using it is hard. Using it properly is very hard. With carefulness, sufficient time and regular improvements will be any project rewarded with huge benefits - cleaner code, quality, fewer bugs and better maintenance. Don’t make mistakes listed above and your benefits will be guaranteed.</p>
 </div>
 <div class="paragraph">
 <p><strong>P.S.</strong> If you enjoyed this post, you can follow me on <a href="https://twitter.com/mikealdo007">twitter</a> to stay in touch with my further articles and other thoughts.</p>
