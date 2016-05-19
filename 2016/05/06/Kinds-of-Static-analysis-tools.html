@@ -38,17 +38,17 @@
     <meta property="og:site_name" content="Michal Davídek - blog" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Kinds of Static analysis tools" />
-    <meta property="og:description" content="I like clean code. I like code where is visible quality with the first touch of code. And I like predictable codebases which can be seen as written by one developer. And I like static analysis because it significantly helps..." />
+    <meta property="og:description" content="I like clean code. I like code where is visible quality with the first touch of code. And I like predictable codebases which look as written by one developer. And I like static analysis because it significantly helps to achieve..." />
     <meta property="og:url" content="https://mikealdo.github.io/2016/05/06/Kinds-of-Static-analysis-tools.html" />
     <meta property="og:image" content="https://mikealdo.github.io/images//covers/kinds-of-static-analysis-tools.jpeg" />
     <meta property="article:published_time" content="2016-05-05T22:00:00.000Z" />
-    <meta property="article:modified_time" content="2016-05-11T15:01:23.161Z" />
+    <meta property="article:modified_time" content="2016-05-19T09:02:41.846Z" />
     <meta property="article:tag" content="static analysis" />
     <meta property="article:tag" content="learning" />
     
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Kinds of Static analysis tools" />
-    <meta name="twitter:description" content="I like clean code. I like code where is visible quality with the first touch of code. And I like predictable codebases which can be seen as written by one developer. And I like static analysis because it significantly helps..." />
+    <meta name="twitter:description" content="I like clean code. I like code where is visible quality with the first touch of code. And I like predictable codebases which look as written by one developer. And I like static analysis because it significantly helps to achieve..." />
     <meta name="twitter:url" content="https://mikealdo.github.io/2016/05/06/Kinds-of-Static-analysis-tools.html" />
     <meta name="twitter:image:src" content="https://mikealdo.github.io/images//covers/kinds-of-static-analysis-tools.jpeg" />
     
@@ -67,10 +67,10 @@
     "headline": "Kinds of Static analysis tools",
     "url": "https://mikealdo.github.io/2016/05/06/Kinds-of-Static-analysis-tools.html",
     "datePublished": "2016-05-05T22:00:00.000Z",
-    "dateModified": "2016-05-11T15:01:23.161Z",
+    "dateModified": "2016-05-19T09:02:41.846Z",
     "image": "https://mikealdo.github.io/images//covers/kinds-of-static-analysis-tools.jpeg",
     "keywords": "static analysis,  learning",
-    "description": "I like clean code. I like code where is visible quality with the first touch of code. And I like predictable codebases which can be seen as written by one developer. And I like static analysis because it significantly helps..."
+    "description": "I like clean code. I like code where is visible quality with the first touch of code. And I like predictable codebases which look as written by one developer. And I like static analysis because it significantly helps to achieve..."
 }
     </script>
 
@@ -189,7 +189,7 @@
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>I like clean code. I like code where is visible quality with the first touch of code. And I like predictable codebases which can be seen as written by one developer. And I like static analysis because it significantly helps to achieve all the mentioned things. In my <a href="https://mikealdo.github.io/2016/04/29/10-biggest-mistakes-in-using-static-analysis.html">last article</a> I wrote about mistakes in using static analysis in software projects. Now I would like to go a step forward and give an advice how to choose the right tool(s). I would say that even with subset of these tools you will have huge benefits as less bugs, better maintainability, cleaner and simpler code. Let’s start with a theory and motivation &#8230;&#8203;</p>
+<p>I like clean code. I like code where is visible quality with the first touch of code. And I like predictable codebases which look as written by one developer. And I like static analysis because it significantly helps to achieve all the mentioned things. In my <a href="https://mikealdo.github.io/2016/04/29/10-biggest-mistakes-in-using-static-analysis.html">last article</a> I wrote about mistakes in using static analysis in software projects. Now I would like to go a step forward and give advice how to choose the right tool(s). I would say that even with a subset of these tools you will have enormous benefits as fewer bugs, better maintainability, cleaner and simpler code. Let’s start with a theory and motivation.</p>
 </div>
 </div>
 </div>
@@ -197,7 +197,7 @@
 <h2 id="_one_tool_is_almost_nothing">One tool is almost nothing</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When it comes to choice static analysis tools, in the first line of possibilities are tools widely accepted by community - in java landscape <a href="https://pmd.github.io/">PMD</a>, <a href="http://findbugs.sourceforge.net">FindBugs</a> and <a href="http://checkstyle.sourceforge.net">CheckStyle</a>. One of these tools is almost on each project but rarely there are more than two of them. And it’s wrong! Maybe is hard to convince anybody responsible for that project, maybe it’s even harder to make codebase compliant to all of these tools. Without any doubts, static analysis has proven his usefulness and we should be very interested in to use it. But not only one tool, but several tools at once.</p>
+<p>When it comes to choice static analysis tools, in the first line of possibilities are tools widely accepted by the community - in Java landscape <a href="https://pmd.github.io/">PMD</a>, <a href="http://findbugs.sourceforge.net">FindBugs</a> and <a href="http://checkstyle.sourceforge.net">CheckStyle</a>. One of these tools is almost on each project, but rarely there are more than two of them. And it’s wrong! Maybe is hard to convince anybody responsible for that project, maybe it’s even more difficult to make codebase compliant to all of these tools. Without any doubts, static analysis has proven his usefulness, and we should be very interested in to use it. But not only one tool, but several tools at once.</p>
 </div>
 <div class="paragraph">
 <p>I believe that not using more than one or two tools is, that we are using wrong and vague arguments and statements about static analysis. When I am listening to “there are pretty much false positives” or “these tools are checking the same things” without particular example, I am bit angry. So what are my arguments when I am talking about SA tools? In my perspective, there are five categories in which are tools distributed:</p>
@@ -222,48 +222,48 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>If you are architect, lead developer, project manager or any developer interested in project, would you like to perform checking rules enforcing code conventions, best practices, no silly technical bugs, clean architecture and good code coverage within each build of your software? Then continue reading, all you need is static analysis and tools for all the mentioned categories. From this dividing is obvious that one tool is not sufficient and tools are complementing each other.</p>
+<p>If you are an architect, lead developer, project manager or any developer interested in a project, would you like to perform checking rules enforcing code conventions, best practices, no silly technical bugs, clean architecture and good code coverage within each build of your software? Then continue reading, all you need is static analysis and tools for all the mentioned categories. This division is evident that one tool is not sufficient, and tools are complementing each other.</p>
 </div>
 <div class="sect2">
 <h3 id="_convention_checking_tools">Convention checking tools</h3>
 <div class="paragraph">
-<p>These tools aims to check code conventions - naming, format and usage of comments. Rules inside are very simple and using them helps with uniform looking and consistent code. It has no impact to performance or stability, but enables people in team work together and get rid of useless discussion - typical tabs or spaces. You can guess who is typical member of this tools in Java landscape - I will reveal on the end of the article. These tools should be aligned with code conventions of the project and always need to have custom configuration to spare the team from the avalanche of irrelevant feedback.</p>
+<p>These tools aim to check code conventions - naming, format, and usage of comments. Rules inside are very simple and using them helps with uniform looking and consistent code. It has no impact to performance or stability, but enables people in team work together and get rid of useless discussion - typical tabs or spaces. You can guess who is the typical member of this tools in Java landscape - I will reveal on the end of the article. We need these tools aligned with code conventions of the project and always need to have a custom configuration to spare the team from the avalanche of irrelevant feedback.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_bad_practices_checking">Bad practices checking</h3>
 <div class="paragraph">
-<p>Rules inside are checking well known behaviours that systematically lead to difficulties over time, for example dead code or complex long methods. It can be seen as a friend who is kindly reminding that developed code contains something smelling or missing (for example missing hashCode implementation when equals provided).</p>
+<p>Rules inside are checking well-known behaviors that systematically lead to difficulties over time, for example, dead code or long complex methods. It can be seen as a friend who is kindly reminding that developed code contains something smelling or missing (for example missing hashCode implementation when equals provided).</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_finding_potential_bugs">Finding potential bugs</h3>
 <div class="paragraph">
-<p>There are many places in code with many parameters needed to be taken into account to spot some buggy behaviour. And it’s even harder because understanding of the buggy behaviour means to go through a sequences of code. For example TODO my example. Also tools for Java are often working on bytecode level, so it can check things that are almost impossible spot (or overseen) at the source level.</p>
+<p>There are many places in the code needed to be taken into account to spot some buggy behavior. And it’s even harder because understanding of the buggy behavior means to go through sequences of code. For example TODO my example. Also tools for Java are often working on bytecode level, so it can check things that are an almost impossible spot (or overseen) at the source level.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_architectural_issues">Architectural issues</h3>
 <div class="paragraph">
-<p>While conventional static analysis tools are focusing on checking source code, architectural static analysis is focusing on overall architecture of the software. For example not using data access layer directly inside UI, checking usage of some framework annotations only in particular classes. I wasn’t aware about that tools for a long time. Instead I was used to write something internally called “Quality assurance tests” which has had one goal - for example prevent improper usage of annotations or verify that some annotation is present on class implementing given interface. And this is exactly what can do architectural static analysis tool.</p>
+<p>While conventional static analysis tools are focusing on checking source code, architectural static analysis is focusing on overall architecture of the software. For example not using data access layer directly inside UI, checking usage of some framework annotations only in particular classes. I wasn’t aware about that tools for a long time. Instead, I was used to writing something internally called “Quality assurance tests” which has had one goal - for example prevent improper usage of annotations or verify that some annotation is present on the class implementing given interface. And this is what can do architectural static analysis tool specifically.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_code_coverage_tool">Code coverage tool</h3>
 <div class="paragraph">
-<p>Tools are basically checking execution of the production code by running unit and integration tests. It checks every condition and every line of code if it were executed and provide a percentage how many code was executed to not executed. Industry standards are very questionable and are very different project to project. I have seen thresholds on 80% and 55% as well. In my opinion there is big mistake in using such tool - checking coverage for different kinds of the tests altogether. Execution of the tests should be divided in build process and code coverage should have different thresholds set for different groups of test. For example for unit test it should be close to 100%, for integration close to 80% and for end-to-end test close to 50%.</p>
+<p>Tools are checking execution of the production code by running unit and integration tests. It checks every condition and every line of code if it were executed and provide a percentage how many code was executed to not executed. Industry standards are very questionable and are very different project to project. I have seen thresholds on 80% and 55% as well. In my opinion, there is the big mistake in using such tool - checking coverage for different kinds of the tests altogether. It&#8217;s important to have divided execution of the tests in the build process and code coverage should have different thresholds set for different groups of the test. For example for unit test, it should be close to 100%, for integration close to 80% and end-to-end test close to 50%.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_what_else">What else &#8230;&#8203;</h2>
+<h2 id="_what_else">What else?</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>I would say that important is one more category - learning. As the tools are written by the developers for the developers, you can benefit from using them to learn something new. Instead of treating the rules as a bad policeman, you need to treat them as a friend who are leading you the right direction. Every time you will have some violations, you will learn something new and you will better developer. With this comes into my mind, that static analysis is industry standard, so it’s bad if you are not having incorporated to your project.</p>
+<p>I would say that critical is one more category - learning. As the tools developers write for the developers, you can benefit from using them to learn something new. Instead of treating the rules as an enemy, you need to treat them as a friend who are leading you the right direction. Every time you will have some violations, you will learn something new and you will better developer. With this comes into my mind, that static analysis is industry standard, so it’s bad if you are not having incorporated to your project.</p>
 </div>
 <div class="paragraph">
-<p><strong>P.S.</strong> If you enjoyed this post, you can follow me on <a href="https://twitter.com/mikealdo007">twitter</a> to stay in touch with my further articles and other thoughts.</p>
+<p><strong>P.S.</strong> If you enjoyed this post, you could follow me on <a href="https://twitter.com/mikealdo007">twitter</a> to stay in touch with my further articles and other thoughts.</p>
 </div>
 <div class="paragraph">
 <p><strong>P.S.2</strong> Cover image by <a href="https://unsplash.com/photos/qG-hPxoAnRE">Johnson Wang | unsplash.com</a>.</p>
