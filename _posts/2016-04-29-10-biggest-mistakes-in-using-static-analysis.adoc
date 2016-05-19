@@ -11,56 +11,56 @@
 :my-twitter-link: https://twitter.com/mikealdo007[twitter]
 :cover-link: https://unsplash.com/photos/ryoZbN7HzU8[Jeremy Thomas | unsplash.com]
 
-*{static-analysis-wiki-link}* is in software engineering for the respected time. *{tools-wiki-link}* are generally used by developers as part of the development and component testing process. The key aspect is that the code (or other artefact) is not executed or run but the tool itself is executed, and the source code we are interested in is the input data to the tool. It’s started with the compilers and derived technologies around that are well established in software development world. Each technology applicable for static analysis can choose between several alternatives, set up own rules and have benefits from using them. What is most surprising for me is that even with huge set of tools, possibilities, the static analysis is not properly used and disregarded at most projects.
+*{static-analysis-wiki-link}* is in software engineering for the important time. Developers use *{tools-wiki-link}* as part of the development and component testing process. The key aspect is that the code (or another artifact) is not executed or run but the tool itself is executed, and the source code we are interested in is the input data to the tool. It’s started with the compilers and derived technologies around that are well established in software development world. Each technology applicable for static analysis can choose between several alternatives, set up own rules and have benefited from using them. What is most surprising to me is that even with a huge set of tools, possibilities, the static analysis is not properly used and disregarded at most projects.
 
-== Well done, here is the list with common mistakes
+== Well done, here is the list of common mistakes
 
 === #1 - Violations doesn’t mean failing build
-Static analysis should help us to discover all the potential problems and raise a red flag whenever the codebase didn’t met the rules. Biggest mistake you can do is producing warnings only and not let the build fail when vilolations against the rules are thrown. It leads to immediate start of ignore mode for anybody to pay attention to static analysis. When you are following strategy that you can ship regardless of static analysis results, it’s definitely bad, see mistake #10.
+Static analysis should help us to discover all the potential problems and raise a red flag whenever the codebase didn’t meet the rules. The biggest mistake you can do is producing warnings only and not let the build fail when violations against the rules were thrown. It leads to the immediate start off ignoring mode for anybody to pay attention to static analysis. When you are following a strategy that you can ship regardless of static analysis results, it’s bad, see mistake #10.
 
 === #2 - Rules are set by architects and developers aren’t in the process
-Engagement of the developers itself is essential for having static analysis effective. If the developers can’t affect the tools, are unable to cooperate on the rules, engagement will be slow, none or both. Developers are the ones who are taking care about code quality in every day life so you need to be friendly to allow them to participate on the rules, tools and overall process.
+Engagement of the developers itself is essential for having static analysis effective. If the developers can’t affect the tools, are unable to cooperate with the rules, engagement will be slow, none or both. Developers are the ones who are taking care of code quality in everyday life, so you need to be friendly to allow them to participate in the rules, tools and overall process.
 
-=== #3 - Not set rules from start of the project
-Setting up static code analysis and removal of the problems after decent work on project is done, can be literally nightmare. It’s so much easier to set up tools for checking quality of the code on start of the project and enforce them from the start. For pet projects probably doesn’t make sense to set up these tools but I have seen pretty big number of projects which started as pet projects and ended as regular project. So maybe is the solution recognizing the right time for adding static analysis to the project.
+=== #3 - Not set standards from start of the project
+Setting up static code analysis and removal of the problems after decent work on the project is done, can be nightmare. It’s so much easier to set up tools for checking the quality of the code at the start of the project and enforce them from the outset. For pet projects probably doesn’t make sense to set up these tools but I have seen a pretty significant number of projects which started as pet projects and ended as a regular project. So maybe is the solution recognizing the right time for adding static analysis to the project.
 
 === #4 - Coding standards not aligned with static analysis
-If coding standards are speaking differently than rules in static analysis, it’s definitely wrong and can be very misleading. These two guys should be playing same game. Being careful about coding standards and having them aligned with static analysis it’s essential to have clear intention what’s good for project and what’s not. Also lack of documentation about static analysis itself - how to
+If coding standards are speaking differently than rules in static analysis, it’s wrong and can be very misleading. These two guys should be playing the same game. Being careful about coding standards and having them aligned with static analysis it’s essential to have clear intention what’s useful for project and what’s not. Also lack of documentation about static analysis itself - how to
 
 - install it
 - use it
 - setup the build
-- setup the continuous integration server
+- set up the continuous integration server
 - mitigate the violations
-- how/when suppress violations
+- how/when to suppress violations
 - handle legacy code - strategy for legacy
-- and which parts of software aren’t checked and why (don’t test what you can’t change).
+- and which parts of the software aren’t checked and why (don’t test what you can’t change).
 
 This lack of documentation is a problem because it can easily break the engagement by team members and proper use of all the tools.
 
 === #5 - Tools are not enhanced with own rules
-You can believe me, there is always something special in your software which should be checked as early as possible by static analysis.
+You can believe me; there is always something special in your software which should be checked as early as possible by static analysis.
 
 === #6 - Tools are not complemented with quality assurance tests
-There are things which static analysis can’t discover - for example configuration of the product, some special runtime behaviour. What you should provide is good suite of quality assurance tests. These tests doesn’t test functionality of software but they are ensuring that the codebase is following coding standards in different way than static analysis. It’s common mistake to believe that static analysis is the only one tool which can get rid of all the problems.
+There are things which static analysis can’t discover - for an example configuration of the product, some specific runtime behavior. What you should provide is the good suite of quality assurance tests. These tests don't test the functionality of the software, but they are ensuring that the codebase is following coding standards in the different way than static analysis. It’s common mistake to believe that static analysis is the only one tool which can get rid of all the problems.
 
 === #7 - Default code inspections set in IDEs
-When you are using some unified {ide-wiki-link} for developing software, you should provide default project configuration for such IDE. For example settitngs.jar for the {intellij-idea-link}. There are list of code inspections set for almost each programming language and environment and you should carefully set all the rules and disable/enable the rules according to coding standards and static analysis. Within every new rule in static analysis or coding standards, these settings needs be aligned as well.
+When you are using some unified {ide-wiki-link} for developing software, you should provide default project configuration for such IDE. For example settitngs.jar for the {intellij-idea-link}. There is list of code inspections set for almost each programming language and environment, and you should carefully set all the rules and disable/enable the rules according to coding standards and static analysis. Within every new rule in static analysis or coding standards, these settings needs be aligned as well.
 
 === #8 - Code coverage threshold is not set or regularly increased
-{code-coverage-link} is one of the tool from the static analysis toolset. It verify that your production codebase is checked by unit and/or integration tests. It’s common mistake if there isn't set threshold meaning failing build whenever the code coverage is under the threshold. And it’s even worse if this threshold isn’t regularly increased. It doesn’t need to be increased by number of percent but whenever the code coverage is increased, the threshold should be increased as well to ensuring that new code added won’t be covered by the tests.
+{code-coverage-link} is one of the tools from the static analysis toolset. It verifies that unit and integration tests check your production codebase. It’s common mistake if there isn't set threshold meaning failing build whenever the code coverage is under the threshold. And it’s even worse not increasing of this threshold regularly. It doesn’t need to be increased by some percents but whenever we are increasing the code coverage, the threshold should be increased as well to ensuring that new code added won’t be covered by the tests.
 
-=== #9 - Compliants to false positives
-Yes, there are pretty obvious possibilities that analysis will throw false positives. You should take care about all the violations and those which are false positives should be handled inside code with some kind of suppression with comment why it’s false positives and why it can be ignored.
+=== #9 - Complaints to false positives
+Yes, there are pretty obvious possibilities that analysis will throw false positives. You should take care about all the violations, and those which are false positives should be handled inside code with some suppression with a comment why it’s false positives and why we can safely ignore them.
 
 === #10 - When adding static analysis, starting with too many rules
-Less rules that are followed are better than many that aren’t. Adding static analysis to product after some work is done is tough. But not having static analysis on your side it’s worse. So if you haven’t sufficient time to incorporate comprehensive set of tools and rules, start with some minimal number and work on improvements continuously. It’s even the rule for the static analysis for greenfield projects - static analysis is continuous process and you should take care about that in regular manner. Adding rules, avoiding inconvenient ones, this is product of careful way of having ensured quality.
+Fewer rules we are following are better than many that aren’t. Adding static analysis to the product after some development is tough. But not having static analysis on your side it’s worse. So if you haven’t sufficient time to incorporate a comprehensive set of tools and rules, start with some minimal number and work on improvements continuously. It’s even the standard for the static analysis for greenfield projects - static analysis is the continuous process, and you should take care about that in a regular manner. Adding rules, avoiding inconvenient ones, this is the product of a careful way of having ensured quality.
 
 === Extra one - Lack of management buy-in
-If you haven’t management on your side, there is no simple way how to have sufficient time for taking care about static analysis. It’s not short run, it’s the long one and definitely not the easy one. And time consuming as well so you need to have management which has understanding of return of such investment, have set allowed time, requirements and goals.
+If you have not management on your side, there is no simple way how to have sufficient time for taking care about static analysis. It’s not the short run, it’s the long one and not the easy one. And time-consuming as well so you need to have management which has an understanding of return on such investment, have set allowed time, requirements and goals.
 
 == Conclusion
-Static analysis is great. Using it is hard. Using it properly is very hard. With carefulness, sufficient time and regular improvements will be any project rewarded with huge benefits - cleaner code, quality, less bugs and better maintenance. Don’t do mistakes listed above and your benefits will be guaranteed.
+Static analysis is great. Using it is hard. Using it properly is very hard. With carefulness, sufficient time and regular improvements will be any project rewarded with huge benefits - cleaner code, quality, fewer bugs and better maintenance. Don’t make mistakes listed above and your benefits will be guaranteed.
 
 *P.S.* If you enjoyed this post, you can follow me on {my-twitter-link} to stay in touch with my further articles and other thoughts.
 
