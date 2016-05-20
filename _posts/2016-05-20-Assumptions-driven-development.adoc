@@ -37,4 +37,5 @@ On the end, it was a success. But more than three weeks work in addition to two 
 If you are self-reflexive enough, you can reckognize one of the fail above. The point is to realize this fail fast to avoid unnecessary work, throwned code, and frustration. You are not alone and not working alone, there is always someone to ask, to discuss possible solutions deeply and getting rid of fails mentioned above. Be more experienced and mature developer!
 
 *P.S.* If you enjoyed this post, you can follow me on {my-twitter-link} to stay in touch with my articles and other thoughts.
+
 *P.S.2* Cover image by {cover-link}.
