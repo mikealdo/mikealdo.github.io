@@ -16,18 +16,18 @@ All this story and throwing away my two-week work (almost all) started with the 
 
 == Fail trajectory
 I have collected all errors bellow:
-- *Fail 1:* As the codebase were pretty large I have created own assumptions, own mind maps about the parts of the architecture.
-    - Then I was trying to invent solution passing to *my* understandings of code. Ultimately wrong.
-- *Fail 2:* I was presuming that is expected to understand all the code with the only slight help of others as others seemed to be very busy.
- - And probably as my ego was big enough for fighting the task alone.
-- *Fail 3:* I was too early convinced that I can come with the reasonable solution and immediately start working on the proof of concept (POC).
-- *Fail 4:* After I designed the POC and proven that might work I was not diligent enough to discuss my solution with a broad audience if the solution fits the architecture, further development or future features.
-- *Fail 5:* As my POC confirmed that it can work I started working on implementation details in one part of the application before scanning all of the affected areas.
-    - And not surprisingly in two code areas, it was very hard and wrong by my design to incorporate my design into these parts of the codebase.
-- *Fail 6:* After some pressure had come, I avoided working in {pomodoro-link} style to achieve “better” productivity and after a whole day of developing I was just so overwhelmed.
-    - The big picture immediately went away. Productivity was even worse. My personal feeling was bad as well. One positive point is that I realized that it’s not working quite early and returned to Pomodoro's after one and half day. At least something.
-- *Fail 7:* I didn’t make an analysis of all technologies used in the project and how can be replaced or utilized better.
-- *Fail 8:* Code review was not done periodically on small amount of code but on the code produced after two-weeks development.
+* *Fail 1:* As the codebase were pretty large I have created own assumptions, own mind maps about the parts of the architecture.
+** Then I was trying to invent solution passing to *my* understandings of code. Ultimately wrong.
+* *Fail 2:* I was presuming that is expected to understand all the code with the only slight help of others as others seemed to be very busy.
+** And probably as my ego was big enough for fighting the task alone.
+* *Fail 3:* I was too early convinced that I can come with the reasonable solution and immediately start working on the proof of concept (POC).
+* *Fail 4:* After I designed the POC and proven that might work I was not diligent enough to discuss my solution with a broad audience if the solution fits the architecture, further development or future features.
+* *Fail 5:* As my POC confirmed that it can work I started working on implementation details in one part of the application before scanning all of the affected areas.
+** And not surprisingly in two code areas, it was very hard and wrong by my design to incorporate my design into these parts of the codebase.
+* *Fail 6:* After some pressure had come, I avoided working in {pomodoro-link} style to achieve “better” productivity and after a whole day of developing I was just so overwhelmed.
+** The big picture immediately went away. Productivity was even worse. My personal feeling was bad as well. One positive point is that I realized that it’s not working quite early and returned to Pomodoro's after one and half day. At least something.
+* *Fail 7:* I didn’t make an analysis of all technologies used in the project and how can be replaced or utilized better.
+* *Fail 8:* Code review was not done periodically on small amount of code but on the code produced after two-weeks development.
 
 == How it ended?
 On the end, it was a success. But more than three weeks work in addition to two weeks spent on the wrong implementation. Beginning of the success started mainly due to my personal {self-retro-link} by my opinion. I am doing it for more than for months and after the second week and revisiting all the work done, I realized that I wasn't able to deliver something feasible in two weeks, and it's just wrong. Then I was communicating with others more thorougly; I was organizing sessions with opened development environment, and I was deeply analyzing all the suggestions. I returned to the implementation after three days of communication, meetings and with clear steps defined to achieve the goal of my task.
