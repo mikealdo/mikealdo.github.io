@@ -16,6 +16,7 @@ All this story and throwing away my two-week work (almost all) started with the 
 
 == Fail trajectory
 I have collected all errors bellow:
+
 * *Fail 1:* As the codebase were pretty large I have created own assumptions, own mind maps about the parts of the architecture.
 ** Then I was trying to invent solution passing to *my* understandings of code. Ultimately wrong.
 * *Fail 2:* I was presuming that is expected to understand all the code with the only slight help of others as others seemed to be very busy.
