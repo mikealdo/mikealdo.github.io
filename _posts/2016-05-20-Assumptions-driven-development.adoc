@@ -34,7 +34,7 @@ I have collected all errors bellow:
 On the end, it was a success. But more than three weeks work in addition to two weeks spent on the wrong implementation. Beginning of the success started mainly due to my personal {self-retro-link} by my opinion. I am doing it for more than for months and after the second week and revisiting all the work done, I realized that I wasn't able to deliver something feasible in two weeks, and it's just wrong. Then I was communicating with others more thorougly; I was organizing sessions with opened development environment, and I was deeply analyzing all the suggestions. I returned to the implementation after three days of communication, meetings and with clear steps defined to achieve the goal of my task.
 
 == Suggestion for all developers
-If you are self-reflexive enough, you can reckognize one of the fail above. The point is to realize this fail fast to avoid unnecessary work, throwned code, and frustration. You are not alone and not working alone, there is always someone to ask, to discuss possible solutions deeply and getting rid of fails mentioned above. Be more experienced and mature developer!
+If you are self-reflexive enough, you can reckognize one of the fail above which all started with my assumptions over knowing. The point is to realize this fail fast to avoid unnecessary work, throwned code, and frustration. You are not alone and not working alone, there is always someone to ask, to discuss possible solutions deeply and getting rid of fails mentioned above. Be more experienced and mature developer by not using assumptions driven-development!
 
 *P.S.* If you enjoyed this post, you can follow me on {my-twitter-link} to stay in touch with my articles and other thoughts.
 
