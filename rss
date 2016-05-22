@@ -5,9 +5,9 @@
     <link>https://mikealdo.github.io</link>
     <description>Architecture, coding, open source.</description>
     <language>en-UK</language>
-    <pubDate>Sat, 14 May 2016 06:09:42 GMT</pubDate>
+    <pubDate>Sun, 22 May 2016 04:30:40 GMT</pubDate>
     <dc:creator>mdavidek1@gmail.com</dc:creator>
-    <dc:date>2016-05-14T06:09:42Z</dc:date>
+    <dc:date>2016-05-22T04:30:40Z</dc:date>
     <dc:language>en-UK</dc:language>
     <item>
       <title>Software architecture like a building own house</title>
@@ -120,7 +120,7 @@
     <item>
       <title>Self-retrospective increases happiness of life</title>
       <link>https://mikealdo.github.io/2016/03/18/Self-retrospective-increases-happiness-of-life.html</link>
-      <description>Recently I read good advice by @Kacanovski about doing self-retros. After some thinking about the idea I decided to adopt it to my work and personal life. After six weeks of doing it I can share some insights from practical...</description>
+      <description>Recently I read good advice by @Kacanovski about doing self-retros. After some thinking about the idea, I decided to adapt it to my work and personal life. After six weeks of doing it, I can share some insights from a...</description>
       <category>happiness</category>
       <pubDate>Fri, 18 Mar 2016 01:00:00 GMT</pubDate>
       <guid>https://mikealdo.github.io/2016/03/18/Self-retrospective-increases-happiness-of-life.html</guid>
@@ -165,7 +165,7 @@
     <item>
       <title>Ubiquitous language without domain-driven design</title>
       <link>https://mikealdo.github.io/2016/04/15/Ubiquitous-language-without-domain-driven-design.html</link>
-      <description>Shared team language, project dictionary, terms. In software development we all speaking about business domain terms but rarely taking care about unifying our language between each other when speaking about the very same things. As I am independent software developer,...</description>
+      <description>Shared team language, project dictionary, terms. In software development, we all speaking about business domain terms but rarely taking care about unifying our language between each other when talking about the very same things. As I am an independent software...</description>
       <category>domain-driven design</category>
       <pubDate>Fri, 15 Apr 2016 00:00:00 GMT</pubDate>
       <guid>https://mikealdo.github.io/2016/04/15/Ubiquitous-language-without-domain-driven-design.html</guid>
@@ -174,7 +174,7 @@
     <item>
       <title>Innovation versus technical debt</title>
       <link>https://mikealdo.github.io/2016/04/22/Innovation-versus-technical-debt.html</link>
-      <description>In software projects is always present tension between producing new features and keeping maintainability of the software. If maintainability is hard (bugs are hard to detect and fix for example) and we are spending much more time with maintaining than...</description>
+      <description>In software projects, there is always present tension between producing new features and keeping the maintainability of the software. If maintainability is hard (bugs are hard to detect and fix for example) and we are spending much more time maintaining...</description>
       <category>technical debt</category>
       <pubDate>Fri, 22 Apr 2016 00:00:00 GMT</pubDate>
       <guid>https://mikealdo.github.io/2016/04/22/Innovation-versus-technical-debt.html</guid>
@@ -183,7 +183,7 @@
     <item>
       <title>10 biggest mistakes in using static analysis</title>
       <link>https://mikealdo.github.io/2016/04/29/10-biggest-mistakes-in-using-static-analysis.html</link>
-      <description>Static analysis is in software engineering for the respected time. Static analysis tools are generally used by developers as part of the development and component testing process. The key aspect is that the code (or other artefact) is not executed...</description>
+      <description>Static analysis is in software engineering for the important time. Developers use Static analysis tools as part of the development and component testing process. The key aspect is that the code (or another artifact) is not executed or run but...</description>
       <category>static analysis</category>
       <pubDate>Fri, 29 Apr 2016 00:00:00 GMT</pubDate>
       <guid>https://mikealdo.github.io/2016/04/29/10-biggest-mistakes-in-using-static-analysis.html</guid>
@@ -192,7 +192,7 @@
     <item>
       <title>Kinds of Static analysis tools</title>
       <link>https://mikealdo.github.io/2016/05/06/Kinds-of-Static-analysis-tools.html</link>
-      <description>I like clean code. I like code where is visible quality with the first touch of code. And I like predictable codebases which can be seen as written by one developer. And I like static analysis because it significantly helps...</description>
+      <description>I like clean code. I like code where is visible quality with the first touch of code. And I like predictable codebases which look as written by one developer. And I like static analysis because it significantly helps to achieve...</description>
       <category>static analysis</category>
       <pubDate>Fri, 06 May 2016 00:00:00 GMT</pubDate>
       <guid>https://mikealdo.github.io/2016/05/06/Kinds-of-Static-analysis-tools.html</guid>
@@ -206,6 +206,15 @@
       <pubDate>Fri, 13 May 2016 00:00:00 GMT</pubDate>
       <guid>https://mikealdo.github.io/2016/05/13/Static-analysis-tools-for-Java-landscape-in-2016.html</guid>
       <dc:date>2016-05-13T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Assumptions driven-development</title>
+      <link>https://mikealdo.github.io/2016/05/20/Assumptions-driven-development.html</link>
+      <description>It’s quite hard to admit, but recently I have almost entirely failed with initial design and implementation of one of the features needed in software on which I am currently working. It’s even more challenging when I have...</description>
+      <category>learning</category>
+      <pubDate>Fri, 20 May 2016 00:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2016/05/20/Assumptions-driven-development.html</guid>
+      <dc:date>2016-05-20T00:00:00Z</dc:date>
     </item>
   </channel>
 </rss>
