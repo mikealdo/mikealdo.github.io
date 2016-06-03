@@ -1,4 +1,4 @@
-= Assumptions driven-development
+= Assumptions-driven development
 :hp-image: /covers/assumptions-driven-development.jpeg
 :hp-tags: learning, development
 :hp-alt-title: Assumptions driven-development
