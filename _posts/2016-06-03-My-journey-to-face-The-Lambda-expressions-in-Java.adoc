@@ -1,0 +1,85 @@
+= My journey to face The Lambda expressions in Java
+:hp-image: /covers/my-journey-to-face-the-lambda-expressions-in-java.jpeg
+:hp-tags: lambda expressions, jdk, programming
+:hp-alt-title: My journey to face The Lambda expressions in Java
+:published_at: 2016-06-03
+:my-twitter-link: https://twitter.com/mikealdo007[twitter]
+:cover-link: https://unsplash.com/photos/0XftWmRbZ_0[Joshua Ness | unsplash.com]
+
+:f-interfaces-java-link: https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html[Functional interfaces from Java]
+:angelika-link: http://www.angelikalanger.com/Lambdas/LambdaTutorial/lambdatutorial_4.html[Comprehensive article about the Lambda expression]
+:jdk-lambda-link: https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html[JDK documentation about lambda]
+:jdk-method-references-link: https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html[JDK method reference documentation]
+:performance-comparison-link: http://www.oracle.com/technetwork/java/jvmls2013kuksen-2014088.pdf[Comparison of performance the lambdas against anonymous inner classes]
+:performance-related-link: https://www.reddit.com/r/java/comments/2suvir/java_8_lambda_performance_is_not_great/[Useful discussion about performance the lambda expressions]
+:api-link: https://en.wikipedia.org/wiki/Application_programming_interface[API]
+:lambdas-link: https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html[the Lambda expressions]
+:intellij-idea-link: https://www.jetbrains.com/idea/[Intellij IDEA]
+:disscusion-link: https://jcp.org/en/jsr/detail?id=335[Discussions]
+:stream-link: https://docs.oracle.com/javase/8/docs/technotes/guides/collections/changes8.html[improvements inside Collection framework]
+:func-langs-link: https://en.wikipedia.org/wiki/Functional_programming[functional languages]
+:oo-lang-link: https://en.wikipedia.org/wiki/Object-oriented_programming[object-oriented language]
+:f-int-doc-link: https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html[@FunctionalInterface]
+:default-methods-link: https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html[the default methods]
+:execute-around-link: http://stackoverflow.com/questions/341971/what-is-the-execute-around-idiom[execute-aroung design pattern]
+:target-type-link: https://docs.oracle.com/javase/tutorial/java/generics/genTypeInference.html[the target type]
+
+It’s not a surprising to me. Even when I am using plenty of libraries, programming techniques, and programming languages, I barely know five percent of them in a deep way. The fact is, it’s not a major problem. The Problem is that about the half of core libraries in Java I know a minimum and only using them as an {api-link}. This level of knowledge I have about the Lambda expressions. Also, whenever there are some talks about {lambdas-link} especially, I have a feeling that everyone knows more about them than me. This feeling I am going to change.
+
+The Lambda expressions are great in my eyes but recently I figured out my inability to apply or write them on demand without intelligent IDE ({intellij-idea-link} in my case). They have become only syntactic sugar for me (for more than two years, huh), and I wasn’t too diligent to find out how they actually might work. So I was studying them in a deeper way and my thoughts about them I am collecting in this post. I’ll not include any of code examples as plenty of them you can find inside links through the article.
+
+== When has the Story begun?
+{disscusion-link} about lambdas have quite a long history. It started in 2006 (yes, ten years ago). After flame wars, declining and accepting, Oracle decided in 2010 that Java is not dead and will stay a modern language adapted to current trends, hardware, and future platforms. I would say that the main reason why the Lambda expressions Oracle incorporated into Java was bringing the possibility to parallelization of the code execution to masses rather than providing syntactic sugar.
+
+Everywhere are talked {stream-link} and enabling parallelization for processing of collections in an easy built-in way. But it’s not the only benefit which we can see and use.
+
+== What are the Lambda expressions?
+The best matching expression for me is - it's an anonymous piece of functionality. This functionality we can pass as an argument to the existing operations (methods in Java). We can glance at them as the shorter form of creation of anonymous inner classes which we were used for passing code to the methods - for this statement is used the term "code as data".
+
+Two advantages. With anonymous inner classes we, in a fact, passing into the method the created object. This object creation is no longer needed; we are passing the lambda expression only. The second advantage is the syntactic overhead of anonymous inner classes is no longer needed. The Lambda expressions are more convenient, less boilerplate code, and more concise.
+
+== Where the Lambda expressions come from
+Lambda expressions have the origin in {func-langs-link}. An important difference between Java ({oo-lang-link}) and functional language is in terms function vs. method.
+
+It's a matter of fact that these two words we are using in commutable fashion often. It’s mainly because both are representing a piece of functionality, they both takes the arguments, have a body and are executable, producing the outputs and may produce side effects.
+
+The methods are belonging to the object and are mostly modifying fields owned by the object. Methods are used in the imperative order; the developer is saying how things are done.
+
+In comparison, the functions are used in declarative style; they describe what a program should do instead of how. They do not mutate any data. Instead, they produce the results concerning the passed arguments. The functions we are passing to the other operations as the arguments.
+
+== Why we should use the Lambda expressions
+* Reduced typing.
+* Readability - you don’t need to look elsewhere for a method’s definition.
+* Internal collection iteration over external loops is more efficient and enables parallelization of execution.
+* When some functionality is used in only one place.
+* To avoid boilerplate code using {execute-around-link}.
+
+== Interesting Implementation Details
+* There is no longer need to mark variables from enclosing scope as final - they are effectively marked as final by the compiler when used in the lambda expression. ** Should we still make it final for readability purposes? It depends on the situation, but I'm inclining to make the effectively final variables also explicitly marked with using final.
+* The lambda expression can be utilized only for interfaces which are containing the single abstract method. But the default methods are allowed, and such an interface we can use in the lambda. Of course, we should treat {default-methods-link} as a compromise when we need to enhance some interface and have no more elegant solution in our hands.
+* The lambda has the same scope as the enclosing context - so you can’t, for example, redefine variable with the same name inside enclosing context within the lambda.
+* *this* and *super* means the same thing in the lambda as they mean in the enclosing context.
+* Execute-around-method pattern is a useful thing for reducing code duplication. With leveraging the lambda, we can pass code into a method where is something done before and after such passed code.
+** For example, we can pass code into try-and-catch sequence. Or even a stream’s forEach is an example of the execute-around pattern; it is a loop that executes around the lambda expression we passed in.
+* If you are returning value from lambda and using “return” keyword for it, you need to enclose the body of the lambda into braces. You don’t have to enclose void statements. You don’t have to enclose returning statements without return keyword.
+* In lambda expression you’re not specifying {target-type-link} (the type which is method expecting to be passed in). Resolution of the target type is possible thanks to overload resolution and type argument inference.
+* Maybe it’s surprising, but the lambda expressions were never intended to replace anonymous classes entirely, only for certain scenarios. And (not-only) therefore we can use lambda only with functional interfaces and not abstract classes which can have SAM (single abstract method) as well.
+* Other Java 8 syntactic sugar - method references - also increases the readability of the lambda expressions.
+* Type inference is a great thing. And therefore, you don’t need to specify the parameter types. Specification of the types was my first question about lambda - how the compiler know which parameter is what type. And this is possible just by the type inference - we should avoid the specifying of these types to increase readability and avoid boilerplate code.
+* It’s avoided to make an overloaded method with the functional interfaces because the compiler isn’t capable of distinguishing between them when we are using these methods (but they are completely ok when we were defining them). Just use another method name or you need to cast the lambda expression before its definition.
+* By {f-int-doc-link} annotation you can explicitly mark the interface as the functional one. It’s very useful to a great codebase when one developer might be tempting to enhance interface with other functionality but breaking the lambda expressions possibility to use. It’s the optional interface with not runtime impact but increase the readability and make the intent of the interface clear. Also, it is helping the compiler in identifying violations of such design intent.
+
+== Reference links
+* {f-interfaces-java-link}
+* {angelika-link}
+* {jdk-lambda-link}
+* {jdk-method-references-link}
+* {performance-comparison-link}
+* {performance-related-link}
+
+== Conclusion
+Wrapping it up, Lambdas are very useful, concise and more convenient to use in comparison to anonymous inner classes. Unless some weird usages of the lambdas, is the performance similar or better than with usage of anonymous inner classes. When the body of the lambda expression has no more than three lines, we should prefer them. The lambda expressions allowed the new way of the treating Java collections - streams. Also, the leverage of the lambdas is very broad in almost entire codebases.
+
+*P.S.* If you enjoyed this post, you can share this post anywhere as well as follow me on {my-twitter-link} to stay in touch with my further articles and other thoughts.
+
+*P.S.2* Cover image by {cover-link}.
