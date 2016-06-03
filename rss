@@ -5,9 +5,9 @@
     <link>https://mikealdo.github.io</link>
     <description>Architecture, coding, open source.</description>
     <language>en-UK</language>
-    <pubDate>Sun, 22 May 2016 04:30:40 GMT</pubDate>
+    <pubDate>Fri, 03 Jun 2016 04:44:24 GMT</pubDate>
     <dc:creator>mdavidek1@gmail.com</dc:creator>
-    <dc:date>2016-05-22T04:30:40Z</dc:date>
+    <dc:date>2016-06-03T04:44:24Z</dc:date>
     <dc:language>en-UK</dc:language>
     <item>
       <title>Software architecture like a building own house</title>
@@ -208,13 +208,22 @@
       <dc:date>2016-05-13T00:00:00Z</dc:date>
     </item>
     <item>
-      <title>Assumptions driven-development</title>
+      <title>Assumptions-driven development</title>
       <link>https://mikealdo.github.io/2016/05/20/Assumptions-driven-development.html</link>
       <description>It’s quite hard to admit, but recently I have almost entirely failed with initial design and implementation of one of the features needed in software on which I am currently working. It’s even more challenging when I have...</description>
       <category>learning</category>
       <pubDate>Fri, 20 May 2016 00:00:00 GMT</pubDate>
       <guid>https://mikealdo.github.io/2016/05/20/Assumptions-driven-development.html</guid>
       <dc:date>2016-05-20T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>My journey to face The Lambda expressions in Java</title>
+      <link>https://mikealdo.github.io/2016/06/03/My-journey-to-face-The-Lambda-expressions-in-Java.html</link>
+      <description>It’s not a surprising to me. Even when I am using plenty of libraries, programming techniques, and programming languages, I barely know five percent of them in a deep way. The fact is, it’s not a major problem....</description>
+      <category>lambda expressions</category>
+      <pubDate>Fri, 03 Jun 2016 00:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2016/06/03/My-journey-to-face-The-Lambda-expressions-in-Java.html</guid>
+      <dc:date>2016-06-03T00:00:00Z</dc:date>
     </item>
   </channel>
 </rss>
