@@ -1,6 +1,6 @@
 = How complicated is to truly learn the Streams in Java?
 :hp-image: /covers/how-complicated-is-to-truly-learn-the-streams-in-java.jpeg
-:hp-tags: java, java 8, streams, lambdas
+:hp-tags: lambda expressions, jdk, programming, java 8, streams
 :hp-alt-title: How complicated is to truly learn the Streams in Java?
 :published_at: 2016-06-17
 :my-twitter-link: https://twitter.com/mikealdo007[twitter]
@@ -14,8 +14,9 @@
 :mutable-reduction-link: https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#MutableReduction[see this]
 :pitfall-parallel-second-link: http://zeroturnaround.com/rebellabs/java-parallel-streams-are-bad-for-your-health/[this]
 :pitfall-parallel-first-link: https://dzone.com/articles/think-twice-using-java-8[this]
+:lambda-article: https://mikealdo.github.io/2016/06/03/My-journey-to-face-The-Lambda-expressions-in-Java.html[in the article about the Lambda expressions]
 
-Why am I about to write an article about well-documented feature of Java language, which is in use for more than two years in production environments? Well, as I was writing in the article about the Lambda expressions, there is a significant difference between using the features and understanding the features. And with the Streams, it’s the same situation for me as with the Lambdas. Frankly, I am using the Streams for more than a one and half year, and I am not satisfied with my understanding and ability to use them. It’s same as it was for the Lambdas, I am going to change my understanding of the Streams. But how complicated the streams are?
+Why am I about to write an article about well-documented feature of Java language, which is in use for more than two years in production environments? Well, as I was writing {lambda-article}, there is a significant difference between using the features and understanding the features. And with the Streams, it’s the same situation for me as with the Lambdas. Frankly, I am using the Streams for more than a one and half year, and I am not satisfied with my understanding and ability to use them. It’s same as it was for the Lambdas, I am going to change my understanding of the Streams. But how complicated the streams are?
 
 == Word on Intelligent IDEs
 Firstly, I am going to make a small note. I would say that majority of us, developers, have a major problem with the IDEs providing to us big set of capabilities around the coding. We are too lazy to read an API documentation where our IDE is intelligent enough for example to choose the right method by calculating with the context. Or replace some older (maybe more verbose) code with newer structure. This intelligent replacing is the exact bad situation with the Streams. Even for the complex for loops is the IDE providing hint or two click’s method to replace it with the Streams. Do we look more amusing when we are using the Streams? Maybe yes. Is our new code better understandable and maintainable? Well, not always. Did we learn anything by this automatic replacement? Indeed, almost nothing. I can point out only one thing we learned - our eyes will be used to see the streams in the code and at least show us the basic syntax. But nothing under the hood, nothing about the performance of such replacement, and of course nothing about the most efficient way how to structure our code. By this statement, I am not about to say to stop using IDEs. I am just saying, before using such built-in features, we need to make sure that we know what is IDE about to do and if it’s right for that context. That’s all, so let’s back to the Streams.
