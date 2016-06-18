@@ -5,9 +5,9 @@
     <link>https://mikealdo.github.io</link>
     <description>Architecture, coding, open source.</description>
     <language>en-UK</language>
-    <pubDate>Fri, 03 Jun 2016 04:44:24 GMT</pubDate>
+    <pubDate>Sat, 18 Jun 2016 07:05:15 GMT</pubDate>
     <dc:creator>mdavidek1@gmail.com</dc:creator>
-    <dc:date>2016-06-03T04:44:24Z</dc:date>
+    <dc:date>2016-06-18T07:05:15Z</dc:date>
     <dc:language>en-UK</dc:language>
     <item>
       <title>Software architecture like a building own house</title>
@@ -224,6 +224,15 @@
       <pubDate>Fri, 03 Jun 2016 00:00:00 GMT</pubDate>
       <guid>https://mikealdo.github.io/2016/06/03/My-journey-to-face-The-Lambda-expressions-in-Java.html</guid>
       <dc:date>2016-06-03T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>How complicated is to truly learn the Streams in Java?</title>
+      <link>https://mikealdo.github.io/2016/06/17/How-complicated-is-to-truly-learn-the-Streams-in-Java.html</link>
+      <description>Why am I about to write an article about well-documented feature of Java language, which is in use for more than two years in production environments? Well, as I was writing in the article about the Lambda expressions, there is...</description>
+      <category>lambda expressions</category>
+      <pubDate>Fri, 17 Jun 2016 00:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2016/06/17/How-complicated-is-to-truly-learn-the-Streams-in-Java.html</guid>
+      <dc:date>2016-06-17T00:00:00Z</dc:date>
     </item>
   </channel>
 </rss>
