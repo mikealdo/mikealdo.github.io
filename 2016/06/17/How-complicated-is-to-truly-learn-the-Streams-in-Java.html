@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>How complicated is to truly learn the Streams in Java?</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-57x57.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="60x60" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-60x60.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="72x72" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-72x72.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="76x76" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-76x76.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="114x114" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-114x114.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="120x120" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-120x120.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="144x144" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-144x144.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="152x152" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-152x152.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-180x180.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-32x32.png?v=wAAv6Wqe6l?v=1.0.0" sizes="32x32">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-194x194.png?v=wAAv6Wqe6l?v=1.0.0" sizes="194x194">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-96x96.png?v=wAAv6Wqe6l?v=1.0.0" sizes="96x96">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/android-chrome-192x192.png?v=wAAv6Wqe6l?v=1.0.0" sizes="192x192">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-16x16.png?v=wAAv6Wqe6l?v=1.0.0" sizes="16x16">
+    <link rel="manifest" href="//mikealdo.github.io/themes/uno-zen/assets/img/manifest.json?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="shortcut icon" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon.ico?v=wAAv6Wqe6l?v=1.0.0">
+    <meta name="msapplication-TileColor" content="#e74c3c">
+    <meta name="msapplication-TileImage" content="//mikealdo.github.io/themes/uno-zen/assets/img/mstile-144x144.png?v=wAAv6Wqe6l?v=1.0.0">
+    <meta name="msapplication-config" content="//mikealdo.github.io/themes/uno-zen/assets/img/browserconfig.xml?v=wAAv6Wqe6l?v=1.0.0">
+    <meta name="theme-color" content="#e74c3c">
+    <link rel="stylesheet" type="text/css" href="//mikealdo.github.io/themes/uno-zen/assets/css/uno-zen.css?v=1.0.0" />
+    <link rel="canonical" href="https://mikealdo.github.io/2016/06/17/How-complicated-is-to-truly-learn-the-Streams-in-Java.html" />
+    
+    <meta property="og:site_name" content="Michal Davídek - blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How complicated is to truly learn the Streams in Java?" />
+    <meta property="og:description" content="Why am I about to write an article about well-documented feature of Java language, which is in use for more than two years in production environments? Well, as I was writing in the article about the Lambda expressions, there is..." />
+    <meta property="og:url" content="https://mikealdo.github.io/2016/06/17/How-complicated-is-to-truly-learn-the-Streams-in-Java.html" />
+    <meta property="og:image" content="https://mikealdo.github.io/images//covers/how-complicated-is-to-truly-learn-the-streams-in-java.jpeg" />
+    <meta property="article:published_time" content="2016-06-16T22:00:00.000Z" />
+    <meta property="article:modified_time" content="2016-06-18T06:57:11.926Z" />
+    <meta property="article:tag" content="java" />
+    <meta property="article:tag" content="java 8" />
+    <meta property="article:tag" content="streams" />
+    <meta property="article:tag" content="lambdas" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How complicated is to truly learn the Streams in Java?" />
+    <meta name="twitter:description" content="Why am I about to write an article about well-documented feature of Java language, which is in use for more than two years in production environments? Well, as I was writing in the article about the Lambda expressions, there is..." />
+    <meta name="twitter:url" content="https://mikealdo.github.io/2016/06/17/How-complicated-is-to-truly-learn-the-Streams-in-Java.html" />
+    <meta name="twitter:image:src" content="https://mikealdo.github.io/images//covers/how-complicated-is-to-truly-learn-the-streams-in-java.jpeg" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Michal Davídek - blog",
+    "author": {
+        "@type": "Person",
+        "name": "Michal Davídek",
+        "image": "https://avatars.githubusercontent.com/u/14245058?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": null
+    },
+    "headline": "How complicated is to truly learn the Streams in Java?",
+    "url": "https://mikealdo.github.io/2016/06/17/How-complicated-is-to-truly-learn-the-Streams-in-Java.html",
+    "datePublished": "2016-06-16T22:00:00.000Z",
+    "dateModified": "2016-06-18T06:57:11.926Z",
+    "image": "https://mikealdo.github.io/images//covers/how-complicated-is-to-truly-learn-the-streams-in-java.jpeg",
+    "keywords": "java,  java 8,  streams,  lambdas",
+    "description": "Why am I about to write an article about well-documented feature of Java language, which is in use for more than two years in production environments? Well, as I was writing in the article about the Lambda expressions, there is..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Michal Davídek - blog" href="https://mikealdo.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+  </head>
+  <body class="post-template tag-java tag-java-8 tag-streams tag-lambdas">
+    <header id="menu-button" class="expanded">
+      <a><i class="icon icon-list"></i></a>
+    </header>
+    <aside class="cover" style="background: url(/images/background-cover.jpg) center/cover no-repeat fixed">
+      <div class="cover container">
+        <div class="profile">
+          <a id="avatar-link" title="link to homepage for Michal Davídek - blog" href="https://mikealdo.github.io/#open">
+            <img src="/images/michal-davidek.png" alt="Michal Davídek - blog avatar" class="profile avatar rounded hvr-buzz-out" />
+            <h1 id="profile-title">Michal Davídek - blog</h1>
+            <h3 id="profile-resume"></h3>
+          </a>
+    
+          <hr class="divider long" />
+          <p>Architecture, coding, open source.</p>
+          <hr class="divider short" />
+          <div class="navigation">
+            <div class="profile contact">
+              
+              <nav class="navigation right">
+                <ul class="social expanded">
+              
+              
+                  <!-- Twitter -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://twitter.com/mikealdo007" title="Twitter account">
+                      <i class='icon icon-social-twitter'></i>
+                      <span class="label">Twitter</span>
+                    </a>
+                  </li>
+              
+                  <!-- Google Plus -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://plus.google.com/+MichalDavidekCZ" title="Google+ account">
+                      <i class='icon icon-social-google-plus'></i>
+                      <span class="label">Google-plus</span>
+                    </a>
+                  </li>
+              
+                  <!-- Github -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://github.com/mikealdo" title="Github account">
+                      <i class='icon icon-social-github'></i>
+                      <span class="label">Github</span>
+                    </a>
+                  </li>
+                  </li>
+              
+              
+              
+              
+                  <!-- LinkedIn -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://www.linkedin.com/in/davidekmichal" title="LinkedIn account">
+                      <i class='icon icon-social-linkedin'></i>
+                      <span class="label">LinkedIn</span>
+                    </a>
+                  </li>
+              
+                  <!-- Email -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="mailto:mdavidek1@gmail.com" title="Email mdavidek1@gmail.com">
+                      <i class='icon icon-mail'></i>
+                      <span class="label">Email</span>
+                    </a>
+                  </li>
+                    <!-- RSS -->
+                    <li class="social item hvr-grow-rotate">
+                        <a href="/rss" title="Subscribe to RSS">
+                            <i class='icon icon-rss'></i>
+                            <span class="label">RSS</span>
+                        </a>
+                    </li>
+                </ul>
+              </nav>
+              <!-- <section class="icon icon-search" id="search-container">
+      <hr class="divider short" />
+      <form id="search-form">
+        <input type="text", name="search", placeholder="git, css, javascript,..." id="search-field" />
+      </form>
+    </section>
+     -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <section id="search-results"></section>
+      <section class="content">
+        
+
+  <article class="post tag-java tag-java-8 tag-streams tag-lambdas">
+    <header>
+      <div class="post meta">
+        <time datetime="17 Jun 2016">17 Jun 2016</time>
+        <span class="post tags">in <a href="https://mikealdo.github.io/tag/java">java</a> <a href="https://mikealdo.github.io/tag/java-8"> java 8</a> <a href="https://mikealdo.github.io/tag/streams"> streams</a> <a href="https://mikealdo.github.io/tag/lambdas"> lambdas</a></span>
+
+
+        <span class="post reading-time"> ~ <span></span> read.</span>
+      </div>
+      <a alt="Tweet 'How complicated is to truly learn the Streams in Java?'" href="https://twitter.com/intent/tweet?text=How%20complicated%20is%20to%20truly%20learn%20the%20Streams%20in%20Java%3F%20%C2%BB&amp;hashtags=java, java 8, streams, lambdas&amp;url=https://mikealdo.github.io/2016/06/17/How-complicated-is-to-truly-learn-the-Streams-in-Java.html">
+        <img id="post-image" src=https://mikealdo.github.io/images//covers/how-complicated-is-to-truly-learn-the-streams-in-java.jpeg alt="How complicated is to truly learn the Streams in Java?">
+        <h1 class="icon-reverse icon-social-twitter-post" id="post-title">How complicated is to truly learn the Streams in Java?</h1>
+      </a>
+    </header>
+
+    <div id="post-content" class="post tag-java tag-java-8 tag-streams tag-lambdas">
+      <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Why am I about to write an article about well-documented feature of Java language, which is in use for more than two years in production environments? Well, as I was writing in the article about the Lambda expressions, there is a significant difference between using the features and understanding the features. And with the Streams, it’s the same situation for me as with the Lambdas. Frankly, I am using the Streams for more than a one and half year, and I am not satisfied with my understanding and ability to use them. It’s same as it was for the Lambdas, I am going to change my understanding of the Streams. But how complicated the streams are?</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_word_on_intelligent_ides">Word on Intelligent IDEs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Firstly, I am going to make a small note. I would say that majority of us, developers, have a major problem with the IDEs providing to us big set of capabilities around the coding. We are too lazy to read an API documentation where our IDE is intelligent enough for example to choose the right method by calculating with the context. Or replace some older (maybe more verbose) code with newer structure. This intelligent replacing is the exact bad situation with the Streams. Even for the complex for loops is the IDE providing hint or two click’s method to replace it with the Streams. Do we look more amusing when we are using the Streams? Maybe yes. Is our new code better understandable and maintainable? Well, not always. Did we learn anything by this automatic replacement? Indeed, almost nothing. I can point out only one thing we learned - our eyes will be used to see the streams in the code and at least show us the basic syntax. But nothing under the hood, nothing about the performance of such replacement, and of course nothing about the most efficient way how to structure our code. By this statement, I am not about to say to stop using IDEs. I am just saying, before using such built-in features, we need to make sure that we know what is IDE about to do and if it’s right for that context. That’s all, so let’s back to the Streams.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_brief_history_of_the_streams_in_java">Brief History of the Streams in Java</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The talks about the streams in Java started before ten years (2006). For the developers, it began to be interesting far later, about five years ago (2011). At that time, it was clear that the Streams and the Lambdas will be parts of the Java language in release 8. There were some first previews and beta versions of JDK also on that time. Still surprising that I am into writing this post five years after the API was born. Maybe there was another stuff which I was interested in, but the main reason to not look under the hood was: the majority of the projects were using Java 7 with no clear perspective to migrate to Java 8. Not always is one developer changing project just for newer technologies.</p>
+</div>
+<div class="paragraph">
+<p>The Streams are using programming technique called Monads (on them I’ll make a note later). This technique comes from the functional languages where it is also the cornerstone. And originally is the collection pipeline from unix system command lines and their pipes implementation - | . The Streams allowed easy peasy lemon squeezy (oh, beautiful phrase) parallel processing by built-in API. The Lambdas significantly increased readability and avoided the majority of boilerplate code also for the Streams. The Streams operations are in majority stateless - doesn’t influence source data, so it enforces making explicit assignments and not produce any side effects. The Streams allowed inner iteration over the external one. After all, it looks like the bright tomorrows.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_monads_from_the_functional_languages">Monads from the Functional Languages</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Developers used to coding in imperative languages are often feared about functional concepts. I am (still) also feared. To be concrete, I am frightened just to learn something about <a href="https://en.wikipedia.org/wiki/Monad_(functional_programming)">the Monads</a>. Even when there are some statements like Monads are simple, they are not. I heard things that if you can learn Monads and understand them, you are unable to explain them afterward. Huh. After reading plenty of materials (<a href="https://dzone.com/articles/whats-wrong-java-8-part-iv">this</a>, <a href="http://stackoverflow.com/questions/13454347/monads-with-java-8">this</a>, and <a href="http://nazarii.bardiuk.com/java-monad/">this</a> for the start) covering Monads in Java language, I would say that for Java, it’s only the definition. Monads have no real impact to us when using the Lambdas, the Streams or any other interface providing the monadic behavior (Optional for example). So you can be calm again, it’s not necessary to bother with learning Monads in a profound way to learn the Streams.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_word_on_the_parallel_streams">Word on the Parallel Streams</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Parallelization is intended to increase runtime performance in processing of large input. As it is in other situations, for making something able to run in parallel you need deeper knowledge than for anything else. Otherwise, you can end up with hard to spot and find bugs in your software. The Parallel stream seems to be easy enough and looks like low hanging fruit. Well, in a majority of the cases it’s the case, but I can only recommend learning common pitfalls with using streams: <a href="https://dzone.com/articles/think-twice-using-java-8">this</a> or <a href="http://zeroturnaround.com/rebellabs/java-parallel-streams-are-bad-for-your-health/">this</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bright_tomorrows">Bright Tomorrows …</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After some time with the Streams, I figured out that there the learning curve about the Streams is not so straightforward. It’s very likely asymptotic.  There are plenty of examples, lots of questions&amp;answers out there, plenty of explanations. What I learned is, even with significant experience, there are still questions in my mind, and they are harder and harder to answer. Therefore, it’s complicated. Even when you check the official documentation, there are passages which you need to go through several times (<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#MutableReduction">see this</a>) for right understanding. I don’t suspect the creators of the API from over-complication but things are not straightforward as it looks when we see the code. And therefore, one should be extremely careful to let IDEs make some automatic replacement.</p>
+</div>
+<div class="paragraph">
+<p>Let’s discuss some of the usual areas for mistakes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Order of operations matters</p>
+<div class="ulist">
+<ul>
+<li>
+<p>By ordering the operations preceding terminal operation, you can significantly improve or reduce the performance of the processing. By calling something before calling “filter()” doesn’t make much sense to the output of the first call is filtered nevertheless.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>One line expressions</p>
+<div class="ulist">
+<ul>
+<li>
+<p>When the lambda inside stream operation has more than one line, it seems pretty obscure and unconventional. Usage of one liner inside streams is standard practice. When the lambdas inside operation have tension to be more verbose, I prefer to use plain old for loop. It’s much more readable and understandable than four line lambda. Using more than one line is not a common mistake but not readable and unconventional code is a mistake.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Stateful behavior</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A stateful lambda is one whose result depends on the state which may vary during the execution of the stream. It may cause unpredictable results, aren’t safe and may influence the performance of the processing. So the best approach is to avoid dependency to mutable state and restructure the operations to be stateless at all.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Reusing the Streams</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Java Streams cannot be reused. After the terminal operation is performed, the stream is closed and don’t accept any other operation to process.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Side-effects</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Changing variables from outer scope, setting values to variables from outer scope, writing something to filesystem, these side effects can easily lead to confusing results. We should focus on the writing the stream operations without possible side-effects to avoid unnecessary effects. In contrast, there are small number of the stream operations which are operating (and only can) by using side-effects - forEach or peek. These should be treated with special care and is encouraged to think twice before using them.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Modifying backing collection</p>
+<div class="ulist">
+<ul>
+<li>
+<p>When you are using plain old for loop, you must not modify the collection you are iterating. With streams you can do anything with backing collection which will leads to unpredictable results. So it’s encouraged not modifying backed collection in the streams operations as well as before Java 8.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Parallelization of reduction operations</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The safest way how to leverage parallelization is with reduction operations. Reduction operation takes the input sequence and produce single summary result so there is big probability that your code will be parallel safe. But be aware with the more complicated reduction operations, where can be counterproductive to use parallelization.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>And more and more</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Points above are only a subset of possible areas to make a mistake. Many of the mistakes can be solved by searching for the problems with the concrete stream operation and there is significant chance that you will get the right answer quickly and with proper explanation.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_so_how_hard_is_truly_learn_the_streams_in_java">So how hard is truly learn the Streams in Java?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To be honest, it took me a year and half of the second year of using the Streams to be able to use them as classic for-loops before. I mean to be not depending on IDE suggestions and be familiar with the standard API methods and possibilities. And took me 14 days to deep dive into <a href="http://martinfowler.com/articles/collection-pipeline/">collection pipeline mechanism</a>, questions&amp;answers and <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html">official documentation</a>. Even after this 14 days I am not convinced that I know everything and without in-depth experience I would be nowhere. Nevertheless, I am pretty sure that I can write the Streams on demand, without side-effects where it’s not needed, and with optimal performance. So, after all, it’s hard and not straightforward. After initial engagement and a pleasure to work with the Streams waits for everybody point of disappointment, unexpected results and lack of performance. At these times, you will need to dive a little bit deeper into the Streams, and I would be glad if my post will be helpful for you.</p>
+</div>
+<div class="paragraph">
+<p><strong>P.S.</strong> If you enjoyed this post, you can share this post anywhere as well as follow me on <a href="https://twitter.com/mikealdo007">twitter</a> to stay in touch with my further articles and other thoughts.</p>
+</div>
+<div class="paragraph">
+<p><strong>P.S.2</strong> Cover image by <a href="https://unsplash.com/photos/7NtiJBowheE">Zachary Young | unsplash.com</a>.</p>
+</div>
+</div>
+</div>
+    </div>
+
+    <div class="post related">
+
+    </div>
+
+    <footer class="post comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        var disqus_shortname = 'mikealdo'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </footer>
+
+  </article>
+
+
+        <footer>
+          <span class="copyright">
+            &copy; 2016. All rights reserved. Built with <a href="https://github.com/Kikobeats/uno-zen" target="_blank">Uno Zen</a> under <a href="http://hubpress.io/" target="_blank">HubPress</a>.
+          </span>
+        </footer>
+      </section>
+    </main>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+    <script src="//mikealdo.github.io/themes/uno-zen/assets/js/uno-zen.js?v=1.0.0" type="text/javascript" charset="utf-8"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-72815761-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
