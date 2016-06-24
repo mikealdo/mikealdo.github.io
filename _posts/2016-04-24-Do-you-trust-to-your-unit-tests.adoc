@@ -1,0 +1,81 @@
+= Do you trust to your unit tests?
+:hp-image: /covers/do-you-trust-to-your-unit-tests.jpeg
+:hp-tags: unit testing, java, mutation testing
+:hp-alt-title: Do you trust to your unit tests?
+:published_at: 2016-04-24
+:my-twitter-link: https://twitter.com/mikealdo007[twitter]
+:cover-link: https://unsplash.com/photos/_es6l-aPDA0[Samuel Zeller | unsplash.com]
+:example-link: https://github.com/mikealdo/mutation-testing-example[as in my minimalistic example]
+:bob-mt-link: http://blog.cleancoder.com/uncle-bob/2016/06/10/MutationTesting.html[superior article]
+:mt-link-1: https://www.techopedia.com/definition/20905/mutation-testing[this]
+:mt-link-2: http://www.codeaffine.com/2015/10/05/what-the-heck-is-mutation-testing/[this]
+:pitest-link: http://pitest.org[Pitest]
+:mt-java-link: http://mutation-testing.org/[Mutation testing for Java]
+:jester-link: http://jester.sourceforge.net/[jester]
+:microjava-link: http://cs.gmu.edu/offutt/mujava/[uJava]
+:javalanche-link: http://www.st.cs.uni-saarland.de/mutation/[Javalanche]
+:jumble-link: http://jumble.sourceforge.net/[Jumble]
+
+
+I am thinking about the value of the unit tests time to time. Sometimes I discover tests without asserts or the right assert(s) for the particular contexts. Sometimes I tend to remove the tests which in my eyes are not useful anymore, but I have not anyone to discuss this removal. So I am not sure. Moreover, it always brings the question how much of our unit tests is valuable.
+
+Of course, when using TDD, we are all starting with unit tests which are shielding us from making mistakes and cover almost 100% of the production code. However, what afterward, after implementation is existing for some time? When the changes in production happen, and someone is not diligent enough to cover all the modified code? Of course, there should be a code review process and code coverage threshold set, but in my eyes, it is somehow not enough. It is maybe rather a philosophical problem because how I can trust to my production code if I am not trusting my test suite? I am not surprised that It has a name already in the philosophical world - “Who will guard the guards?”.
+
+I ended with the resolution - I believe that code review process does not have an ability to discover all the issues with newly produced code and more importantly, I do not believe to the code coverage. Alternatively, in better words, I believe that measuring of the code coverage has a significant impact on quality of the code but does not ensure that all the code do what it should do. It only says what and how many times the code has been called during the execution of the unit tests. However, is not saying anything about whereas the results were confronted with expected reality. It says nothing about how much paths or not happy day scenarios the execution of the tests performed. If we have the super trooper code review process, we can ensure most of the situations, but not all and even if more people is working on the same thing, there is no guarantee that code is bug-free due to a presence of the unit tests with close to 100% code coverage.
+
+What we can do with that and is it even possible? I would say, that we have one step available to incorporate into our software quality process.
+
+*Welcome the Mutation testing!*
+
+== Mutation Testing
+The idea behind the mutation testing (MT in further text) is quite simple, and it is quite surprising that I stumbled upon this thing not until before. The idea is to modify existing production code slightly (producing so-called Mutants - changing the meaning of if or while statement) and run the test suite against it. If the test suite is failing against this slight modification (mutants h killed), it is good, because our unit test safety net caught unexpected behavior (semantic change). If the test suite does not fail (some mutants survived), it is bad, because our test codebase is not covering the production codebase complexity (when someone make semantic change without writing a test, no test is failing).
+
+Uncle Bob has written {bob-mt-link} about MT where he is discussing the philosophy of MT and actual benefits. The diligent reader can find out the theoretical information there or in other useful places ({mt-link-1} or {mt-link-2}, so I’ll rather try to discuss practical usage and areas where the benefits of the MT be the best.
+
+== Cost of reaction to all mutants
+There is a big probability that your test suite contains surviving mutants. Even for the simplest code it seems ({example-link}) that the effort to kill all the mutants is very exhaustive. So when I was reacting to these survived mutants, it appeared to be better to modify slightly production code than be exhausted to respond to all these mutants. However, even with the several attempts of modification the production code, I was not able to make the test code more cohesive. So the second trial was searching what the survived mutants meant and how to react properly. Well, it was tough. With reacting to one method with one simple if-else statement I spent over one hour to have all the mutants killed.
+
+I believe, even with the increasing practical knowledge about MT, the cost of reaction to all the survived mutants is very significant.
+
+== So *When* to Use the Mutation Testing?
+Short answer, to the business most critical part of the application.
+
+Long answer, it depends. I agree with Uncle Bob, who stated that it is irrelevant any other than 100% code coverage. However, in these days and technologies is very impractical to achieve this goal. Moreover, it seems same for the MT. Applying MT to the whole codebase appears to be very impractical as the value negatively influence too many survived mutants and big cost of killing them. The goal to apply MT to the whole codebase is challenging, and maybe it is not necessary as in the codebases are often places which are not covered by the unit test in 100% way. These places are mostly not business critical and don't change regularly.
+
+MT is most practical for the code which is changing in a daily manner, containing critical business functionality or there is big chance to make a mistake. There should be prioritization process for identification places where is the return on the investment the best.
+
+I would also state that every code marked as a library, should be covered by MT. The library has a chance to be used in many different situations, paths, and circumstances. So it seems very practical to have the library code challenged by MT.
+
+I would use MT in the project which hasn’t been written with TDD style, and you are not trusting to your codebase enough. With using MT and appropriate changes in the test suite, you can reach the trust to practically every codebase.
+
+== Who should be handling MT - programmers or testers?
+The question is, who should take care of the output of MT? Testers are verifying programmer’s work by checking their results. So, in fact, they are playing the role of guarding programmer’s guards (unit tests). In contrast, it seems that it is impossible to handle MT outputs without programming knowledge and maybe even without skills in overall programming testing. So, the responsibility is closer to the programmers as MT primarily focus on the unit tests which are handled by the programmers also.
+
+I would say that handling of the survived mutants can be the perfect task for the pair of programmer and tester. With the possibility of false positives paths which are impossible the tester can easily spot any behavior which doesn’t need to be treated as the survived mutant. Moreover, they can learn more about the product than in any other situation.
+
+== Word on Quality Assurance Testing
+I am pretty confident, that Quality assurance testing is not term known in the community. With this term, I am calling the test suite which is probing the test suite whether it fulfill for example coding standards impossible to check by static analysis - a presence of some annotation on particular classes can be the case.
+
+== Tools for the Java landscape
+Just for completeness, let's do a review of available tools:
+* {pitest-link}
+** actively developed and maintained
+* {mt-java-link}
+** actively developed and maintained
+* {jester-link}
+** not maintained
+* {microjava-link}
+** not maintained
+* {javalanche-link}
+** not maintained
+* {jumble-link}
+** not maintained
+
+== In Conclusion
+I am still surprised that the idea of MT is here for the decades. Moreover, maybe more surprised why MT is not incorporated to the most software projects yet because the benefits are worth the expensiveness and time needed for such incorporation. In all the project should be MT challenging the most critical parts of the applications, eliminate the possibility for errors and improve software quality. Ok, for complex mutations it is hard work to get rid of the survived mutants. However, the reward from the comprehensive test suite and no place for mistakes it is the best approach what I ever met to trust to the unit tests.
+
+MT is the big step towards to have quality in the software, and it is a great teammate to code coverage, code review, and static analysis.
+
+*P.S.* If you enjoyed this post, you can share this post anywhere as well as follow me on {my-twitter-link} to stay in touch with my further articles and other thoughts.
+
+*P.S.2* Cover image by {cover-link}
