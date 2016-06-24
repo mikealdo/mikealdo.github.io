@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Do you trust to your unit tests?</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-57x57.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="60x60" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-60x60.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="72x72" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-72x72.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="76x76" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-76x76.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="114x114" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-114x114.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="120x120" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-120x120.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="144x144" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-144x144.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="152x152" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-152x152.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="//mikealdo.github.io/themes/uno-zen/assets/img/apple-touch-icon-180x180.png?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-32x32.png?v=wAAv6Wqe6l?v=1.0.0" sizes="32x32">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-194x194.png?v=wAAv6Wqe6l?v=1.0.0" sizes="194x194">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-96x96.png?v=wAAv6Wqe6l?v=1.0.0" sizes="96x96">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/android-chrome-192x192.png?v=wAAv6Wqe6l?v=1.0.0" sizes="192x192">
+    <link rel="icon" type="image/png" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon-16x16.png?v=wAAv6Wqe6l?v=1.0.0" sizes="16x16">
+    <link rel="manifest" href="//mikealdo.github.io/themes/uno-zen/assets/img/manifest.json?v=wAAv6Wqe6l?v=1.0.0">
+    <link rel="shortcut icon" href="//mikealdo.github.io/themes/uno-zen/assets/img/favicon.ico?v=wAAv6Wqe6l?v=1.0.0">
+    <meta name="msapplication-TileColor" content="#e74c3c">
+    <meta name="msapplication-TileImage" content="//mikealdo.github.io/themes/uno-zen/assets/img/mstile-144x144.png?v=wAAv6Wqe6l?v=1.0.0">
+    <meta name="msapplication-config" content="//mikealdo.github.io/themes/uno-zen/assets/img/browserconfig.xml?v=wAAv6Wqe6l?v=1.0.0">
+    <meta name="theme-color" content="#e74c3c">
+    <link rel="stylesheet" type="text/css" href="//mikealdo.github.io/themes/uno-zen/assets/css/uno-zen.css?v=1.0.0" />
+    <link rel="canonical" href="https://mikealdo.github.io/2016/06/24/Do-you-trust-to-your-unit-tests.html" />
+    
+    <meta property="og:site_name" content="Michal Davídek - blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Do you trust to your unit tests?" />
+    <meta property="og:description" content="I am thinking about the value of the unit tests time to time. Sometimes I discover tests without asserts or the right assert(s) for the particular contexts. Sometimes I tend to remove the tests which in my eyes are..." />
+    <meta property="og:url" content="https://mikealdo.github.io/2016/06/24/Do-you-trust-to-your-unit-tests.html" />
+    <meta property="og:image" content="https://mikealdo.github.io/images//covers/do-you-trust-to-your-unit-tests.jpeg" />
+    <meta property="article:published_time" content="2016-06-23T22:00:00.000Z" />
+    <meta property="article:modified_time" content="2016-06-24T19:37:58.278Z" />
+    <meta property="article:tag" content="unit testing" />
+    <meta property="article:tag" content="java" />
+    <meta property="article:tag" content="mutation testing" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Do you trust to your unit tests?" />
+    <meta name="twitter:description" content="I am thinking about the value of the unit tests time to time. Sometimes I discover tests without asserts or the right assert(s) for the particular contexts. Sometimes I tend to remove the tests which in my eyes are..." />
+    <meta name="twitter:url" content="https://mikealdo.github.io/2016/06/24/Do-you-trust-to-your-unit-tests.html" />
+    <meta name="twitter:image:src" content="https://mikealdo.github.io/images//covers/do-you-trust-to-your-unit-tests.jpeg" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Michal Davídek - blog",
+    "author": {
+        "@type": "Person",
+        "name": "Michal Davídek",
+        "image": "https://avatars.githubusercontent.com/u/14245058?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": null
+    },
+    "headline": "Do you trust to your unit tests?",
+    "url": "https://mikealdo.github.io/2016/06/24/Do-you-trust-to-your-unit-tests.html",
+    "datePublished": "2016-06-23T22:00:00.000Z",
+    "dateModified": "2016-06-24T19:37:58.278Z",
+    "image": "https://mikealdo.github.io/images//covers/do-you-trust-to-your-unit-tests.jpeg",
+    "keywords": "unit testing,  java,  mutation testing",
+    "description": "I am thinking about the value of the unit tests time to time. Sometimes I discover tests without asserts or the right assert(s) for the particular contexts. Sometimes I tend to remove the tests which in my eyes are..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Michal Davídek - blog" href="https://mikealdo.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+  </head>
+  <body class="post-template tag-unit-testing tag-java tag-mutation-testing">
+    <header id="menu-button" class="expanded">
+      <a><i class="icon icon-list"></i></a>
+    </header>
+    <aside class="cover" style="background: url(/images/background-cover.jpg) center/cover no-repeat fixed">
+      <div class="cover container">
+        <div class="profile">
+          <a id="avatar-link" title="link to homepage for Michal Davídek - blog" href="https://mikealdo.github.io/#open">
+            <img src="/images/michal-davidek.png" alt="Michal Davídek - blog avatar" class="profile avatar rounded hvr-buzz-out" />
+            <h1 id="profile-title">Michal Davídek - blog</h1>
+            <h3 id="profile-resume"></h3>
+          </a>
+    
+          <hr class="divider long" />
+          <p>Architecture, coding, open source.</p>
+          <hr class="divider short" />
+          <div class="navigation">
+            <div class="profile contact">
+              
+              <nav class="navigation right">
+                <ul class="social expanded">
+              
+              
+                  <!-- Twitter -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://twitter.com/mikealdo007" title="Twitter account">
+                      <i class='icon icon-social-twitter'></i>
+                      <span class="label">Twitter</span>
+                    </a>
+                  </li>
+              
+                  <!-- Google Plus -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://plus.google.com/+MichalDavidekCZ" title="Google+ account">
+                      <i class='icon icon-social-google-plus'></i>
+                      <span class="label">Google-plus</span>
+                    </a>
+                  </li>
+              
+                  <!-- Github -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://github.com/mikealdo" title="Github account">
+                      <i class='icon icon-social-github'></i>
+                      <span class="label">Github</span>
+                    </a>
+                  </li>
+                  </li>
+              
+              
+              
+              
+                  <!-- LinkedIn -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="https://www.linkedin.com/in/davidekmichal" title="LinkedIn account">
+                      <i class='icon icon-social-linkedin'></i>
+                      <span class="label">LinkedIn</span>
+                    </a>
+                  </li>
+              
+                  <!-- Email -->
+                  <li class="social item hvr-grow-rotate">
+                    <a rel="me" href="mailto:mdavidek1@gmail.com" title="Email mdavidek1@gmail.com">
+                      <i class='icon icon-mail'></i>
+                      <span class="label">Email</span>
+                    </a>
+                  </li>
+                    <!-- RSS -->
+                    <li class="social item hvr-grow-rotate">
+                        <a href="/rss" title="Subscribe to RSS">
+                            <i class='icon icon-rss'></i>
+                            <span class="label">RSS</span>
+                        </a>
+                    </li>
+                </ul>
+              </nav>
+              <!-- <section class="icon icon-search" id="search-container">
+      <hr class="divider short" />
+      <form id="search-form">
+        <input type="text", name="search", placeholder="git, css, javascript,..." id="search-field" />
+      </form>
+    </section>
+     -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <section id="search-results"></section>
+      <section class="content">
+        
+
+  <article class="post tag-unit-testing tag-java tag-mutation-testing">
+    <header>
+      <div class="post meta">
+        <time datetime="24 Jun 2016">24 Jun 2016</time>
+        <span class="post tags">in <a href="https://mikealdo.github.io/tag/unit-testing">unit testing</a> <a href="https://mikealdo.github.io/tag/java"> java</a> <a href="https://mikealdo.github.io/tag/mutation-testing"> mutation testing</a></span>
+
+
+        <span class="post reading-time"> ~ <span></span> read.</span>
+      </div>
+      <a alt="Tweet 'Do you trust to your unit tests?'" href="https://twitter.com/intent/tweet?text=Do%20you%20trust%20to%20your%20unit%20tests%3F%20%C2%BB&amp;hashtags=unit testing, java, mutation testing&amp;url=https://mikealdo.github.io/2016/06/24/Do-you-trust-to-your-unit-tests.html">
+        <img id="post-image" src=https://mikealdo.github.io/images//covers/do-you-trust-to-your-unit-tests.jpeg alt="Do you trust to your unit tests?">
+        <h1 class="icon-reverse icon-social-twitter-post" id="post-title">Do you trust to your unit tests?</h1>
+      </a>
+    </header>
+
+    <div id="post-content" class="post tag-unit-testing tag-java tag-mutation-testing">
+      <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>I am thinking about the value of the unit tests time to time. Sometimes I discover tests without asserts or the right assert(s) for the particular contexts. Sometimes I tend to remove the tests which in my eyes are not useful anymore, but I have not anyone to discuss this removal. So I am not sure. Moreover, it always brings the question how much of our unit tests is valuable.</p>
+</div>
+<div class="paragraph">
+<p>Of course, when using TDD, we are all starting with unit tests which are shielding us from making mistakes and cover almost 100% of the production code. However, what afterward, after implementation is existing for some time? When the changes in production happen, and someone is not diligent enough to cover all the modified code? Of course, there should be a code review process and code coverage threshold set, but in my eyes, it is somehow not enough. It is maybe rather a philosophical problem because how I can trust to my production code if I am not trusting my test suite? I am not surprised that It has a name already in the philosophical world - “Who will guard the guards?”.</p>
+</div>
+<div class="paragraph">
+<p>I ended with the resolution - I believe that code review process does not have an ability to discover all the issues with newly produced code and more importantly, I do not believe to the code coverage. Alternatively, in better words, I believe that measuring of the code coverage has a significant impact on quality of the code but does not ensure that all the code do what it should do. It only says what and how many times the code has been called during the execution of the unit tests. However, is not saying anything about whereas the results were confronted with expected reality. It says nothing about how much paths or not happy day scenarios the execution of the tests performed. If we have the super trooper code review process, we can ensure most of the situations, but not all and even if more people is working on the same thing, there is no guarantee that code is bug-free due to a presence of the unit tests with close to 100% code coverage.</p>
+</div>
+<div class="paragraph">
+<p>What we can do with that and is it even possible? I would say, that we have one step available to incorporate into our software quality process.</p>
+</div>
+<div class="paragraph">
+<p><strong>Welcome the Mutation testing!</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mutation_testing">Mutation Testing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The idea behind the mutation testing (MT in further text) is quite simple, and it is quite surprising that I stumbled upon this thing not until before. The idea is to modify existing production code slightly (producing so-called Mutants - changing the meaning of if or while statement) and run the test suite against it. If the test suite is failing against this slight modification (mutants h killed), it is good, because our unit test safety net caught unexpected behavior (semantic change). If the test suite does not fail (some mutants survived), it is bad, because our test codebase is not covering the production codebase complexity (when someone make semantic change without writing a test, no test is failing).</p>
+</div>
+<div class="paragraph">
+<p>Uncle Bob has written <a href="http://blog.cleancoder.com/uncle-bob/2016/06/10/MutationTesting.html">superior article</a> about MT where he is discussing the philosophy of MT and actual benefits. The diligent reader can find out the theoretical information there or in other useful places (<a href="https://www.techopedia.com/definition/20905/mutation-testing">this</a> or <a href="http://www.codeaffine.com/2015/10/05/what-the-heck-is-mutation-testing/">this</a>, so I’ll rather try to discuss practical usage and areas where the benefits of the MT be the best.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cost_of_reaction_to_all_mutants">Cost of reaction to all mutants</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There is a big probability that your test suite contains surviving mutants. Even for the simplest code it seems (<a href="https://github.com/mikealdo/mutation-testing-example">as in my minimalistic example</a>) that the effort to kill all the mutants is very exhaustive. So when I was reacting to these survived mutants, it appeared to be better to modify slightly production code than be exhausted to respond to all these mutants. However, even with the several attempts of modification the production code, I was not able to make the test code more cohesive. So the second trial was searching what the survived mutants meant and how to react properly. Well, it was tough. With reacting to one method with one simple if-else statement I spent over one hour to have all the mutants killed.</p>
+</div>
+<div class="paragraph">
+<p>I believe, even with the increasing practical knowledge about MT, the cost of reaction to all the survived mutants is very significant.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_so_strong_when_strong_to_use_the_mutation_testing">So <strong>When</strong> to Use the Mutation Testing?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Short answer, to the business most critical part of the application.</p>
+</div>
+<div class="paragraph">
+<p>Long answer, it depends. I agree with Uncle Bob, who stated that it is irrelevant any other than 100% code coverage. However, in these days and technologies is very impractical to achieve this goal. Moreover, it seems same for the MT. Applying MT to the whole codebase appears to be very impractical as the value negatively influence too many survived mutants and big cost of killing them. The goal to apply MT to the whole codebase is challenging, and maybe it is not necessary as in the codebases are often places which are not covered by the unit test in 100% way. These places are mostly not business critical and don&#8217;t change regularly.</p>
+</div>
+<div class="paragraph">
+<p>MT is most practical for the code which is changing in a daily manner, containing critical business functionality or there is big chance to make a mistake. There should be prioritization process for identification places where is the return on the investment the best.</p>
+</div>
+<div class="paragraph">
+<p>I would also state that every code marked as a library, should be covered by MT. The library has a chance to be used in many different situations, paths, and circumstances. So it seems very practical to have the library code challenged by MT.</p>
+</div>
+<div class="paragraph">
+<p>I would use MT in the project which hasn’t been written with TDD style, and you are not trusting to your codebase enough. With using MT and appropriate changes in the test suite, you can reach the trust to practically every codebase.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_who_should_be_handling_mt_programmers_or_testers">Who should be handling MT - programmers or testers?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The question is, who should take care of the output of MT? Testers are verifying programmer’s work by checking their results. So, in fact, they are playing the role of guarding programmer’s guards (unit tests). In contrast, it seems that it is impossible to handle MT outputs without programming knowledge and maybe even without skills in overall programming testing. So, the responsibility is closer to the programmers as MT primarily focus on the unit tests which are handled by the programmers also.</p>
+</div>
+<div class="paragraph">
+<p>I would say that handling of the survived mutants can be the perfect task for the pair of programmer and tester. With the possibility of false positives paths which are impossible the tester can easily spot any behavior which doesn’t need to be treated as the survived mutant. Moreover, they can learn more about the product than in any other situation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_word_on_quality_assurance_testing">Word on Quality Assurance Testing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I am pretty confident, that Quality assurance testing is not term known in the community. With this term, I am calling the test suite which is probing the test suite whether it fulfill for example coding standards impossible to check by static analysis - a presence of some annotation on particular classes can be the case.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tools_for_the_java_landscape">Tools for the Java landscape</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Just for completeness, let&#8217;s do a review of available tools:
+* <a href="http://pitest.org">Pitest</a>
+<strong> actively developed and maintained
+* <a href="http://mutation-testing.org/">Mutation testing for Java</a>
+</strong> actively developed and maintained
+* <a href="http://jester.sourceforge.net/">jester</a>
+<strong> not maintained
+* <a href="http://cs.gmu.edu/offutt/mujava/">uJava</a>
+</strong> not maintained
+* <a href="http://www.st.cs.uni-saarland.de/mutation/">Javalanche</a>
+<strong> not maintained
+* <a href="http://jumble.sourceforge.net/">Jumble</a>
+</strong> not maintained</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_in_conclusion">In Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I am still surprised that the idea of MT is here for the decades. Moreover, maybe more surprised why MT is not incorporated to the most software projects yet because the benefits are worth the expensiveness and time needed for such incorporation. In all the project should be MT challenging the most critical parts of the applications, eliminate the possibility for errors and improve software quality. Ok, for complex mutations it is hard work to get rid of the survived mutants. However, the reward from the comprehensive test suite and no place for mistakes it is the best approach what I ever met to trust to the unit tests.</p>
+</div>
+<div class="paragraph">
+<p>MT is the big step towards to have quality in the software, and it is a great teammate to code coverage, code review, and static analysis.</p>
+</div>
+<div class="paragraph">
+<p><strong>P.S.</strong> If you enjoyed this post, you can share this post anywhere as well as follow me on <a href="https://twitter.com/mikealdo007">twitter</a> to stay in touch with my further articles and other thoughts.</p>
+</div>
+<div class="paragraph">
+<p><strong>P.S.2</strong> Cover image by <a href="https://unsplash.com/photos/_es6l-aPDA0">Samuel Zeller | unsplash.com</a></p>
+</div>
+</div>
+</div>
+    </div>
+
+    <div class="post related">
+
+    </div>
+
+    <footer class="post comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        var disqus_shortname = 'mikealdo'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </footer>
+
+  </article>
+
+
+        <footer>
+          <span class="copyright">
+            &copy; 2016. All rights reserved. Built with <a href="https://github.com/Kikobeats/uno-zen" target="_blank">Uno Zen</a> under <a href="http://hubpress.io/" target="_blank">HubPress</a>.
+          </span>
+        </footer>
+      </section>
+    </main>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+    <script src="//mikealdo.github.io/themes/uno-zen/assets/js/uno-zen.js?v=1.0.0" type="text/javascript" charset="utf-8"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-72815761-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
