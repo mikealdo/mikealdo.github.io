@@ -2,7 +2,7 @@
 :hp-image: /covers/do-you-trust-to-your-unit-tests.jpeg
 :hp-tags: unit testing, java, mutation testing
 :hp-alt-title: Do you trust to your unit tests?
-:published_at: 2016-04-24
+:published_at: 2016-06-24
 :my-twitter-link: https://twitter.com/mikealdo007[twitter]
 :cover-link: https://unsplash.com/photos/_es6l-aPDA0[Samuel Zeller | unsplash.com]
 :example-link: https://github.com/mikealdo/mutation-testing-example[as in my minimalistic example]
