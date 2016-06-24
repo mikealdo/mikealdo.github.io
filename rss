@@ -5,9 +5,9 @@
     <link>https://mikealdo.github.io</link>
     <description>Architecture, coding, open source.</description>
     <language>en-UK</language>
-    <pubDate>Sat, 18 Jun 2016 07:05:15 GMT</pubDate>
+    <pubDate>Fri, 24 Jun 2016 19:41:25 GMT</pubDate>
     <dc:creator>mdavidek1@gmail.com</dc:creator>
-    <dc:date>2016-06-18T07:05:15Z</dc:date>
+    <dc:date>2016-06-24T19:41:25Z</dc:date>
     <dc:language>en-UK</dc:language>
     <item>
       <title>Software architecture like a building own house</title>
@@ -233,6 +233,15 @@
       <pubDate>Fri, 17 Jun 2016 00:00:00 GMT</pubDate>
       <guid>https://mikealdo.github.io/2016/06/17/How-complicated-is-to-truly-learn-the-Streams-in-Java.html</guid>
       <dc:date>2016-06-17T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Do you trust to your unit tests?</title>
+      <link>https://mikealdo.github.io/2016/06/24/Do-you-trust-to-your-unit-tests.html</link>
+      <description>I am thinking about the value of the unit tests time to time. Sometimes I discover tests without asserts or the right assert(s) for the particular contexts. Sometimes I tend to remove the tests which in my eyes are...</description>
+      <category>unit testing</category>
+      <pubDate>Fri, 24 Jun 2016 00:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2016/06/24/Do-you-trust-to-your-unit-tests.html</guid>
+      <dc:date>2016-06-24T00:00:00Z</dc:date>
     </item>
   </channel>
 </rss>
