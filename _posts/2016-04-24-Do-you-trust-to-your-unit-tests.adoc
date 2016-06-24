@@ -56,7 +56,8 @@ I would say that handling of the survived mutants can be the perfect task for th
 == Word on Quality Assurance Testing
 I am pretty confident, that Quality assurance testing is not term known in the community. With this term, I am calling the test suite which is probing the test suite whether it fulfill for example coding standards impossible to check by static analysis - a presence of some annotation on particular classes can be the case.
 
-== Tools for java
+== Tools for the Java landscape
+Just for completeness, let's do a review of available tools:
 * {pitest-link}
 ** actively developed and maintained
 * {mt-java-link}
