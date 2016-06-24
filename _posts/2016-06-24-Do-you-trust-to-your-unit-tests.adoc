@@ -58,6 +58,7 @@ I am pretty confident, that Quality assurance testing is not term known in the c
 
 == Tools for the Java landscape
 Just for completeness, let's do a review of available tools:
+
 * {pitest-link}
 ** actively developed and maintained
 * {mt-java-link}
