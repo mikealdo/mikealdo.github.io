@@ -3,7 +3,7 @@
 :hp-tags: ide, intellij idea
 :hp-alt-title: 10 unfamiliar features in IntelliJ Idea
 :published_at: 2016-07-01
-:idea-link: [IntelliJ Idea IDE]
+:idea-link: https://www.jetbrains.com/idea[IntelliJ Idea IDE]
 :deployment-link: https://www.jetbrains.com/help/idea/2016.1/deployment-working-with-web-servers.html[Deployment]
 :column-mode-link: https://www.jetbrains.com/help/idea/2016.1/selecting-text-in-the-editor.html[Column mode for selection]
 :lines-link: https://www.jetbrains.com/help/idea/2016.1/navigating-between-methods-and-tags.html[Lines for division of methods]
