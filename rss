@@ -5,9 +5,9 @@
     <link>https://mikealdo.github.io</link>
     <description>Architecture, coding, open source.</description>
     <language>en-UK</language>
-    <pubDate>Fri, 24 Jun 2016 19:41:25 GMT</pubDate>
+    <pubDate>Mon, 04 Jul 2016 04:17:30 GMT</pubDate>
     <dc:creator>mdavidek1@gmail.com</dc:creator>
-    <dc:date>2016-06-24T19:41:25Z</dc:date>
+    <dc:date>2016-07-04T04:17:30Z</dc:date>
     <dc:language>en-UK</dc:language>
     <item>
       <title>Software architecture like a building own house</title>
@@ -242,6 +242,15 @@
       <pubDate>Fri, 24 Jun 2016 00:00:00 GMT</pubDate>
       <guid>https://mikealdo.github.io/2016/06/24/Do-you-trust-to-your-unit-tests.html</guid>
       <dc:date>2016-06-24T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>10 unfamiliar features in IntelliJ Idea</title>
+      <link>https://mikealdo.github.io/2016/07/01/10-unfamiliar-features-in-Intelli-J-Idea.html</link>
+      <description>As I am pretty experienced with using [IntelliJ Idea IDE] - about five years - I have developed a style of using it for almost all the situations in which I might be. Still, time to time I am discovering...</description>
+      <category>ide</category>
+      <pubDate>Fri, 01 Jul 2016 00:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2016/07/01/10-unfamiliar-features-in-Intelli-J-Idea.html</guid>
+      <dc:date>2016-07-01T00:00:00Z</dc:date>
     </item>
   </channel>
 </rss>
