@@ -1,0 +1,57 @@
+= 10 unfamiliar features in IntelliJ Idea
+:hp-image: /covers/10-unfamiliar-features-in-intellij-idea.jpeg
+:hp-tags: ide, intellij idea
+:hp-alt-title: 10 unfamiliar features in IntelliJ Idea
+:published_at: 2016-07-01
+:idea-link: [IntelliJ Idea IDE]
+:deployment-link: https://www.jetbrains.com/help/idea/2016.1/deployment-working-with-web-servers.html[Deployment]
+:column-mode-link: https://www.jetbrains.com/help/idea/2016.1/selecting-text-in-the-editor.html[Column mode for selection]
+:lines-link: https://www.jetbrains.com/help/idea/2016.1/navigating-between-methods-and-tags.html[Lines for division of methods]
+:settings-link: https://www.jetbrains.com/help/idea/2016.1/settings-repository.html[Settings.jar through remote repository]
+:presentation-link: https://www.jetbrains.com/help/idea/2016.1/intellij-idea-viewing-modes.html[Presentation/distraction free modes]
+:scratch-files: https://www.jetbrains.com/help/idea/2016.1/scratches.html[Scratch files]
+:join-lines-link: https://www.jetbrains.com/help/idea/2016.1/joining-lines-and-literals.html[Join lines]
+:notifications-link: https://www.jetbrains.com/help/idea/2016.1/notifications.html[Customized OS Notifications]
+:hide-project-structure-link: https://www.jetbrains.com/help/idea/2016.1/navigation-between-ide-components.html[Hide the Project structure shortcut]
+:rest-link: https://www.jetbrains.com/help/idea/2016.1/rest-client-tool-window.html[Testing RESTful services]
+:my-twitter-link: https://twitter.com/mikealdo007[twitter]
+:cover-link: https://unsplash.com/photos/zyiKqZCzHsY[Rory Björkman | unsplash.com]
+
+As I am pretty experienced with using {idea-link} - about five years - I have developed a style of using it for almost all the situations in which I might be. Still, time to time I am discovering feature(s) which I wasn’t aware before (or which I forgot). Or Intellij Idea knows things for which I was used to leveraging another software and never predicted that this IDE is capable of doing such things.
+
+So here is my list of not so known features which replaced my old-school approaches:
+
+* {deployment-link} (Tools > Deployment)
+** Time to time I’m maintaining some little (let’s say classic style - HTML, CSS, PHP) website. Continuous integration server is fine, but it is too much work to set up locally or for the remote site. Deployment is useful when you need to update site along the implementation to local Apache (directory) or directly through FTP.
+** Replaced deployment by Total Commander, FileZilla and similar managers capable maintaining FTP connections or automatic .sh, .php scripts capable of some automatic deployment.
+* {column-mode-link}
+** It is a feature which I was using in Eclipse and inside Notepad++ and wasn’t so surprised that it is inside IDEA as well. But it seems, that many developers aren’t familiar with this handy feature, so it is on my list.
+** Replaced (so called University Combo) Ctrl+C + Ctrl+V and moving the cursor to the right place for multiple lines.
+* {lines-link} (Preferences > Editor > General > Appearance > Show method separators)
+** Method separation is just UI feature, but for me, it is very useful. Particularly in projects where the methods with more than ten lines. Much more readable code.
+** Replaced folding/unfolding of long methods.
+* {settings-link} (File > Settings repository)
+** Everyone is tuning settings of Intellij Idea, so he is maintaining settings.jar for configuring a new instance of installation. Keeping settings.jar in some public repository (GitHub for example) gives you a way how to connect and maintain settings.jar in a smooth way.
+** Replaced old-school backup settings.jar of the whole IDE with colors, fonts, inspections, etc. at locally/FTP/dropbox/google drive, etc.
+* {presentation-link}
+** When you need only to perform coding without any distractions, tool windows, notifications, welcome distraction free mode. When you need to present some code to someone else, appreciate the presentation fullscreen mode.
+** Various viewing mode replaced PowerPoint and other similar presentation software.
+* {scratch-files} (Project window > (Right arrow for more options) > Scratches
+** Sometimes you need a way how to write something or copy text/script/code to file which is not part of any project. And this is where Scratches are the best. You can add whatever type of file you need and it will be entirely excluded from the project but still in handy place when it is needed.
+** Replaced using /tmp folder with many undocumented text files with various content.
+* {join-lines-link} (Ctrl+Shift+J)
+** Replaced combo Down Arrow + Home + Ctrl+Shift+Left Arrow + Delete.
+* {notifications-link} (Preferences > Appearance & Behavior > Notifications, Linux and Mac OS only)
+** Stopped wasting time with waiting for the end of some action (deployment to server finished for example).
+* {hide-project-structure-link} (Command+1)
+** Useful when you need your tool windows (you don’t want the distraction free mode), and you are looking into a file with the long lines where every place on the display is valuable.
+** Replaced mouse scrolling of files with long lines.
+* {rest-link} (Tools > Test RESTful web services)
+** Straightforward and useful calling REST services with modifiable parameters, exportable calls also possible.
+** Replaced third-party software and browser plugins for checking the functionality of REST services.
+
+*Do you know another useful techniques/features which surprised you (or they aren’t so famous) in IntelliJ Idea? Thanks for sharing in comments.*
+
+*P.S.* If you enjoyed this post, you can share this post anywhere as well as follow me on {my-twitter-link} to stay in touch with my further articles and other thoughts.
+
+*P.S.2* Cover image by {cover-link}.
