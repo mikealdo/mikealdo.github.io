@@ -1,0 +1,82 @@
+= What I would expect when joining the new project?
+:hp-image: /covers/what-i-would-expect-when-joining-the-new-project.jpeg
+:hp-tags: programming, project, development
+:hp-alt-title: What I would expect when joining the new project?
+:published_at: 2016-07-08
+:my-twitter-link: https://twitter.com/mikealdo007[twitter]
+:cover-link: https://unsplash.com/photos/rEnH56DV2vQ[Yolanda Sun | unsplash.com]
+
+
+As I am an entrepreneur in software development area, I have fixed time&price projects. It also means that I am changing the projects from time to time. These changes are usually happening after one year, but there are projects for months as well. So I am pretty often facing the fact that I am not expert in the business of the new projects or the technologies used inside.
+
+What is surprising me is the situation after joining the project. There are projects where I can deliver something useful on the end of the first day, and there are projects where I am unable to code anything even after fourteen days. This big difference is not caused by the complexity of the project or experience but by the quality of the initial set of information you get on joining the project.
+
+I would like to offer my expectations of what type of information the project should have for being productive from the very start on the project.
+
+== Let’s discuss common mistakes firstly
+
+There are much more, but below is the list of the biggest mistakes which affects productivity and motivation, with common sentences which I am constantly hearing :).
+
+* No time for newbies.
+** Here is the computer, here is your username/password, please set up the machine and we will talk tomorrow.
+* No documentation.
+** Code is our documentation and everything you can find inside the codebase.
+* Not set credentials to the company systems
+** It’s funny to wait a whole day for accessing the wiki system for getting the information, or for the mail being set up. Great fun!
+* Too deep documentation.
+** Well, we have some documents to read firstly. After a week we can talk about it, enjoy!
+* Absence of the big picture.
+** There was no time to draw pictures about architecture because it’s very complex and analysts don’t have a time for it.
+* No person to ask.
+** Sorry, but I have no time for you, I have more urgent tasks right now so you’ll need to find someone else.
+* Expectations to be an independent developer from the start.
+** There is your first mission, it’s about this thing (2-minute intro), and it’s quite easy.
+* No comments inside code.
+** We aren’t fans of the comments as the code should be self-descriptive. And it is our opinion.
+* No deployment documentation
+** We are using some CI server, and there is everything to reach.
+* No coding style, code review process documentation
+** Well, there are industry standards, you know. So we are following them, and there is no need for having own one.
+* Inability to checkout&build sources at the first day.
+** We need to ensure that you know everything about having the ability to code something.
+
+Ok, maybe the statuses are a little bit longer or descriptive, but the value what you get at the start is very low if you are facing anything from the list above. Maybe for someone, it is ok, because it gives the excuses to your hands why something wasn’t finished at the time. But for me, it’s very distracting because I am enjoying the projects at most, where I can be productive as soon as possible and have feeling that I am useful from the start.
+
+== What to expect?
+
+After all, the expectations aren’t so big and even with a subset of the following you can be productive very early. The expectations aren’t sorted by the usefulness; every piece has a value. It can be treated as the checklist for the projects if they are ready to incorporate new person to the project.
+
+* Big picture of the architecture
+** Having one drawing of the business components playing with each other brings a lot overview of the project. Even if someone is talking about the project, rarely he is not using the pictures (even handmade).
+* Historical Overview
+** The historical perspective is crucial and overseen very often. Good description of historical milestones, names and persons on the project gives you feeling that you are starting on the project where are individuals who cares. Even inside codebase, you’ll find historical terms and names, so it’s useful to know if they are legacy, historical or present.
+* Technical architecture overview
+** This don’t need to be an essay for hundred pages but in one or two pages explained which technologies, technical components, communication, third-party services are used.
+* Business Overview
+** It’s same as before mentioned point. In one or two pages you should be able to realize what is the goal of the project, business what is the project doing and set of links for more information. After reading such overview, you should know how the project is earning money.
+* Deployment process overview
+** How the application (output of the programming effort) is delivered to the clients? Is there used CI? Where are the artifacts are uploaded? Is there a goal to meet the CD? Briefly, the overview should contain all the answers for these type of the questions to be sure that newbie knows what to do if anything is wrong and can deliver an application to production.
+* Set of done tasks
+** Is very useful to have an initial set of tasks which were done in past with very well description, comments and code attached inside. It helps to realize the amount of work needed for a particular tasks, area touched inside codebase and overall style of the communication between the author of the task, programmer and maybe verifier of the task.
+* "People to ask” list for the business areas
+** For the even smallest project you need persons to ask. And for not bothering every people in the room and figuring out who is capable of answering your question in the particular area, is ver useful to have a list with person <> business area for such cases.
+* "People to ask” list for the implementation areas
+** It’s the same as above but only for the technical perspective and implementation.
+* Answers to your initial set of questions
+** I’m used to collecting the answers in written form from the very start of the project. After one or two days I have between 30 and 50 questions (even the simplest ones for the URL to the canteen). And getting the answers for such questions is critical for having the good perspective of the project.
+* Surprising & and hacky areas
+** On the start of the project you are about to make assumptions for the areas which weren’t discussed too deeply or only touched. And you are making assumptions how these areas, components, whatever is working and maybe this is wrong. So the list of the surprising or hacky areas which aren’t following some standard would be useful not to be surprised if I touch anything from this list.
+* Legacy code documentation
+** There are always places which are somehow legacy. These should be documented with the description of the future improvements, the tasks inside tracking issues system for having the clear picture how the legacy code will be handled and when.
+* Code review process documentation
+** What is the code flow? What is taken into account in code review and how it is done? By documenting how the code review is done I can quickly find out what are the expectations for the quality and what is the process after my code is somewhere checked in.
+* Coding style
+** Well, whenever I see comprehensive Coding Style document, it’s pleasure to work with the code following such standards. Every single projects has own rules upon the general one so this document (and shared settings for most favourite IDEs) is extremely important to have clean code.
+
+== Why I am writing this?
+
+If there is some chance that my future project management will read this piece and prepare the materials which I am expecting, it would be perfect for me (and of course for all the newbies). Then I’ll be very pleasured to work on such project and ready to be productive and motivated from the very start.
+
+*P.S.* If you enjoyed this post, you can share this post anywhere as well as follow me on {my-twitter-link} to stay in touch with my further articles and other thoughts.
+
+*P.S.2* Cover image by {cover-link}.
