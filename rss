@@ -5,9 +5,9 @@
     <link>https://mikealdo.github.io</link>
     <description>Architecture, coding, open source.</description>
     <language>en-UK</language>
-    <pubDate>Mon, 11 Jul 2016 05:58:59 GMT</pubDate>
+    <pubDate>Sun, 24 Jul 2016 05:47:00 GMT</pubDate>
     <dc:creator>mdavidek1@gmail.com</dc:creator>
-    <dc:date>2016-07-11T05:58:59Z</dc:date>
+    <dc:date>2016-07-24T05:47:00Z</dc:date>
     <dc:language>en-UK</dc:language>
     <item>
       <title>Software architecture like a building own house</title>
@@ -260,6 +260,15 @@
       <pubDate>Fri, 08 Jul 2016 00:00:00 GMT</pubDate>
       <guid>https://mikealdo.github.io/2016/07/08/What-I-would-expect-when-joining-the-new-project.html</guid>
       <dc:date>2016-07-08T00:00:00Z</dc:date>
+    </item>
+    <item>
+      <title>Performance tip for tuning SQL with UNION</title>
+      <link>https://mikealdo.github.io/2016/07/22/Performance-tip-for-tuning-S-Q-L-with-U-N-I-O-N.html</link>
+      <description>This post will be short. It’s about a lesson learned by tuning the big SQL used for loading items from not related tables using the same where clause. It was performed on Oracle 11g, but I am pretty confident...</description>
+      <category>performance</category>
+      <pubDate>Fri, 22 Jul 2016 00:00:00 GMT</pubDate>
+      <guid>https://mikealdo.github.io/2016/07/22/Performance-tip-for-tuning-S-Q-L-with-U-N-I-O-N.html</guid>
+      <dc:date>2016-07-22T00:00:00Z</dc:date>
     </item>
   </channel>
 </rss>
