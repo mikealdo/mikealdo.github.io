@@ -10,12 +10,11 @@
 
 This post will be short. It’s about a lesson learned by tuning the big SQL used for loading items from not related tables using the same where clause. It was performed on Oracle 11g, but I am pretty confident that it applies to the most SQL databases.
 
-=== Keynote
+== Keynote
 
-[NOTE]
-====
+____
 Using the “WHERE” clause after the whole “UNION” is performed is significantly slower than using the “WHERE” clause inside inner selects.
-====
+____
 
 *This (if you can ensure removal of duplicates by the inner where clauses):*
 
@@ -46,11 +45,12 @@ UNION
 WHERE COL > 1;
 ----
 
-=== Explanations
+== Explanations
 * UNION ALL is faster than UNION because plain UNION is expecting that in two joined datasets are duplicates which need to be removed. If you can ensure (by inner where clauses) that there will be no duplicates, it’s far better to use UNION ALL and let database engine optimize the inner selects.
 * Using WHERE clause on the result of grouped results is too expensive because you are operating on more internal results than you need. Also the optimizing by database engine can't be processed as the results have anything in common.
 * {stack-link-1}
 * {stack-link-2}
+
 
 *P.S.* If you enjoyed this post, you can share this post anywhere as well as follow me on {my-twitter-link} to stay in touch with my further articles and other thoughts.
 
