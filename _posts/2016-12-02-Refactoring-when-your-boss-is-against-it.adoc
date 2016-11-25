@@ -1,0 +1,55 @@
+= 10 tips for convincing the managers for refactoring
+:hp-image: /covers/refactoring-when-your-boss-is-against-it.jpeg
+:hp-tags: refactoring, programming, quality
+:hp-alt-title: Refactoring when your boss is against it
+:published_at: 2016-12-02
+:technical-debt-vs-inovation-link: https://mikealdo.github.io/2016/04/22/Innovation-versus-technical-debt.html[technical debt]
+:innovation-link: https://mikealdo.github.io/2016/04/22/Innovation-versus-technical-debt.html[changing every day]
+:static-analysis-link: https://mikealdo.github.io/2016/05/06/Kinds-of-Static-analysis-tools.html[static analysis]
+:clean-code-link: http://amzn.to/2gaMDKz[quality advices]
+:working-with-the-legacy-code-link: http://amzn.to/2gaFt95[possible return]
+:phoenix-project-link: http://amzn.to/2fuBrHe[the right communication]
+:my-twitter-link: https://twitter.com/mikealdo007[twitter]
+:cover-link:
+
+I am pretty often facing the situation on software projects, that bosses are against the major refactoring. These refactorings are often treated as {technical-debt-vs-inovation-link} and are regularly checked and resolved. But even when the team do have dedicated time for facing the technical debt, refactorings which doesn’t directly lead to enhance some feature has often lower priority than other stuff.
+
+This low priority is bad because it allowing the technical debt to grow and ability to work with codebase poluted by technical debt in reasonable manner is decreasing. Both things can lead only to increasing tension between managers and engineers which is very uncomfortable situation.
+
+In this post I would like to enrich your arguments with set of reasonable approaches from my experience which simply work. And therefore is worth to have them in your communication pocket - as this problem can be solved mainly by {phoenix-project-link}.
+
+. *First thing to do is - change the wording.*
+** Don’t use word “refactoring”, ever. Don’t talk about rewriting ever. The managers aren’t willing to hear it, so dress the needed work in the words they wants to hear. How? What about speaking about improving the stability, throughput of the system or faster delivery? Of course, not every refactoring leads directly to these goals but what helps you to better maintain or develop your software, then it can possibly lead to them.
+. *Include refactoring to each task|story|bug you are working on.*
+** This is so much important. This means, you don’t need to convince anyone for doing your job properly. The refactoring is the inextricable part of the software development, so why to ask someone to let you doing your job in the best quality? You, as a developer, are responsible for the quality of the product and if you need to refactor anything, it’s needed to be done regardless of what the managers says. After all, it’s embarrassing to call ourselves a good engineers when the quality is not built into every piece of produced code.
+** In ideal world it also means, no refactoring tasks in the backlog.
+. *Give managers the numbers instead of technical speeches.*
+** Each manager|product owner knows the numbers better than anything else. Even the technical product owners. So when you are asked why something take so much time, give them exact numbers on which you spent the most time. Even when it would be the thinking the whole day where to put one line of code. Just don’t talk about refactoring or why it’s not technically possible to add this or that feature.
+** Use the word “interest” often. This is working in the same way as the numbers. Anyone who is familiar with meaning of the interest, he understands that it’s much easier in the long run to not accumulate debts with interests from beginning.
+. *Let the unconvinced bosses learn about refactoring in the hard way.*
+** Sometimes is the best to let the managers, who aren’t convincible for anything else than working on the features, learn about such technical needs in the hard way. See what will happen when the production servers crashes and there is any significant outage. And of course, measure the cost of such outages in money and numbers.
+** Of course, it can lead to the situation without {working-with-the-legacy-code-link} to the reasonable piece of software, so it’s the worst advice on this list.
+. *When the refactoring needs to be done and everybody agree, refactor the most touched codebase firstly.*
+** If there are part of the software which are touched frequently and they aren’t in a good shape, focus on them. Time spent on such places will return the investment in the best ratio.
+. *Improve the code separately from the features in small chunks.*
+** When the managers aren’t willing to hear about refactoring and are directly against including risk of refactoring to the current production, keep the refactoring separately and included it to the software in the less critical time.
+** Also it’s a good strategy to incrementally improve software - one can say that 15 minutes per day is too little, but count it for half a year and you have 30 hours of working on the quality only.
+. *Measure the refactoring results.*
+** It’s essential to have a way how to measure benefit of refactoring. Try to accumulate as much as metrics (I mean {static-analysis-link}, bugs arrived, time spent on bugs, test coverage, time needed to implement well defined feature with similar scope etc) from current state and compare them after refactoring are done. Not only managers can retrieve such data from issue tracking tools, we have the same metrics at our hands.
+** When you have the numbers proving that the overall quality is increasing, it’s a big win for you and for your bosses which make your life so much easier.
+. *Do something and ask for forgiveness, rather than asking permission.*
+** Sometimes (and it’s related to the second advice) is better to do something even without permission. It means it’s better to follow the industrial standards, {clean-code-link} even when the others are not convinced about it.
+. *Learn how to operate on moving target*
+** The software is {innovation-link}, refactoring done yesterday and not included into software at the same time denote additional time needed today. Being able to operate on such moving parts is essential for refactoring.
+** Such things as keeping the refactoring as smallest as possible, including the refactoring in bug fix or feature implementation, significantly helps with regular increasing of the quality.
+. *Don’t being afraid of making changes*
+** Well, this is my favourite one. When someone is afraid of making changes, than he is lacking confidence in his abilities. You have the luxury of comprehensive set of advices, knowledge laying around and experience gathered by other, that it’s simple with starting with small changes and continuously improving own abilities to making bigger and bigger changes.
+** By making changes you are constantly learning, even when you are wrong with your changes, it means that you aren’t pussyfooting and you are moving to be better as well as your software.
+
+== In Conclusion
+
+The best way how to persuade bosses to accept refactoring is to keep such tasks as smallest as possible and therefore the bosses don’t need to be bothered with them. Of course plenty of stuff hasn’t be able to solve in a single day, but we can make refactoring step by steps. Preparation, polishing and so on can be separate tasks. And if you can include the refactoring into the everyday stuff, than the bosses don’t need to be bothered about the refactoring need.
+
+*P.S.* If you enjoyed this post, give me a favour and share this post anywhere online, as well as you can follow me on {my-twitter-link} to stay in touch with my further articles, news from software development and other thoughts.
+
+*P.S.2* Cover image by {cover-link}.
