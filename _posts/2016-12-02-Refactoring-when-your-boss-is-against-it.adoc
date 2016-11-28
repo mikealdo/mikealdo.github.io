@@ -1,5 +1,5 @@
 = 10 tips for convincing the managers for refactoring
-:hp-image: /covers/refactoring-when-your-boss-is-against-it.jpeg
+:hp-image: /covers/10-tips-for-confincing-the-managers-for-refactoring.jpeg
 :hp-tags: refactoring, programming, quality
 :hp-alt-title: Refactoring when your boss is against it
 :published_at: 2016-12-02
