@@ -10,7 +10,7 @@
 :working-with-the-legacy-code-link: http://amzn.to/2gaFt95[possible return]
 :phoenix-project-link: http://amzn.to/2fuBrHe[the right communication]
 :my-twitter-link: https://twitter.com/mikealdo007[twitter]
-:cover-link:
+:cover-link: https://unsplash.com/search/smart?photo=TTPMpLl_2lc[Andrew Neel | unsplash.com]
 
 I am pretty often facing the situation on software projects, that bosses are against the major refactoring. These refactorings are often treated as {technical-debt-vs-inovation-link} and are regularly checked and resolved. But even when the team do have dedicated time for facing the technical debt, refactorings which doesn’t directly lead to enhance some feature has often lower priority than other stuff.
 
