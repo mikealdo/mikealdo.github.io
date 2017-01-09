@@ -2,7 +2,7 @@
 :hp-image: /covers/lets-programming-offline.jpeg
 :hp-tags: programming, offline, quality, knowledge
 :hp-alt-title: Let’s programming offline to gather quality and knowledge
-:published_at: 2016-11-25
+:published_at: 2017-01-09
 :good-googler-link: http://www.hanselman.com/blog/AmIReallyADeveloperOrJustAGoodGoogler.aspx[good developer or just good googler]
 :git-link: http://git-scm.com[Git]
 :stackoverflow-link: http://stackoverflow.com[StackOverflow.com]
