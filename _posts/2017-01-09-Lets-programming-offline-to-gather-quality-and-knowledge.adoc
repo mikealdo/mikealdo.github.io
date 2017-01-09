@@ -1,5 +1,5 @@
 = Let’s programming offline to gather quality and knowledge
-:hp-image: /covers/lets-programming-offline.jpeg
+:hp-image: /covers/lets-programming-offline.jpg
 :hp-tags: programming, offline, quality, knowledge
 :hp-alt-title: Let’s programming offline to gather quality and knowledge
 :published_at: 2017-01-09
