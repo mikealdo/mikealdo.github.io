@@ -5,9 +5,9 @@
     <link>https://mikealdo.github.io</link>
     <description>Architecture, coding, open source.</description>
     <language>en-UK</language>
-    <pubDate>Mon, 28 Nov 2016 06:21:59 GMT</pubDate>
+    <pubDate>Mon, 09 Jan 2017 15:49:39 GMT</pubDate>
     <dc:creator>mdavidek1@gmail.com</dc:creator>
-    <dc:date>2016-11-28T06:21:59Z</dc:date>
+    <dc:date>2017-01-09T15:49:39Z</dc:date>
     <dc:language>en-UK</dc:language>
     <item>
       <title>Software architecture like a building own house</title>
@@ -273,7 +273,7 @@
     <item>
       <title>10 tips for convincing the managers for refactoring</title>
       <link>https://mikealdo.github.io/2016/12/02/Refactoring-when-your-boss-is-against-it.html</link>
-      <description>I am pretty often facing the situation on software projects, that bosses are against the major refactoring. These refactorings are often treated as technical debt and are regularly checked and resolved. But even when the team do have dedicated time...</description>
+      <description>I am pretty often facing the situation on software projects, where bosses are against the major refactoring. These refactorings are often treated as technical debt are regularly checked and resolved. But even when the team does have dedicated time for...</description>
       <category>refactoring</category>
       <pubDate>Fri, 02 Dec 2016 01:00:00 GMT</pubDate>
       <guid>https://mikealdo.github.io/2016/12/02/Refactoring-when-your-boss-is-against-it.html</guid>
