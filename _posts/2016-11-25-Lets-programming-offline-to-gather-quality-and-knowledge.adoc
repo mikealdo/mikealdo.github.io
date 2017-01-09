@@ -1,0 +1,102 @@
+= Let’s programming offline to gather quality and knowledge
+:hp-image: /covers/lets-programming-offline.jpeg
+:hp-tags: programming, offline, quality, knowledge
+:hp-alt-title: Let’s programming offline to gather quality and knowledge
+:published_at: 2016-11-25
+:good-googler-link: http://www.hanselman.com/blog/AmIReallyADeveloperOrJustAGoodGoogler.aspx[good developer or just good googler]
+:git-link: http://git-scm.com[Git]
+:stackoverflow-link: http://stackoverflow.com[StackOverflow.com]
+:api-wiki-link: https://en.wikipedia.org/wiki/Application_programming_interface[API]
+:fotbal-cz-api-link: https://github.com/mikealdo/fotbal-cz-api[the public API]
+:quora-question-link: https://www.quora.com/What-was-it-like-to-be-a-programmer-without-the-Internet[from these times.]
+:maven-way-link: http://stackoverflow.com/questions/5780758/maven-always-download-sources-and-javadocs[Maven way]
+:gradle-way-link: http://stackoverflow.com/questions/28404149/how-to-download-javadocs-and-sources-for-jar-using-gradle-2-0[Gradle way]
+:intellij-idea-way-link: https://www.jetbrains.com/help/idea/2016.2/downloading-libraries-from-maven-repositories.html[Intellij Idea way]
+:dash-plugin-idea-link: https://github.com/gdelmas/IntelliJDashPlugin#readme[plugin for Intellij Idea]
+:dash-link: https://kapeli.com/dash[Dash]
+:zeal-link: https://zealdocs.org[Zeal]
+:bdd-link: https://mikealdo.github.io/2015/11/04/Behaviour-driven-development-and-automatic-acceptance-tests-in-action.html[Focus on the real goal]
+:familiarity-with-ide-link: https://mikealdo.github.io/2016/07/01/10-unfamiliar-features-in-Intelli-J-Idea.html[Be familiar with features of your IDE.]
+:history-of-prg-link: http://amzn.to/2i4PoC3[the history]
+:gates-of-fire-link: http://amzn.to/2i4EKv6[the discipline]
+:my-twitter-link: https://twitter.com/mikealdo007[twitter]
+:cover-link: https://unsplash.com/photos/1zA_mC846yU[Ben White | unsplash.com]
+
+I am commuting to work on the regular basis. My sessions in the train are about 45 minutes, and in that time I am focusing on enhancing my skills in programming area, trying to create some valuable stuff or write a blog posts. In the recent months, I was focusing on programming {fotbal-cz-api-link} for official results of football competitions in the Czech Republic (not finished yet but it’s open source, microservices-driven project). In the trains, there is no provided WiFi yet so when I need something interacting the internet I am using my cell phone with various quality of the internet signal. During the majority of the track to my work I have a bit bare signal, so, for example, downloading new library dependency takes ages as well as searching the answer on the internet.
+
+Therefore, I was under pressure to adjust my programming to be, let’s say, “offline ready” programmer. And after several months (nearly 200 hours of pure programming), I would like to say that programming offline has made a great impact on quality of my work and even more on my knowledge.
+
+The thing is, that when you are offline, you are alone with your code and maybe with {api-wiki-link} provided by third-party libraries, frameworks and overall technical universe (and their documentation) you have currently on the classpath. No {stackoverflow-link} programming anymore, no new libraries or advice on various forums available.
+
+Let’s take a look and discuss what is waiting for you when you are offline …
+
+== Historically, there were offline programmers only
+
+First of all, let’s discuss the history for enlightenment. When we look back to {history-of-prg-link}, there were offline programmers only. Without the internet, they were using books, frequent discussions and collaboration with colleagues and programming platforms offerings. In comparison to them, we have still significant advantages even in offline mode because we have a compiler at our disposal, we can gather information much more quickly before being offline and often we can postpone the work not possible to do offline to the times when we are working online. But still, there is much to learn {quora-question-link}.
+
+== Libraries and their APIs
+
+As the forums are unavailable, you need to cooperate with documentation included in libraries you are using. Well, the quality of the API of open source libraries is indeed various. I was aware of the quality, but I wasn’t used to looking at the documentation of the API when I had the internet and enough experience to know how to ask the right questions. By the way, in this situation is an almost majority of experienced developers - just read the excellent answer about being {good-googler-link}.
+
+And when you are offline, you are very dependent on the documentation. You are forced to go through the API offered, pick up the right classes/methods on your own. That is a good thing! It brings four things:
+
+* Familiarity and knowledge about the libraries.
+* {bdd-link}, avoid trying something out.
+* Distraction free mode.
+* Improving of {gates-of-fire-link} to not look for online sources when it’s not needed.
+
+Just a note, being able to use the libraries in the most efficient way and knowledge about the important internals of libraries brings you variability in programming skills also.
+
+== How to gather documentation
+
+It’s always practical to have sources and documentation of all libraries used in your project in your local repository. For being able to dig into the implementation for searching the useful information or preferred approach of using the library. So I am used to ensuring that all my libraries have sources included when I am adding it to my software. There are many ways how to achieve this so that I would mention the primary ones for Java development:
+
+* {maven-way-link}
+* {gradle-way-link}
+* {intellij-idea-way-link}
+
+Also, there are pretty impressive tools with collected documentation from various sources. One for all - {dash-link} for MacOS (and {dash-plugin-idea-link}). It’s not for free but I would say that it’s most comprehensive and handy tool which you might have installed on your computer. Pretty useful and super fast search capability, various sources, possibility to include individual datasets, etc.
+
+Check also {zeal-link} for Windows and Linux.
+
+But still, it’s always good to have sources/documentation for all the libraries on your classpath to have quick navigation inside the IDE.
+
+== Stackoverflow.com programming
+
+Oh, yeah. A developer who didn’t copy-paste code from {stackoverflow-link} doesn’t exist. A developer who didn’t collect pieces of information and explanations on SO doesn’t exist. So what you are about to do when it’s not available? You have to think first of all. You will have to think about the problem you are trying to solve and find a solution by yourself. It’s a bit weird that sometimes we are looking for the answers outside even for the questions which are answerable after the minute of thinking. But with the luxury of the available knowledge (and with the experience about how to ask) on the internet, it’s pretty common and understandable.
+
+Information online is not available or so slow to retrieve, which means it’s waste of your time. It has a great impact on the knowledge about the libraries and development stack. After tens of hours, you are much more familiar with possibilities that you don’t need to look into API or the internet anymore even when you are online. Of course, it’s a lot of time spent in this area, but, again, it’s most valuable thing you can gather by programming offline.
+
+== Stubs and programming against them
+
+When your software is cooperating with some third-party service, when you are offline, you can’t connect to her. So now what? It’s overall good practice to produce the stubs for such services for the automation testing purposes to be independent of availability of these services. So you need to enhance your software to be able to use the stubs even for regular application, not only for the tests. It helps for having the ability to run the software locally with all dependencies locally also and in some cases reveals potential problems with integration of such third-party services.
+
+Even when it might not discover all the problems with integration with third-party services, for development speed it’s a must-have. Even with the super fast internet, calling third party services is pretty expensive (or, in better words, time-consuming) and faulty. So you need to enhance application you are working on and introduce stubbing if there is cooperation with external service.
+
+== Committing and pushing
+
+It’s essential to be aligned with the last changes in the version control system. So it’s needed to fetch all the relevant data from VCS before you’re going to be offline. This is always good practice, but when you are offline, you are aware of the importance of being up-to-date even more than in traditional development.
+
+Also, I would like to mention the advantages of {git-link} here. One big advantage is that you can fetch all relevant data without actually apply them to your current work. It’s so much valuable to postpone rebasing/merging to the point when you are prepared for this activity. Also, there is no problem with frequent committing with small and focused changesets. No data needs to be sent to any server, so much effective when you are offline than other not distributed SCM.
+
+== Preparation when you are online
+
+Here I collected few tips for to be able to work offline:
+
+* Download dependencies with the sources and documentation.
+* Prepare responses from third-party services to be stubbed (HTML, RSS, JSON, whatever).
+* Fetch all related stuff from version control system.
+* Plan your tasks - work on stuff demanding being online when you are online and postpone stuff which can be done offline.
+* Be familiar with running all the tools you needed offline (e.g. for Maven, that is switch “-o” to tell maven not to download any stuff from the internet).
+* Prepare IDE with imported and running the project with all the dependencies.
+* {familiarity-with-ide-link}
+
+== In conclusion
+
+After a significant amount of the offline programming sessions, I would like to say that I am regretting that I haven’t started programming offline even before. So I would like to recommend it for every developer. Yes, it’s not always best performing and without connection to repositories and tools you might be pretty limited. But it brings you focus on the most important things, it forces you to be thinking about the best solution and increases the knowledge about a plethora of third-party stuff included in your software. It helps you with self-understanding that you are a real programmer, not only good googler or problem solver. It helps you to re-establish the basics which might be lost in your experience. Also, pain helps you remember deeply. It helps avoid guess and check approach and enforces thinking over the trying plan.
+
+*So let’s perform programming in offline mode! Your developer’s life will become better.*
+
+*P.S.* If you enjoyed this post, give me a favor and share this post anywhere online, as well as you can follow me on {my-twitter-link} to stay in touch with my further articles, news from software development and other thoughts.
+
+*P.S.2* Cover image by {cover-link}.
