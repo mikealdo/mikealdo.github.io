@@ -13,7 +13,7 @@
 :funk-link: https://www.youtube.com/watch?v=C6-TWRn0k4I[Electro swing]
 :jamaica-style: https://www.youtube.com/watch?v=22xZCNEJaQc[Jamaica style]
 :piano-link: https://www.youtube.com/watch?v=mJ_fkw5j-t0&list=PLE9F2F094EA15DF2B[The Piano Guys]
-:dance-music-link: https://www.youtube.com/watch?v=AnwoM4NfQXk[Dance musice without lyrics]
+:dance-music-link: https://www.youtube.com/watch?v=AnwoM4NfQXk[Dance music without lyrics]
 :brainfood-link: https://www.youtube.com/watch?v=s2Jw_pn2lY8[Cinematic orchestra]
 :rain-link: https://rain.simplynoise.com/[Simply rain]
 :yoga-link-1: https://www.youtube.com/watch?v=PnCZ9DgtbsE[Yoga 1]
