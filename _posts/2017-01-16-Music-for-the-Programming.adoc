@@ -1,0 +1,84 @@
+= Music for the Programming
+:hp-image: /covers/music-for-the-programming.jpg
+:hp-tags: music, distractions, productivity
+:hp-alt-title: Music for the Programming
+:published_at: 2017-01-16
+:my-twitter-link: https://twitter.com/mikealdo007[twitter]
+:cover-link: https://unsplash.com/photos/SEgJqTJ91c4[wo yi | unsplash.com]
+:earphones-link: http://amzn.to/2joqhdb[Earphones]
+:headphones-link: http://amzn.to/2jom1tW[JBL headset]
+:home-link: http://www.cel.ro/boxe/boxe-genius-sw_hf5.1-5005-cherry-wood-pMyY0Nzc-l/[5.1 set]
+:epic-music-link-1: https://www.youtube.com/watch?v=1mQ-Xpf8Wgs[Epic Music example]
+:epic-music-link-2: https://www.youtube.com/watch?v=lPON5FSDHkk[Second example with epic music]
+:funk-link: https://www.youtube.com/watch?v=C6-TWRn0k4I[Electro swing]
+:jamaica-style: https://www.youtube.com/watch?v=22xZCNEJaQc[Jamaica style]
+:piano-link: https://www.youtube.com/watch?v=mJ_fkw5j-t0&list=PLE9F2F094EA15DF2B[The Piano Guys]
+:dance-music-link: https://www.youtube.com/watch?v=AnwoM4NfQXk[Dance musice without lyrics]
+:brainfood-link: https://www.youtube.com/watch?v=s2Jw_pn2lY8[Cinematic orchestra]
+:rain-link: https://rain.simplynoise.com/[Simply rain]
+:yoga-link-1: https://www.youtube.com/watch?v=PnCZ9DgtbsE[Yoga 1]
+:yoga-link-2: https://www.youtube.com/watch?v=QZbuj3RJcjI[Yoga 2]
+:nature-singing-link: http://gomix.it/walking_in_my_woods[Nature singing]
+
+:pomodoro-link: https://mikealdo.github.io/2016/03/14/Pomodoro-and-happiness-in-developer-life.html[usually after my Pomodoro period ends]
+
+Being part of the openspace-driven office means to face the distractions for the whole workday. One of the methods how to eliminate distractions from the speaking colleagues, outside noise and so on, is to listen something. After significant time spent inside openspace I have several sources to choose, whose I am listening during the day for common situation in the developer’s life. And if you are interested or exploring new sources, read on.
+
+== One note on headphones
+For being able to listen something for majority of the day you need comfortable, high-quality headphones with the suppressing outside noise. I am personally using these two:
+
+* {earphones-link} - mainly during the commuting because their ability to suppress outside noise is just superior. But after two or more hours are a little bit uncomfortable to wear and have a wire as well.
+* {headphones-link} - closed, wireless, bluetooth, light, with long-life battery inside, very passing to my head and ears.
+* {home-link} - pretty old set, but for my small working room are good enough with clear sound even after the years. I am using it when I am working remotely and kids aren’t sleeping.
+
+== Music for facing the emails and communication
+Well, here I am big fan for so called “Epic music”. This epic music is mainly from the films where the most critical moment is arriving and something epic will come. It brings me some inner feeling that even for boring and not programming acts there is a need to be effective, precise and quick.
+
+* {epic-music-link-1}
+* {epic-music-link-2}
+
+== Music for the boring, almost “no brain needed” programming
+There are the tasks whose takes the whole days but you don’t need to think about them very deeply. Here I am listening the funky or let’s say the Jamaica style music which brings to me some relax and fun.
+
+* {funk-link}
+* {jamaica-style}
+
+== Music for the scripting
+I am not scripting often, but when I am on such situation, I have feeling that it must be somehow rushed and therefore is dance music working for me at most.
+
+* {dance-music-link}
+
+== Music for the thinking over the programming
+Because this is the area where the brain is the most active, I am changing the styles bellow pretty often — {pomodoro-link}. And sometimes I am leveraging the active suppressing outside noise and leveraging the silence. When I am working remotely, the silence do have more time during my working day.
+
+* {brainfood-link}
+* {rain-link}
+* {yoga-link-1}
+* {yoga-link-2}
+* *silence*
+* {nature-singing-link}
+
+== Music for the Fridays
+On Fridays I am listening mostly the Little from everything and mostly the ones with the most energy inside.
+
+== What I am not listening
+During the working time, I am not listening:
+
+* podcasts
+* my favourite music
+* pop music
+* music with significant amount of singing (no matter of language)
+* rock music
+* drums based music
+* internet radios
+
+All of these types of music significantly decrease the productivity and focus so I got rid of them.
+
+== What else?
+The styles of music I am maybe changing even outside the boundaries I have written above, but from my experience, the above choices are performing the best for me. Usually I am working in Pomorodo style and the break means the silence and putting my headphones down. Also I noticed slightly improving focus when I am listening the same pieces of music repeatedly. It has been described somewhere definitely, but it’s always about personal experience what will work the best.
+
+*I would be glad if you’ll share your sources of good productivity and focus music or other hacks for getting rid of outside noise.*
+
+*P.S.* If you enjoyed this post, you can share this post anywhere as well as follow me on {my-twitter-link} to stay in touch with my further articles and other thoughts.
+
+*P.S.2* Cover image by {cover-link}.
