@@ -1,0 +1,57 @@
+= @Deprecated annotation in Java 9
+:hp-image: /covers/deprecated-annotation-in-java-9.jpg
+:hp-tags: java, deprecation, java 9
+:hp-alt-title: @Deprecated annotation in Java 9
+:published_at: 2017-01-23
+:my-twitter-link: https://twitter.com/mikealdo007[twitter]
+:cover-link: https://unsplash.com/photos/YIN4xUBaqnk[Morgan Sessions | unsplash.com]
+:java-8-link: http://docs.oracle.com/javase/8/docs/technotes/guides/javadoc/deprecation/deprecation.html[Official documentation for Java 8]
+:java-9-link: http://download.java.net/java/jdk9/docs/api/java/lang/Deprecated.html[Official documentation for Java 9]
+:alt-link: https://blog.jooq.org/2015/12/22/jep-277-enhanced-deprecation-is-nice-but-heres-a-much-better-alternative/[Alternative proposal by Lukas Eder]
+:alt-discussion-link: http://mail.openjdk.java.net/pipermail/jdk9-dev/2015-December/003336.html[Discussion about the alternative proposal with authors of JEP]
+:alt-reddit-link: https://www.reddit.com/r/java/comments/3yn9ys/jep_277_enhanced_deprecation_is_nice_but_heres_a/[Discussion about the same thing on Reddit]
+:hiding-warnings-link: https://intellij-support.jetbrains.com/hc/en-us/community/posts/206226589-Hiding-deprecation-warnings?sort_by=votes[Hiding warnings about deprecation inside Intellij Idea]
+:presentation-link: https://www.youtube.com/watch?v=T_O9merCgKw&feature=youtu.be&list=PLPIzp-E1msrYicmovyeuOABO4HxVPlhEA[Official presentation about deprecation in Java 9 and impact to java API]
+:guava-link: https://github.com/google/guava/wiki/PhilosophyExplained#non-beta-apis[Way how the deprecation works in Google Guava]
+:javascript-link: http://stackoverflow.com/questions/14363740/should-javascript-libraries-use-the-deprecated-annotation[Way how it’s working in JavaScript environments - much worse than in Java]
+:checkstyle-link: http://checkstyle.sourceforge.net/apidocs/com/puppycrawl/tools/checkstyle/checks/annotation/MissingDeprecatedCheck.html[can be checked by Checkstyle]
+:java-9-book-link: [Java 9 Book with whole section about deprecation]
+:so-how-to-link: [My preferred way how to deprecate in Java for several years]
+
+It seems weird to me that after an only little amount of research around new @Deprecated annotation (appeared to be the very small thing) I found surprisingly many discussions, criticism, and articles about the resulting change.
+
+It seems like a baby step toward the effective deprecation in Java, and I would like to express my opinion on that. For me, the change is welcome, and it’s better than in previous version(s) of Java. With forRemoval() and since() methods inside, you are in the bigger press to avoid using deprecated stuff than without it.
+
+
+== My two points which are most important:
+
+* Finally we have a possibility to build tools around forRemoval() and since() to keep the codebase clean.
+** What I mean is mainly the build tools. The warning can (and actually in the vast majority of occasions is) be easily overlooked, and no action till the end of application life is performed on it. So compile time warning not enough to enforce clean codebase. Replacing the compilation warning with the failing build, when there is deprecated stuff even in the version where it was intended for removal, can easily bring the replacement stuff onto the surface to handle.
+** The second group of tools are IDEs and their ability to warn us about (or avoid using) the deprecated stuff more properly.
+* The second one is backward compatibility as always in Java - both new methods inside annotation are optional, so it’s no problem to accommodate new approach incrementally.
+
+== Another valuable statements:
+
+* No more deprecation warnings when you are importing deprecated type - not need to suppress this warning.
+* Deprecation of the whole package through package-info.java is still working.
+* Presence JavaDoc tag @deprecated {checkstyle-link} for methods/classes which are marked with @Deprecated annotation.
+* SuppressWarnings(“deprecated”) still works.
+* Value of the since() is the string, so it gives the flexibility to include any desired version into it.
+
+== Here is the list of the sources and related articles:
+
+* {java-8-link}
+* {java-9-link}
+* {alt-link}
+* {alt-discussion-link}
+* {alt-reddit-link}
+* {hiding-warnings-link}
+* {presentation-link}
+* {guava-link}
+* {javascript-link}
+* {java-9-book-link}
+* {so-how-to-link}
+
+*P.S.* If you enjoyed this post, give me a favor and share this post anywhere online, as well as you can follow me on {my-twitter-link} to stay in touch with my further articles, news from software development and other thoughts.
+
+*P.S.2* Cover image by {cover-link}.
