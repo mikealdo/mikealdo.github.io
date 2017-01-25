@@ -15,8 +15,7 @@
 :guava-link: https://github.com/google/guava/wiki/PhilosophyExplained#non-beta-apis[Way how the deprecation works in Google Guava]
 :javascript-link: http://stackoverflow.com/questions/14363740/should-javascript-libraries-use-the-deprecated-annotation[Way how it’s working in JavaScript environments - much worse than in Java]
 :checkstyle-link: http://checkstyle.sourceforge.net/apidocs/com/puppycrawl/tools/checkstyle/checks/annotation/MissingDeprecatedCheck.html[can be checked by Checkstyle]
-:java-9-book-link: [Java 9 Book with whole section about deprecation]
-:so-how-to-link: [My preferred way how to deprecate in Java for several years]
+:java-9-book-link: http://amzn.to/2jdvn7L[Java 9 Revealed - Book with whole section about deprecation]
 
 It seems weird to me that after an only little amount of research around new @Deprecated annotation (appeared to be the very small thing) I found surprisingly many discussions, criticism, and articles about the resulting change.
 
@@ -50,7 +49,6 @@ It seems like a baby step toward the effective deprecation in Java, and I would 
 * {guava-link}
 * {javascript-link}
 * {java-9-book-link}
-* {so-how-to-link}
 
 *P.S.* If you enjoyed this post, give me a favor and share this post anywhere online, as well as you can follow me on {my-twitter-link} to stay in touch with my further articles, news from software development and other thoughts.
 
