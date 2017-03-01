@@ -1,0 +1,48 @@
+= TDD is impossible to use in legacy projects
+:hp-image: /covers/tdd-is-impossible-to-use-in-legacy-projects.jpg
+:hp-tags: tdd, unit tests, legacy
+:hp-alt-title: TDD is impossible to use in legacy projects
+:published_at: 2017-03-06
+:my-twitter-link: https://twitter.com/mikealdo007[twitter]
+:cover-link: https://unsplash.com/collections/172064/macros?photo=Skf7HxARcoc[Markus Spiske | unsplash.com]
+:it-test-coverage-link: http://sqa.stackexchange.com/a/25007[questionable]
+:isolation-link: https://leanpub.com/visualising-software-architecture/[isolation of components]
+
+
+It seems obvious that Test-driven development (TDD) is in the majority (if not all) of cases the good thing. For greenfield projects, it’s true for hundred percent. But in reality, the programmer is often facing projects and applications with a significant amount of legacy code, not tested or documented parts which are hard to understand and almost impossible to maintain. And I was always curious whether I can use the TDD in such, let’s say, unfriendly conditions.
+
+I am strongly convinced that it’s about us, developers, whether we are using technologies or methodologies which help us producing the better software. So, if I’m convinced that TDD is a good thing, I should use it independently on the situation of underlying project.
+
+But, in the case of the project with large existing codebase which hasn't been written in TDD style, is almost impossible to be working in TDD style in a reasonable manner. Here is my list of why.
+
+=== Refactoring must come before TDD.
+The biggest problem which I am seeing is that for practicing TDD in such unfriendly conditions is need to refactor firstly. The code which will be enhanced or improved by the new code written with TDD is not always in shape for driving the new features by TDD. And not always is covered by unit tests. There are plenty of excellent sources how to deal with such refactorings, and I have read plenty books around that. And, even when I am pretty confident how to refactor, there exist plenty of situations (for example scope of needed refactoring, strong coupling to the other parts of software) where refactoring is not the option. Then, it’s not the option to use TDD.
+
+=== If you are stand alone, you are lost.
+For having TDD feasible, it must be followed by every single developer in the team. Or, at least, by every single developer working on the component developed by TDD. If it’s not like that, it doesn’t matter how one developer produce the code if another one does not follow the same approach. It will become not thoroughly tested mess independently for greenfield and legacy projects, and added value of TDD is subtle in such case. So it’s very dependent on the discipline of the whole team which I saw in past project, let’s say in every fifth project the team was motivated and disciplined enough to have TDD be beneficial for the software.
+
+=== Integration testing.
+In later stages of software development is evident that code not driven by TDD is easier to test by integration testing instead of unit testing. So there is a tension to produce more integration tests and avoid unit testing with a clear mind. It’s because of the smaller cohesion and bigger coupling of the code not developed by TDD. The classes tend to be bigger, having a big amount of dependencies which isn’t easy to mock and test by unit tests. But with the missing unit test suite, you don’t know if the integration tests are covering all the cases. Yes, you can measure code coverage, but measuring code coverage of the integration tests is quite {it-test-coverage-link} - integration test calls many of the logic even when it’s not testing (*and verifying*) it particularly so the coverage is corrupted with such cases.
+
+=== Isolation of the components.
+If the {isolation-link} or modules are done right, then the modules/components are small and easy to refactor, easy to enhance about comprehensive unit test suite and continue with coding with TDD style. Or is possible to replace them entirely with the newly shiny component. If not, then producing of code by TDD don’t enhance the existing codebase at all. It’s like the old saying: What become with a cask of sewage when the glass of wine pour out to it? Sewage. What becomes with a cask of wine when the glass of sewage pour out to it? Sewage.
+
+=== Dead code.
+Writing tests for dead code seems to be very useless. But find out which parts of the code are effectively dead or better said - impossible to reach in runtime, is very hard. And it’s very hard to convince anyone to a removal of such code also - there is a fear of removal code which might be useful, but we don’t have tests which are testing it and proving that it’s useful code. So does help the TDD us when we are operating on the dead code? No.
+
+=== Not frequently touched code.
+Adding features to not frequently touched code by TDD when this code wasn’t developed by TDD is nonsense. The refactorings and testing need to come before the actual feature, and for the code which is simply working even when it’s not properly tested, it’s a waste of time. There is a need to have priority to concentrate on things which matter at most and not using any useful technique just for the reason of using it.
+
+=== Testing first approach.
+TDD is replaced by "testing first" approach often (misleadingly). It means that for each bug or new feature is written one or more tests (integration tests often) which is failing and only then is bug fixed or feature implemented in production code. But, there is no refactor phase afterward, and the code isn’t improved at all. And there is no preparation phase to enhance the code before the actual feature often. So, if there is tension to use this approach on your project, then it definitely comes against using TDD.
+
+== So is it possible to use TDD in a project with plenty of legacy code?
+I would like to say yes, but the reality is, no. Or better, in the long term, no. There are many preconditions and actual conditions which prevent to use TDD in a reasonable manner and with the fair amount of added value. Ok, is possible to use TDD, but I would like to say, that the benefits are questionable.
+
+In my experience, I was facing 10-11 projects with the large codebase and a big amount of legacy code. Even when I started using TDD, tried to convince anyone in the teams that it’s a good thing, I often find out the way how to work in TDD style on a daily basis, after all, the benefits were small, and the enthusiasm and motivation were continuously decreasing. Then I moved to use TDD only for the newly developed component, and when I touched the legacy code, I have had a temptation to use test-first approach and not touch the existing code by refactoring or only in, let’s say, “low hanging fruit” scenarios.
+
+Maybe it was my discipline which failed, but I am convinced that without a clear intention of the whole team, one doesn't have a chance to use TDD in a reasonable manner. It must be a team decision and team discipline which brings the possibility of using TDD for everything.
+
+*P.S.* If you enjoyed this post, give me a favor and share this post anywhere online, as well as you can follow me on {my-twitter-link} to stay in touch with my further articles, news from software development and other thoughts.
+
+*P.S.2* Cover image by {cover-link}.
