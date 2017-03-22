@@ -1,0 +1,59 @@
+= Long build time complicates doing proper code review
+:hp-image: /covers/long-build-time-complicates-doing-proper-code-review.jpg
+:hp-tags: code review, effectivity
+:hp-alt-title: Long build time complicates doing proper code review and what to do with it
+:published_at: 2017-03-20
+:my-twitter-link: https://twitter.com/mikealdo007[twitter]
+:cover-link: https://unsplash.com/?photo=-hI5dX2ObAs[NASA | unsplash.com]
+:svn-link: https://mikealdo.github.io/2016/02/10/S-V-N-prevent-doing-proper-code-reviews.html[I wrote in one blog post]
+:read-only-master-link: https://mikealdo.github.io/2015/11/02/Read-only-master-branch.html[always green master]
+
+
+Doing proper and useful code reviews in a conventional manner has many obstacles. As {svn-link}, using incapable source control management system can be one of them. Recently I realized that quality of code review is influenced with a metric which has nothing to do with code reviews itself. It’s a *build time which taking ages.*
+
+The build time not only matters for the continuous delivery or development experience. It directly influences the quality of code reviews. And it’s especially emerging when you are trying to adopt continuous delivery (deployment) and using pull (merge) request builds for proving that the code being integrated into delivery artifact is correct.
+
+Here is my list of undeniable facts which are emerging from long-term builds:
+
+* Postponed changes.
+** The workflow of the code review should stay the same - writing code, reviewing it, applying changes. When you are in even the minor pressure, you are going to deliver something as faster as you can. At these times, the code rarely doesn’t contain any arguably part. But you need to deliver something, and the build takes 30 minutes. So what is going to happen? You will make a pressure to code reviewer to do changes after your code is integrated as is with the promise that all the suggested changes you will make afterward. Well, I agree that the code review is often not the most important thing you have to do, but this behavior can (and inevitably will) lead to more bugs and problems than you might expect. In applying changes suggested by the code reviewer you can explore some bug or design flaw which can be tough and costly to fix/improve in a later stage.
+* Postponed tests.
+** Yes, due to the fact, that build takes some time, we are in the temptation to delay some important test cases just because you need to deliver something. These tests are rarely added after the code is merged into the main codebase.
+* Need to switching contexts
+** When something takes ages we need to change context often and move to another useful work. This lead to two things - we can quickly forget that something is already built and we are introducing the possibility of raising bugs just due to switching branches and code itself.
+* Bigger change lists.
+** Longer build time can lead to more significant changes and commit less frequently. This less frequency of commits can result in merging problems and maybe an issue for the code review itself as the optimal LOC for proper code review is about 200-400. If it’s more than code reviewer can oversee something easier.
+* Randomly failing tests.
+** Have your suite any randomly failing tests? This might be a nightmare if the build you are waiting for will fail due to this kind of the test and the only solution is to build it again without any change.
+
+== What you can do about your build time?
+
+* Measure what takes the biggest time. And then act.
+** for example use —profile parameter when building software with Gradle to gain a very useful statistics about timing when building for example.
+* Splitting up the tests by the groups - *fail fast*.
+** Nobody wants to wait for a full build just to realize that one single unit test failed. So splitting the test suite to the groups and executing them to fail fast will prevent waiting for the full builds with creation all artifacts, uploading them anywhere or running end to end tests even for the software which doesn’t pass the unit test phase.
+* Parallelization of the tests.
+** Nothing is as important as having the ability to run the tests in parallel. We are living in the era of low-cost computational forces, and proper parallelization of the test execution can lead to dramatical decreasing the build time.
+* Parallelization of the modules builds.
+** If you can build the modules which aren’t dependent on each other, then build them in parallel.
+* Don’t save on power machine.
+** The parallelization speaks clearly - the time is worth power machine. You can ask your manager if it’s better to invest some minor dollars on the machine or let the developers waiting.
+* Extracting not so commonly touched parts into separate modules.
+** Getting rid of build time of static part of the software (and his tests) is an essence of having clean build of the software part which is developed at most.
+** Getting rid of preparation of the artifacts which are immediately thrown away.
+* Use pull request builds.
+** Not only it will bring you [read-only-master-link], but it gives you a chance to notice that the long build time will be much more emerging as a problem.
+* Revisit your tests suite.
+** Move anything from integration tests to unit tests if possible.
+** Avoid using @DirtiesContext if you are using Spring Framework.
+** Remove dead code and tests. Tests which are testing the dead code are just waste of time and energy of developers.
+** Improve the tests which take the biggest time.
+** Remove test duplication - what’s the value of the testing one thing in several places? Test it once.
+
+== Conclusion
+
+Get rid of long-running builds. Dot.
+
+*P.S.* If you enjoyed this post, give me a favor and share this post anywhere online, as well as you can follow me on {my-twitter-link} to stay in touch with my further articles, news from software development and other thoughts.
+
+*P.S.2* Cover image by {cover-link}.
