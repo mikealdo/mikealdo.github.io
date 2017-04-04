@@ -1,0 +1,40 @@
+= Deployment of web applications through Intellij Idea
+:hp-image: /covers/deployment-of-web-applications-through-intellij-idea.jpg
+:hp-tags: intellij idea, effectivity, tip
+:hp-alt-title: Deployment of web applications through Intellij Idea
+:published_at: 2017-03-27
+:my-twitter-link: https://twitter.com/mikealdo007[twitter]
+:cover-link: https://unsplash.com/collections/166804/send-the-light?photo=cLKDVvtoVZo[Will van Windergen | unsplash.com]
+:ftp-deploy-link: https://www.jetbrains.com/help/idea/2017.1/deployment.html[this feature]
+:idea-link: https://www.jetbrains.com/idea/[Intellij Idea]
+:in-place-help-link: https://www.jetbrains.com/help/idea/2017.1/add-server-dialog.html[in-place help]
+:docker-link: https://www.unixmen.com/deploy-lamp-andor-lemp-stacks-easily-using-docker/[this article]
+
+This gonna be short.
+
+I’m using {ftp-deploy-link} of {idea-link} for more than four years and I’m still surprised how many people, experienced with such superior IDE, don’t know about it. It’s a tiny but superior feature of Idea which is mostly used for deployment to local web server and ocassionaly to web server on FTP. I am using it for my let’s say old-school projects based on PHP and MySQL or pure HTML. These projects usually don’t use these fancy cool technologies for hot deploy available for current JS/CSS stack.
+
+== Tools -> Deployment
+
+The best for ensuring the right settings is to read the [in-place-help-link] in Intellij Idea but I can introduce shortly the most basics:
+
+* There are three most used settings for development and production environments:
+** The Web server is installed on your computer. The sources are under the server document root (for example, /htdocs), and you do your development right on the server.
+** The Web server is installed on your computer but the sources are stored in another folder. You do your development, then copy the sources to the server.
+** The Web server is on another computer (remote host). Files on the server are available through the FTP/SFTP/FTPS protocol, through a network share, or a mounted drive.
+* There are three main settings available for the servers:
+** in-place server - server whose document root is the parent of the Idea project root - the same folder for web server and for IDE
+** local server is a server that is running locally and isn’t imported into IDE
+** remote server is server on another computer
+* There are settings for mapping the context paths (which will be deployed in desired place)
+* There are settings for exclusion of deployment/synchronization of folders
+* The Automatic deployment is just superior. All your edits are in web server in milliseconds. Just great and without any other external dependency or library included in your project.
+
+== My usual workflow
+I usually have web server (Apache in most cases) running locally, the development runs in separate folder and I am using the same settings for deployment for local web-server and remote one. This helps to ensure that everything working locally will work in production also.
+
+But it’s not always as easy as you might know. There are usually different settings/versions of web servers and even the operation systems on local and remote environments. So when the difference is significant (for example differs in major version of PHP) I’m moving to docker, trying to set up the environments as close as possible to production server and use the deployment from IDEA to FTP installed on docker container. As a basis for my “dockerized” environment is {docker-link} with docker container similar to the production one.
+
+== Use it, it’s a huge Time Saver
+
+What to say in the end? It’s a great time server. I was using the manual deployment, script based deployment, automated deployment through CI server. All of them have it’s place and can work properly. For small projects this deployment can save the work needed for setting up the CI/scripts and for local environment it’s just a god feature.
