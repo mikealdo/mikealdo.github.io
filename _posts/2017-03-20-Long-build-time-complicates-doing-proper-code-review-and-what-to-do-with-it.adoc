@@ -13,7 +13,7 @@ Doing proper and useful code reviews in a conventional manner has many obstacles
 
 The build time not only matters for the continuous delivery or development experience. It directly influences the quality of code reviews. And it’s especially emerging when you are trying to adopt continuous delivery (deployment) and using pull (merge) request builds for proving that the code being integrated into delivery artifact is correct.
 
-Here is my list of undeniable facts which are emerging from long-term builds:
+=== Here is my list of undeniable facts which are emerging from long-term builds:
 
 * Postponed changes.
 ** The workflow of the code review should stay the same - writing code, reviewing it, applying changes. When you are in even the minor pressure, you are going to deliver something as faster as you can. At these times, the code rarely doesn’t contain any arguably part. But you need to deliver something, and the build takes 30 minutes. So what is going to happen? You will make a pressure to code reviewer to do changes after your code is integrated as is with the promise that all the suggested changes you will make afterward. Well, I agree that the code review is often not the most important thing you have to do, but this behavior can (and inevitably will) lead to more bugs and problems than you might expect. In applying changes suggested by the code reviewer you can explore some bug or design flaw which can be tough and costly to fix/improve in a later stage.
